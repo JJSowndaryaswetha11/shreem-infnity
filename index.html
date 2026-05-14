@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreeminfinity – Luxury Bridal & Beauty Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="pre-logo">Shreem<span>infinity</span></div>
+  <div class="pre-bar"></div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curRing"></div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919876543210" target="_blank" class="wa-float" title="Chat on WhatsApp">💬</a>
+
+<!-- BACK TO TOP -->
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Shreem<span>infinity</span><sup>™</sup></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Now</a>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMob()">×</button>
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#about" onclick="closeMob()">About Us</a>
+  <a href="#gallery" onclick="closeMob()">Gallery</a>
+  <a href="#packages" onclick="closeMob()">Packages</a>
+  <a href="#contact" onclick="closeMob()">Book Now</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-eyebrow reveal">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Madurai's Finest Luxury Beauty Studio</span>
+    </div>
+    <h1 class="hero-title reveal">
+      <span class="line1">Where Every</span><br>
+      <span class="line2">Woman Blossoms</span><br>
+      <span class="line3">Into Royalty</span>
+    </h1>
+    <p class="hero-desc reveal">From breathtaking bridal transformations to fashion-forward hair artistry — Shreeminfinity crafts beauty experiences that last a lifetime, told in every photograph.</p>
+    <div class="hero-actions reveal">
+      <a href="#packages" class="btn-lav">Explore Packages</a>
+      <a href="#gallery" class="btn-ghost">View Portfolio</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div>
+        <div class="hstat-num">500<sup>+</sup></div>
+        <div class="hstat-label">Brides Adorned</div>
+      </div>
+      <div>
+        <div class="hstat-num">8<sup>+</sup></div>
+        <div class="hstat-label">Years of Artistry</div>
+      </div>
+      <div>
+        <div class="hstat-num">12</div>
+        <div class="hstat-label">Expert Stylists</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-right-bg"></div>
+    <div class="hero-svg-wrap">
+      <!-- Main hero bridal SVG illustration -->
+      <svg viewBox="0 0 560 680" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+        <defs>
+          <radialGradient id="hbg" cx="50%" cy="40%" r="70%">
+            <stop offset="0%" stop-color="#EDE5F7"/>
+            <stop offset="100%" stop-color="#DDD0F4"/>
+          </radialGradient>
+          <radialGradient id="hskin" cx="45%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#F5C8A0"/>
+            <stop offset="100%" stop-color="#D4956A"/>
+          </radialGradient>
+          <radialGradient id="hhair" cx="50%" cy="20%" r="80%">
+            <stop offset="0%" stop-color="#3D1F5F"/>
+            <stop offset="100%" stop-color="#1A0A30"/>
+          </radialGradient>
+          <radialGradient id="hblush" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#C4AEE9" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#C4AEE9" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="hsaree" cx="50%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#8B5FC3"/>
+            <stop offset="100%" stop-color="#552E88"/>
+          </radialGradient>
+        </defs>
+        <!-- BG -->
+        <rect width="560" height="680" fill="url(#hbg)"/>
+        <!-- Decorative arches -->
+        <path d="M80,680 Q80,180 280,100 Q480,180 480,680" fill="rgba(139,95,195,0.06)" stroke="rgba(139,95,195,0.12)" stroke-width="1"/>
+        <path d="M120,680 Q120,220 280,150 Q440,220 440,680" fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.08)" stroke-width="0.5"/>
+        <!-- Petals / decorative -->
+        <ellipse cx="70" cy="100" rx="20" ry="10" fill="#C4AEE9" opacity="0.25" transform="rotate(-25,70,100)"/>
+        <ellipse cx="490" cy="180" rx="16" ry="8" fill="#C9A84C" opacity="0.2" transform="rotate(20,490,180)"/>
+        <ellipse cx="60" cy="380" rx="14" ry="7" fill="#C4AEE9" opacity="0.2" transform="rotate(-10,60,380)"/>
+        <ellipse cx="510" cy="320" rx="18" ry="9" fill="#C4AEE9" opacity="0.15" transform="rotate(40,510,320)"/>
+        <ellipse cx="100" cy="560" rx="12" ry="6" fill="#C9A84C" opacity="0.15" transform="rotate(15,100,560)"/>
+        <!-- Body / Saree -->
+        <path d="M160,680 C160,530 145,460 158,400 C170,365 192,338 230,312 L280,298 L330,312 C368,338 390,365 402,400 C415,460 400,530 400,680Z" fill="url(#hsaree)" opacity="0.92"/>
+        <!-- Saree gold border -->
+        <path d="M165,680 L165,500 C165,478 180,465 192,450 L210,438" fill="none" stroke="#C9A84C" stroke-width="2.5" opacity="0.7"/>
+        <path d="M395,680 L395,500 C395,478 380,465 368,450 L350,438" fill="none" stroke="#C9A84C" stroke-width="2.5" opacity="0.7"/>
+        <!-- Saree details -->
+        <path d="M225,375 Q252,395 280,400 Q308,395 335,375" fill="none" stroke="rgba(196,174,233,0.6)" stroke-width="1.5"/>
+        <path d="M210,430 Q245,450 280,454 Q315,450 350,430" fill="none" stroke="rgba(196,174,233,0.4)" stroke-width="1"/>
+        <!-- Neck -->
+        <ellipse cx="280" cy="288" rx="26" ry="32" fill="url(#hskin)"/>
+        <!-- Head -->
+        <ellipse cx="280" cy="205" rx="70" ry="82" fill="url(#hskin)"/>
+        <!-- Hair elaborate updo -->
+        <path d="M210,162 C192,145 177,115 182,85 C187,50 212,30 244,24 C262,18 280,17 298,20 C336,27 358,50 363,86 C368,116 353,145 336,163 C358,196 373,246 368,306 C382,286 402,268 412,298 L407,338 C392,308 372,318 362,348 L357,396 C358,374 347,353 340,342 C332,302 337,263 328,234 C314,262 298,278 280,281 C262,278 246,262 232,234 C223,263 228,302 220,342 C213,353 202,374 203,396 L198,348 C188,318 168,308 153,338 L148,298 C158,268 178,286 192,306 C187,246 202,196 210,162Z" fill="url(#hhair)"/>
+        <!-- Hair decorations - maang tikka chain -->
+        <path d="M280,130 L280,148" stroke="#C9A84C" stroke-width="1.5"/>
+        <circle cx="280" cy="128" r="9" fill="#C9A84C" opacity="0.9"/>
+        <circle cx="280" cy="128" r="5" fill="#DDD0F4"/>
+        <circle cx="280" cy="150" r="5" fill="#8B5FC3"/>
+        <!-- Flowers in hair -->
+        <circle cx="224" cy="152" r="7" fill="#E8D5A0" opacity="0.8"/>
+        <circle cx="224" cy="152" r="3.5" fill="#C9A84C" opacity="0.9"/>
+        <circle cx="340" cy="150" r="7" fill="#E8D5A0" opacity="0.8"/>
+        <circle cx="340" cy="150" r="3.5" fill="#C9A84C" opacity="0.9"/>
+        <!-- Bindi -->
+        <circle cx="280" cy="172" r="5.5" fill="#6A0572" opacity="0.85"/>
+        <!-- Eyes -->
+        <path d="M248,187 Q258,180 272,185 Q258,193 248,187Z" fill="#1A0A30"/>
+        <path d="M288,185 Q302,180 312,187 Q302,194 288,185Z" fill="#1A0A30"/>
+        <circle cx="254" cy="186" r="2.5" fill="white" opacity="0.75"/>
+        <circle cx="308" cy="186" r="2.5" fill="white" opacity="0.75"/>
+        <!-- Eyeliner + flick -->
+        <path d="M242,187 L237,183" stroke="#1A0A30" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M318,187 L323,183" stroke="#1A0A30" stroke-width="1.2" stroke-linecap="round"/>
+        <!-- Eyeshadow lavender -->
+        <ellipse cx="260" cy="183" rx="14" ry="5" fill="#8B5FC3" opacity="0.2"/>
+        <ellipse cx="300" cy="183" rx="14" ry="5" fill="#8B5FC3" opacity="0.2"/>
+        <!-- Eyebrows -->
+        <path d="M240,177 Q258,169 272,173" fill="none" stroke="#2A1A40" stroke-width="2" stroke-linecap="round"/>
+        <path d="M288,173 Q302,169 320,177" fill="none" stroke="#2A1A40" stroke-width="2" stroke-linecap="round"/>
+        <!-- Nose -->
+        <path d="M276,198 Q275,212 270,218 Q280,222 290,218 Q285,212 284,198" fill="none" stroke="#C09070" stroke-width="1" stroke-linecap="round"/>
+        <!-- Nose pin -->
+        <circle cx="269" cy="218" r="3.5" fill="#C9A84C" opacity="0.9"/>
+        <circle cx="269" cy="218" r="1.5" fill="#DDD0F4"/>
+        <!-- Lips - dark plum -->
+        <path d="M260,234 Q270,228 280,230 Q290,228 300,234 Q296,244 280,248 Q264,244 260,234Z" fill="#6A0572" opacity="0.88"/>
+        <path d="M260,234 Q270,239 280,237 Q290,239 300,234" fill="none" stroke="#8B5FC3" stroke-width="0.5"/>
+        <!-- Blush lavender -->
+        <ellipse cx="248" cy="215" rx="18" ry="11" fill="url(#hblush)"/>
+        <ellipse cx="312" cy="215" rx="18" ry="11" fill="url(#hblush)"/>
+        <!-- Earrings - elaborate jhumka -->
+        <ellipse cx="208" cy="218" rx="12" ry="7" fill="#C9A84C"/>
+        <circle cx="208" cy="218" r="4" fill="#DDD0F4"/>
+        <path d="M201,223 Q208,242 208,252 Q214,242 215,223" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="208" cy="253" r="6" fill="#8B5FC3"/>
+        <circle cx="208" cy="253" r="2.5" fill="#C9A84C"/>
+        <ellipse cx="352" cy="218" rx="12" ry="7" fill="#C9A84C"/>
+        <circle cx="352" cy="218" r="4" fill="#DDD0F4"/>
+        <path d="M345,223 Q352,242 352,252 Q358,242 359,223" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="352" cy="253" r="6" fill="#8B5FC3"/>
+        <circle cx="352" cy="253" r="2.5" fill="#C9A84C"/>
+        <!-- Necklace -->
+        <path d="M232,300 Q256,325 280,330 Q304,325 328,300" fill="none" stroke="#C9A84C" stroke-width="2.2" opacity="0.85"/>
+        <circle cx="280" cy="330" r="8" fill="#C9A84C" opacity="0.85"/>
+        <circle cx="256" cy="320" r="4.5" fill="#8B5FC3" opacity="0.75"/>
+        <circle cx="304" cy="320" r="4.5" fill="#8B5FC3" opacity="0.75"/>
+        <circle cx="242" cy="308" r="3.5" fill="#C9A84C" opacity="0.7"/>
+        <circle cx="318" cy="308" r="3.5" fill="#C9A84C" opacity="0.7"/>
+        <!-- Bangles -->
+        <ellipse cx="165" cy="400" rx="13" ry="5" fill="none" stroke="#C9A84C" stroke-width="2.2" opacity="0.8"/>
+        <ellipse cx="165" cy="412" rx="13" ry="5" fill="none" stroke="#8B5FC3" stroke-width="1.8" opacity="0.6"/>
+        <ellipse cx="165" cy="424" rx="13" ry="5" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+        <ellipse cx="395" cy="400" rx="13" ry="5" fill="none" stroke="#C9A84C" stroke-width="2.2" opacity="0.8"/>
+        <ellipse cx="395" cy="412" rx="13" ry="5" fill="none" stroke="#8B5FC3" stroke-width="1.8" opacity="0.6"/>
+        <ellipse cx="395" cy="424" rx="13" ry="5" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+        <!-- Veil detail -->
+        <path d="M340,162 C392,195 440,275 430,375 C418,440 385,475 365,510" fill="none" stroke="rgba(196,174,233,0.35)" stroke-width="3.5"/>
+        <!-- Bottom accent -->
+        <rect x="0" y="656" width="560" height="24" fill="rgba(201,168,76,0.1)"/>
+        <path d="M0,656 Q140,642 280,656 Q420,670 560,656" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.35"/>
+      </svg>
+    </div>
+    <div class="float-badge badge-1">
+      <div class="badge-label">Featured Look</div>
+      <div class="badge-val">Bridal Royale ✦</div>
+    </div>
+    <div class="float-badge badge-2">
+      <div class="badge-label">Rating</div>
+      <div class="badge-val">⭐ 4.9 / 5.0</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>Bridal Makeup</span><span class="gem">✦</span>
+    <span>Airbrush & HD</span><span class="gem">✦</span>
+    <span>Hair Styling</span><span class="gem">✦</span>
+    <span>Bridal Updo</span><span class="gem">✦</span>
+    <span>Pre-Bridal Packages</span><span class="gem">✦</span>
+    <span>Party Glam</span><span class="gem">✦</span>
+    <span>Saree Draping</span><span class="gem">✦</span>
+    <span>Nail Art</span><span class="gem">✦</span>
+    <span>Skin Treatments</span><span class="gem">✦</span>
+    <span>Fashion Styling</span><span class="gem">✦</span>
+    <span>Bridal Makeup</span><span class="gem">✦</span>
+    <span>Airbrush & HD</span><span class="gem">✦</span>
+    <span>Hair Styling</span><span class="gem">✦</span>
+    <span>Bridal Updo</span><span class="gem">✦</span>
+    <span>Pre-Bridal Packages</span><span class="gem">✦</span>
+    <span>Party Glam</span><span class="gem">✦</span>
+    <span>Saree Draping</span><span class="gem">✦</span>
+    <span>Nail Art</span><span class="gem">✦</span>
+    <span>Skin Treatments</span><span class="gem">✦</span>
+    <span>Fashion Styling</span><span class="gem">✦</span>
+  </div>
+</div>
+
+<!-- ── SERVICES ── -->
+<section id="services" class="sec" style="background:var(--white);padding:8rem 5rem;">
+  <div class="services-top">
+    <div class="reveal-left">
+      <div class="sec-label">What We Offer</div>
+      <h2 class="sec-title">Signature <em>Services</em><br><strong>Crafted for You</strong></h2>
+    </div>
+    <p class="sec-sub reveal-right">Every service at Shreeminfinity is personalised to your skin tone, facial features, and occasion — because true beauty is never one-size-fits-all.</p>
+  </div>
+
+  <div class="svc-grid">
+    <div class="svc-card reveal">
+      <div class="svc-card-inner">
+        <span class="svc-no">01</span>
+        <div class="svc-icon-box">💍</div>
+        <h3 class="svc-name">Bridal Makeup</h3>
+        <p class="svc-text">Flawless HD & Airbrush bridal looks for Tamil, Telugu, Christian, Muslim and all traditions. Long-lasting, camera-perfect, and uniquely yours.</p>
+        <a href="#contact" class="svc-link">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-card-inner">
+        <span class="svc-no">02</span>
+        <div class="svc-icon-box">✂️</div>
+        <h3 class="svc-name">Hair Styling</h3>
+        <p class="svc-text">Elaborate bridal updos, traditional pleating, modern cuts, balayage, keratin, rebonding and creative hair colour treatments.</p>
+        <a href="#contact" class="svc-link">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-card-inner">
+        <span class="svc-no">03</span>
+        <div class="svc-icon-box">🌸</div>
+        <h3 class="svc-name">Pre-Bridal Rituals</h3>
+        <p class="svc-text">Complete skin prep — glow facials, bleach, waxing, threading, O3+ treatments and full body polishing for your wedding season.</p>
+        <a href="#contact" class="svc-link">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-card-inner">
+        <span class="svc-no">04</span>
+        <div class="svc-icon-box">🎉</div>
+        <h3 class="svc-name">Party & Event Glam</h3>
+        <p class="svc-text">Stunning looks for receptions, sangeet nights, mehendi ceremonies, engagements, and all festive & corporate occasions.</p>
+        <a href="#contact" class="svc-link">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-card-inner">
+        <span class="svc-no">05</span>
+        <div class="svc-icon-box">🧖</div>
+        <h3 class="svc-name">Skin & Beauty Care</h3>
+        <p class="svc-text">Advanced facials, microdermabrasion, skin brightening, clean-up, eyebrow sculpting, and premium waxing services.</p>
+        <a href="#contact" class="svc-link">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-card-inner">
+        <span class="svc-no">06</span>
+        <div class="svc-icon-box">👗</div>
+        <h3 class="svc-name">Saree & Fashion Draping</h3>
+        <p class="svc-text">Expert draping in 20+ styles — Nivi, Coorg, Bengali, Gujarati, Maharashtrian. Complete bridal fashion styling consultation included.</p>
+        <a href="#contact" class="svc-link">Book Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<div id="about">
+  <div class="about-img-side reveal-left">
+    <div class="about-big-text">S</div>
+    <div class="about-card">
+      <div class="about-card-quote">"</div>
+      <p class="about-card-text">Every woman who sits in my chair leaves feeling like the most radiant version of herself. That is my purpose, my passion, and my promise.</p>
+      <div class="about-card-sig">Shreeminfinity</div>
+      <div class="about-card-role">Lead Bridal Artist & Founder</div>
+    </div>
+  </div>
+
+  <div class="about-content-side reveal-right">
+    <div class="sec-label">Our Story</div>
+    <h2 class="sec-title">Where <em>Artistry</em><br><strong>Meets Passion</strong></h2>
+    <p class="sec-sub" style="margin-bottom:1.2rem;">Born from a deep love of beauty and the transformative power of makeup, Shreeminfinity has been adorning women across Tamil Nadu for over 8 years. We've beautifully dressed 500+ brides and counting.</p>
+    <p class="sec-sub">We blend traditional Indian aesthetics with contemporary global trends — delivering looks that are timeless, culturally rooted, and uniquely personal. Every brushstroke is placed with intention, care, and artistry.</p>
+
+    <div class="about-features">
+      <div class="af-item">
+        <div class="af-icon">🏆</div>
+        <div class="af-title">Certified Artists</div>
+        <div class="af-desc">All stylists are professionally trained & certified in HD, Airbrush & international techniques.</div>
+      </div>
+      <div class="af-item">
+        <div class="af-icon">🚗</div>
+        <div class="af-title">On-Site Service</div>
+        <div class="af-desc">We come to your venue — hotel, home, or mandapam — anywhere in Madurai & nearby districts.</div>
+      </div>
+      <div class="af-item">
+        <div class="af-icon">🌍</div>
+        <div class="af-title">All Traditions</div>
+        <div class="af-desc">Tamil, Telugu, Kerala, Christian, Muslim, North Indian — we specialise in all cultural bridal looks.</div>
+      </div>
+      <div class="af-item">
+        <div class="af-icon">✨</div>
+        <div class="af-title">Premium Products</div>
+        <div class="af-desc">Mac, Huda Beauty, Charlotte Tilbury, Kryolan — only the finest brands touch your skin.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── GALLERY ── -->
+<section id="gallery">
+  <div class="gallery-head reveal">
+    <div>
+      <div class="sec-label">Our Portfolio</div>
+      <h2 class="sec-title">Beauty <em>Gallery</em></h2>
+    </div>
+    <a href="#contact" class="btn-lav">Book a Session →</a>
+  </div>
+  <div class="gallery-mosaic">
+    <!-- Cell A - large -->
+    <div class="gm-cell gm-a" style="background:linear-gradient(160deg,#EDE5F7,#C4AEE9);">
+      <svg viewBox="0 0 380 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;transition:transform 0.5s;">
+        <rect width="380" height="400" fill="#DDD0F4"/>
+        <ellipse cx="190" cy="185" rx="80" ry="95" fill="#F0C090"/>
+        <path d="M112,155 Q118,108 148,88 Q170,75 190,73 Q210,75 232,88 Q262,108 268,155 C272,133 288,123 300,135 C290,158 268,158 268,155 C272,182 275,210 255,228 Q222,248 190,252 Q158,248 125,228 Q105,210 112,180 C112,158 90,158 80,135 C92,123 108,133 112,155Z" fill="#2A1A40"/>
+        <!-- simple face features -->
+        <path d="M160,180 Q172,172 185,177 Q172,186 160,180Z" fill="#1A0A30"/>
+        <path d="M195,177 Q208,172 220,180 Q208,186 195,177Z" fill="#1A0A30"/>
+        <circle cx="166" cy="179" r="2.5" fill="white" opacity="0.7"/>
+        <circle cx="214" cy="179" r="2.5" fill="white" opacity="0.7"/>
+        <path d="M152,171 Q168,163 183,167" fill="none" stroke="#1A0A30" stroke-width="2" stroke-linecap="round"/>
+        <path d="M197,167 Q212,163 228,171" fill="none" stroke="#1A0A30" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="190" cy="163" r="5" fill="#6A0572" opacity="0.8"/>
+        <path d="M173,212 Q181,206 190,208 Q199,206 207,212 Q203,222 190,225 Q177,222 173,212Z" fill="#6A0572" opacity="0.9"/>
+        <ellipse cx="158" cy="202" rx="14" ry="8" fill="rgba(196,174,233,0.5)"/>
+        <ellipse cx="222" cy="202" rx="14" ry="8" fill="rgba(196,174,233,0.5)"/>
+        <!-- earring -->
+        <ellipse cx="108" cy="202" rx="10" ry="6" fill="#C9A84C"/>
+        <circle cx="108" cy="216" r="6" fill="#8B5FC3"/>
+        <ellipse cx="272" cy="202" rx="10" ry="6" fill="#C9A84C"/>
+        <circle cx="272" cy="216" r="6" fill="#8B5FC3"/>
+        <!-- necklace -->
+        <path d="M148,250 Q170,270 190,274 Q210,270 232,250" fill="none" stroke="#C9A84C" stroke-width="2" opacity="0.8"/>
+        <circle cx="190" cy="274" r="7" fill="#C9A84C" opacity="0.8"/>
+        <text x="190" y="360" text-anchor="middle" font-family="Playfair Display,serif" font-size="16" fill="#4A3D60" opacity="0.7" font-style="italic">Bridal Elegance</text>
+      </svg>
+      <div class="gm-overlay"><span class="gm-tag">Traditional Bridal</span></div>
+    </div>
+
+    <!-- Cell B -->
+    <div class="gm-cell gm-b" style="background:#F0EBF9;">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;transition:transform 0.5s;">
+        <rect width="200" height="200" fill="#EDE5F7"/>
+        <ellipse cx="100" cy="90" rx="50" ry="58" fill="#F0C090"/>
+        <path d="M55,72 Q62,38 88,26 Q100,20 112,26 Q138,38 145,72 C148,54 160,47 168,57 C161,73 145,72 145,72 C148,95 148,118 132,132 Q116,145 100,148 Q84,145 68,132 Q52,118 55,93 C55,73 40,73 33,57 C41,47 52,54 55,72Z" fill="#3D1F5F"/>
+        <!-- flower in hair -->
+        <circle cx="140" cy="56" r="9" fill="#E8D5A0"/>
+        <circle cx="140" cy="56" r="4.5" fill="#C9A84C"/>
+        <path d="M82,88 Q90,82 100,85 Q90,94 82,88Z" fill="#1A0A30"/>
+        <path d="M100,85 Q110,82 118,88 Q110,94 100,85Z" fill="#1A0A30"/>
+        <path d="M74,80 Q87,73 98,77" fill="none" stroke="#1A0A30" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M102,77 Q113,73 126,80" fill="none" stroke="#1A0A30" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="100" cy="72" r="3.5" fill="#6A0572" opacity="0.8"/>
+        <path d="M87,112 Q94,107 100,109 Q106,107 113,112 Q110,121 100,123 Q90,121 87,112Z" fill="#6A0572" opacity="0.9"/>
+        <text x="100" y="185" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#4A3D60" opacity="0.7">Hair Art</text>
+      </svg>
+      <div class="gm-overlay"><span class="gm-tag">Bridal Updo</span></div>
+    </div>
+
+    <!-- Cell C -->
+    <div class="gm-cell gm-c" style="background:#E8E0F5;">
+      <svg viewBox="0 0 220 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;transition:transform 0.5s;">
+        <rect width="220" height="400" fill="#DDD0F4"/>
+        <ellipse cx="110" cy="145" rx="58" ry="70" fill="#D4956A"/>
+        <ellipse cx="110" cy="128" rx="50" ry="62" fill="#F0C090"/>
+        <path d="M62,106 Q68,66 94,50 Q110,42 126,50 Q152,66 158,106 C161,86 175,78 184,89 C175,108 158,107 158,106 C162,132 162,160 144,176 Q128,190 110,193 Q92,190 76,176 Q58,160 62,133 C62,108 45,108 36,89 C45,78 59,86 62,106Z" fill="#3D1F5F"/>
+        <path d="M90,125 Q100,118 110,121 Q100,130 90,125Z" fill="#1A0A30"/>
+        <path d="M110,121 Q120,118 130,125 Q120,130 110,121Z" fill="#1A0A30"/>
+        <path d="M82,115 Q96,107 108,111" fill="none" stroke="#1A0A30" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M112,111 Q124,107 138,115" fill="none" stroke="#1A0A30" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="110" cy="108" r="4" fill="#6A0572" opacity="0.8"/>
+        <path d="M95,152 Q103,147 110,149 Q117,147 125,152 Q121,162 110,165 Q99,162 95,152Z" fill="#6A0572" opacity="0.9"/>
+        <ellipse cx="88" cy="141" rx="12" ry="7" fill="rgba(196,174,233,0.5)"/>
+        <ellipse cx="132" cy="141" rx="12" ry="7" fill="rgba(196,174,233,0.5)"/>
+        <!-- body saree suggestion -->
+        <rect x="52" y="190" width="116" height="210" fill="#8B5FC3" opacity="0.85"/>
+        <path d="M52,210 Q110,230 168,210" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.6"/>
+        <text x="110" y="370" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="white" opacity="0.6">Full Look</text>
+      </svg>
+      <div class="gm-overlay"><span class="gm-tag">Full Bridal</span></div>
+    </div>
+
+    <!-- Cell D -->
+    <div class="gm-cell gm-d" style="background:#F9F5FF;">
+      <svg viewBox="0 0 180 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;transition:transform 0.5s;">
+        <rect width="180" height="200" fill="#F0EBF9"/>
+        <!-- nail art -->
+        <rect x="20" y="50" width="26" height="90" rx="13" fill="#C4AEE9"/>
+        <rect x="54" y="38" width="26" height="100" rx="13" fill="#8B5FC3"/>
+        <rect x="88" y="44" width="26" height="95" rx="13" fill="#C9A84C"/>
+        <rect x="122" y="55" width="24" height="82" rx="12" fill="#DDD0F4"/>
+        <ellipse cx="33" cy="68" rx="6" ry="3.5" fill="white" opacity="0.35"/>
+        <ellipse cx="67" cy="55" rx="6" ry="3.5" fill="white" opacity="0.35"/>
+        <ellipse cx="101" cy="60" rx="6" ry="3.5" fill="white" opacity="0.35"/>
+        <ellipse cx="134" cy="70" rx="5" ry="3" fill="white" opacity="0.35"/>
+        <text x="90" y="175" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="#4A3D60" opacity="0.7" font-style="italic">Nail Art</text>
+      </svg>
+      <div class="gm-overlay"><span class="gm-tag">Nail Design</span></div>
+    </div>
+
+    <!-- Cell E -->
+    <div class="gm-cell gm-e" style="background:#EDE5F7;">
+      <svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;transition:transform 0.5s;">
+        <rect width="220" height="200" fill="#DDD0F4"/>
+        <ellipse cx="110" cy="90" rx="52" ry="60" fill="#F0C090"/>
+        <path d="M60,72 Q68,34 96,20 Q110,14 124,20 Q152,34 160,72 C163,54 176,45 186,57 C178,73 160,72 160,72 C163,96 162,120 145,134 Q128,148 110,151 Q92,148 75,134 Q58,120 60,94 C60,73 42,73 34,57 C44,45 57,54 60,72Z" fill="#2A1A40"/>
+        <path d="M88,90 Q98,83 110,86 Q98,96 88,90Z" fill="#1A0A30"/>
+        <path d="M110,86 Q122,83 132,90 Q122,96 110,86Z" fill="#1A0A30"/>
+        <ellipse cx="87" cy="108" rx="13" ry="8" fill="rgba(196,174,233,0.55)"/>
+        <ellipse cx="133" cy="108" rx="13" ry="8" fill="rgba(196,174,233,0.55)"/>
+        <path d="M95,126 Q103,120 110,122 Q117,120 125,126 Q121,136 110,139 Q99,136 95,126Z" fill="#6A0572" opacity="0.9"/>
+        <text x="110" y="182" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#4A3D60" opacity="0.7">Party Glam</text>
+      </svg>
+      <div class="gm-overlay"><span class="gm-tag">Party Makeup</span></div>
+    </div>
+
+    <!-- Cell F -->
+    <div class="gm-cell gm-f" style="background:#F5F0FF;">
+      <svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;transition:transform 0.5s;">
+        <rect width="220" height="200" fill="#EDE5F7"/>
+        <!-- Mehendi hand art -->
+        <ellipse cx="110" cy="100" rx="70" ry="50" fill="#F5C870" opacity="0.3"/>
+        <path d="M60,100 Q80,60 110,55 Q140,60 160,100 Q140,140 110,145 Q80,140 60,100Z" fill="none" stroke="#8B5FC3" stroke-width="1.5"/>
+        <circle cx="110" cy="100" r="15" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+        <circle cx="110" cy="100" r="8" fill="#C9A84C" opacity="0.3"/>
+        <!-- mehendi pattern dots -->
+        <circle cx="80" cy="85" r="3" fill="#8B5FC3" opacity="0.5"/>
+        <circle cx="140" cy="85" r="3" fill="#8B5FC3" opacity="0.5"/>
+        <circle cx="80" cy="115" r="3" fill="#8B5FC3" opacity="0.5"/>
+        <circle cx="140" cy="115" r="3" fill="#8B5FC3" opacity="0.5"/>
+        <path d="M90,72 Q110,65 130,72" fill="none" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3,2"/>
+        <path d="M90,128 Q110,135 130,128" fill="none" stroke="#C9A84C" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="110" y="182" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#4A3D60" opacity="0.7">Mehendi Art</text>
+      </svg>
+      <div class="gm-overlay"><span class="gm-tag">Mehendi</span></div>
+    </div>
+
+    <!-- Cell G -->
+    <div class="gm-cell gm-g" style="background:#EDE5F7;">
+      <svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;transition:transform 0.5s;">
+        <rect width="220" height="200" fill="#DDD0F4"/>
+        <ellipse cx="110" cy="88" rx="50" ry="58" fill="#F0C090"/>
+        <path d="M62,68 Q70,32 96,18 Q110,12 124,18 Q150,32 158,68 C161,50 174,42 184,53 C175,70 158,68 158,68 C162,93 161,118 144,133 Q128,147 110,150 Q92,147 76,133 Q59,118 62,91 C62,69 45,70 36,53 C46,42 59,50 62,68Z" fill="#3D1F5F"/>
+        <!-- hair with flowers -->
+        <circle cx="72" cy="56" r="8" fill="#E8D5A0" opacity="0.85"/>
+        <circle cx="72" cy="56" r="4" fill="#C9A84C"/>
+        <circle cx="150" cy="52" r="8" fill="#E8D5A0" opacity="0.85"/>
+        <circle cx="150" cy="52" r="4" fill="#C9A84C"/>
+        <path d="M88,87 Q98,80 110,83 Q98,93 88,87Z" fill="#1A0A30"/>
+        <path d="M110,83 Q122,80 132,87 Q122,93 110,83Z" fill="#1A0A30"/>
+        <path d="M95,124 Q103,118 110,120 Q117,118 125,124 Q121,134 110,137 Q99,134 95,124Z" fill="#6A0572" opacity="0.9"/>
+        <ellipse cx="86" cy="105" rx="12" ry="7" fill="rgba(196,174,233,0.5)"/>
+        <ellipse cx="134" cy="105" rx="12" ry="7" fill="rgba(196,174,233,0.5)"/>
+        <text x="110" y="182" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#4A3D60" opacity="0.7">Floral Bridal</text>
+      </svg>
+      <div class="gm-overlay"><span class="gm-tag">Floral Style</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section id="process">
+  <div class="process-head reveal">
+    <div class="sec-label" style="justify-content:center;">
+      <span>How We Work</span>
+    </div>
+    <h2 class="sec-title" style="text-align:center;">Your <em>Beauty Journey</em><br>in 4 Simple Steps</h2>
+  </div>
+  <div class="process-steps">
+    <div class="step reveal">
+      <div class="step-circle">
+        💬
+        <span class="step-num">1</span>
+      </div>
+      <h3 class="step-name">Consultation</h3>
+      <p class="step-desc">We understand your vision, skin type, event type, and cultural preferences through a detailed discussion.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-circle">
+        🎨
+        <span class="step-num">2</span>
+      </div>
+      <h3 class="step-name">Trial Session</h3>
+      <p class="step-desc">A full makeup and hair trial to finalise your perfect look weeks before your big day.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-circle">
+        ✨
+        <span class="step-num">3</span>
+      </div>
+      <h3 class="step-name">Day-of Artistry</h3>
+      <p class="step-desc">Our artists arrive at your venue and create your flawless, camera-ready bridal or event look.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-circle">
+        📸
+        <span class="step-num">4</span>
+      </div>
+      <h3 class="step-name">Touch-ups & Beyond</h3>
+      <p class="step-desc">We stay for touch-ups, saree draping and complete bridal-day support so you shine all day long.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials">
+  <div class="testi-head reveal">
+    <div class="sec-label">Happy Clients</div>
+    <h2 class="sec-title">Words from Our <em>Beloved</em> Brides</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="tcard reveal">
+      <div class="tcard-mark">"</div>
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-quote">Shreeminfinity made me look absolutely breathtaking on my wedding day. The look lasted all 12 hours and I received compliments from every single guest. Best artist in Madurai, hands down!</p>
+      <div class="tcard-divider"></div>
+      <div class="tcard-name">Priya Venkatesh</div>
+      <div class="tcard-role">Bride · Tamil Brahmin Wedding 2024</div>
+    </div>
+    <div class="tcard reveal">
+      <div class="tcard-mark">"</div>
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-quote">From the pre-bridal sessions to the final look — everything was perfection. The team is so warm, professional, and deeply skilled. My updo stayed perfect all through the reception!</p>
+      <div class="tcard-divider"></div>
+      <div class="tcard-name">Ananya Krishnaswamy</div>
+      <div class="tcard-role">Bride · Reception & Muhurtham 2024</div>
+    </div>
+    <div class="tcard reveal">
+      <div class="tcard-mark">"</div>
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-quote">I've been a loyal client for 3 years — for my engagement, sangeet, and reception. They always understand exactly what suits me. Shreeminfinity is my forever beauty home!</p>
+      <div class="tcard-divider"></div>
+      <div class="tcard-name">Meera Subramanian</div>
+      <div class="tcard-role">Repeat Client · Events & Occasions</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PACKAGES ── -->
+<section id="packages" class="sec" style="background:var(--soft-white);padding:8rem 5rem;">
+  <div class="pkg-head">
+    <div class="reveal-left">
+      <div class="sec-label">Pricing Plans</div>
+      <h2 class="sec-title">Transparent <em>Packages</em><br><strong>for Every Occasion</strong></h2>
+    </div>
+    <p class="sec-sub reveal-right">All packages are customisable. Contact us for a personalised quote for your specific event and requirements. No hidden charges — ever.</p>
+  </div>
+  <div class="pkg-grid">
+    <div class="pcard reveal">
+      <div class="pcard-tier">Essential</div>
+      <div class="pcard-name">Glow Day</div>
+      <div class="pcard-sub">Perfect for parties & events</div>
+      <div class="pcard-price"><sup>₹</sup>3,999</div>
+      <div class="pcard-period">per occasion</div>
+      <hr class="pcard-hr">
+      <ul class="pcard-list">
+        <li class="pcard-item">HD Party / Event Makeup</li>
+        <li class="pcard-item">Styled Blowout or Waves</li>
+        <li class="pcard-item">Saree Draping (1 style)</li>
+        <li class="pcard-item">Touch-up Kit Provided</li>
+        <li class="pcard-item">Eyelash Application</li>
+      </ul>
+      <a href="#contact" class="pbtn pbtn-lav">Book This Package</a>
+    </div>
+
+    <div class="pcard star reveal">
+      <div class="star-badge">✦ Most Popular</div>
+      <div class="pcard-tier">Signature</div>
+      <div class="pcard-name">Bridal Royale</div>
+      <div class="pcard-sub">Complete bridal experience</div>
+      <div class="pcard-price"><sup>₹</sup>18,999</div>
+      <div class="pcard-period">full bridal package</div>
+      <hr class="pcard-hr">
+      <ul class="pcard-list">
+        <li class="pcard-item">Full HD / Airbrush Bridal Makeup</li>
+        <li class="pcard-item">Elaborate Bridal Updo</li>
+        <li class="pcard-item">Saree Draping — All Events</li>
+        <li class="pcard-item">Pre-Bridal Glow Facial</li>
+        <li class="pcard-item">Reception Look Included</li>
+        <li class="pcard-item">On-Site Venue Service</li>
+        <li class="pcard-item">All-Day Touch-up Support</li>
+      </ul>
+      <a href="#contact" class="pbtn pbtn-gold">Book This Package</a>
+    </div>
+
+    <div class="pcard reveal">
+      <div class="pcard-tier">Preparation</div>
+      <div class="pcard-name">Pre-Bridal Ritual</div>
+      <div class="pcard-sub">Skin & hair preparation</div>
+      <div class="pcard-price"><sup>₹</sup>8,499</div>
+      <div class="pcard-period">full course</div>
+      <hr class="pcard-hr">
+      <ul class="pcard-list">
+        <li class="pcard-item">5-Session Glow Facial Course</li>
+        <li class="pcard-item">Full Body Wax & Threading</li>
+        <li class="pcard-item">Luxury Hair Spa & Mask</li>
+        <li class="pcard-item">Skin Brightening Treatment</li>
+        <li class="pcard-item">Mehendi Day Makeup</li>
+      </ul>
+      <a href="#contact" class="pbtn pbtn-lav">Book This Package</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<div id="contact">
+  <div class="contact-info reveal-left">
+    <div class="sec-label">Get in Touch</div>
+    <h2 class="sec-title">Book Your <em>Appointment</em></h2>
+    <p class="sec-sub" style="margin-bottom:0;">We'd love to be part of your special day. Reach out and we'll craft a beauty journey that's perfectly yours.</p>
+    <div class="contact-details">
+      <div class="cdetail">
+        <div class="cdetail-icon">📍</div>
+        <div>
+          <div class="cdetail-label">Studio Location</div>
+          <div class="cdetail-val">Shreeminfinity Beauty Studio<br>Madurai, Tamil Nadu, India</div>
+        </div>
+      </div>
+      <div class="cdetail">
+        <div class="cdetail-icon">📞</div>
+        <div>
+          <div class="cdetail-label">Call / WhatsApp</div>
+          <div class="cdetail-val">+91 98765 43210<br>Mon – Sun &nbsp; 8:00 AM – 8:00 PM</div>
+        </div>
+      </div>
+      <div class="cdetail">
+        <div class="cdetail-icon">📧</div>
+        <div>
+          <div class="cdetail-label">Email Us</div>
+          <div class="cdetail-val">hello@shreeminfinity.in</div>
+        </div>
+      </div>
+      <div class="cdetail">
+        <div class="cdetail-icon">📱</div>
+        <div>
+          <div class="cdetail-label">Follow Our Work</div>
+          <div class="cdetail-val">@shreeminfinity on Instagram & Facebook</div>
+        </div>
+      </div>
+    </div>
+    <div class="social-strip">
+      <a href="#" class="social-btn" title="Instagram">📷</a>
+      <a href="#" class="social-btn" title="Facebook">📘</a>
+      <a href="#" class="social-btn" title="YouTube">▶️</a>
+      <a href="#" class="social-btn" title="WhatsApp">💬</a>
+    </div>
+  </div>
+
+  <div class="contact-form-side reveal-right">
+    <div class="sec-label">Appointment Request</div>
+    <h2 class="sec-title" style="color:var(--white);margin-bottom:2rem;">Let's Create Your <em>Perfect Look</em></h2>
+    <div class="frow">
+      <div class="fgroup">
+        <label>Your Name</label>
+        <input type="text" placeholder="Priya Venkatesh">
+      </div>
+      <div class="fgroup">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 99999 00000">
+      </div>
+    </div>
+    <div class="fgroup">
+      <label>Email Address</label>
+      <input type="email" placeholder="you@example.com">
+    </div>
+    <div class="frow">
+      <div class="fgroup">
+        <label>Service Required</label>
+        <select>
+          <option>Bridal Makeup</option>
+          <option>Pre-Bridal Package</option>
+          <option>Party / Event Makeup</option>
+          <option>Hair Styling</option>
+          <option>Saree Draping</option>
+          <option>Skin Treatment</option>
+          <option>Nail Art</option>
+        </select>
+      </div>
+      <div class="fgroup">
+        <label>Preferred Date</label>
+        <input type="date">
+      </div>
+    </div>
+    <div class="frow">
+      <div class="fgroup">
+        <label>Event Type</label>
+        <select>
+          <option>Wedding / Muhurtham</option>
+          <option>Engagement</option>
+          <option>Reception</option>
+          <option>Sangeet / Mehendi</option>
+          <option>Festival / Party</option>
+          <option>Corporate Event</option>
+          <option>Photoshoot</option>
+        </select>
+      </div>
+      <div class="fgroup">
+        <label>Package Interest</label>
+        <select>
+          <option>Glow Day (₹3,999)</option>
+          <option>Bridal Royale (₹18,999)</option>
+          <option>Pre-Bridal Ritual (₹8,499)</option>
+          <option>Custom / Discuss</option>
+        </select>
+      </div>
+    </div>
+    <div class="fgroup">
+      <label>Message / Special Requirements</label>
+      <textarea rows="3" placeholder="Tell us about your event, cultural tradition, style references, or any special requests..."></textarea>
+    </div>
+    <button class="fsub" onclick="handleSubmit()">✦ Request Appointment</button>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="foot-brand-name">Shreem<span>infinity</span></div>
+      <p class="foot-brand-desc">Luxury bridal makeup, hair styling and beauty services in Madurai, Tamil Nadu. Where every woman becomes royalty.</p>
+    </div>
+    <div>
+      <div class="foot-col-title">Services</div>
+      <ul class="foot-links">
+        <li><a href="#services">Bridal Makeup</a></li>
+        <li><a href="#services">Hair Styling</a></li>
+        <li><a href="#services">Pre-Bridal Care</a></li>
+        <li><a href="#services">Party Glam</a></li>
+        <li><a href="#services">Saree Draping</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Studio</div>
+      <ul class="foot-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Portfolio</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#packages">Packages</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Contact</div>
+      <ul class="foot-links">
+        <li><a href="#">+91 98765 43210</a></li>
+        <li><a href="#">hello@shreeminfinity.in</a></li>
+        <li><a href="#">Madurai, Tamil Nadu</a></li>
+        <li><a href="#">@shreeminfinity</a></li>
+        <li><a href="#contact">Book Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="foot-copy">© 2025 Shreeminfinity. All Rights Reserved.</div>
+    <div class="foot-love">Crafted with <span>♥</span> for Beautiful Brides</div>
+  </div>
+</footer>
+
+
+</body>
+</html>
