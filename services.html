@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services – Shreeminfinity Beauty Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --lav-50:#F9F7FD;--lav-100:#F0EBF9;--lav-200:#DDD0F4;--lav-300:#C4AEE9;
+  --lav-400:#A886D8;--lav-500:#8B5FC3;--lav-600:#7040A8;--lav-700:#552E88;
+  --gold:#C9A84C;--gold-light:#E8D5A0;--gold-dark:#A07830;
+  --white:#FFFFFF;--soft-white:#FDFCFF;--charcoal:#2A2035;
+  --charcoal-mid:#4A3D60;--stone:#8A7DA0;
+  --font-serif:'Playfair Display',Georgia,serif;
+  --font-sans:'Raleway',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-sans);background:var(--soft-white);color:var(--charcoal);overflow-x:hidden;}
+*{cursor:none;}
+.cursor{position:fixed;width:10px;height:10px;background:var(--lav-500);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid var(--lav-400);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width 0.2s,height 0.2s;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 5rem;background:rgba(253,252,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(196,174,233,0.2);transition:all 0.4s;}
+nav.scrolled{padding:1rem 5rem;box-shadow:0 4px 40px rgba(139,95,195,0.08);}
+.nav-logo{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;color:var(--charcoal);text-decoration:none;}
+.nav-logo span{color:var(--lav-500);font-style:italic;}
+.nav-logo sup{font-size:0.55rem;color:var(--gold);vertical-align:super;font-family:var(--font-sans);}
+.nav-links{display:flex;gap:2.8rem;list-style:none;}
+.nav-links a{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal-mid);text-decoration:none;font-weight:600;position:relative;transition:color 0.2s;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s;}
+.nav-links a:hover,.nav-links a.active{color:var(--lav-600);}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-cta{padding:0.7rem 1.8rem;background:var(--lav-500);color:var(--white);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;}
+.nav-cta:hover{background:var(--lav-700);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer!important;}
+.hamburger span{width:22px;height:1.5px;background:var(--charcoal);display:block;}
+.mob-menu{display:none;position:fixed;inset:0;z-index:400;background:var(--lav-50);padding:7rem 2.5rem 2.5rem;flex-direction:column;}
+.mob-menu.open{display:flex;}
+.mob-menu a{font-family:var(--font-serif);font-size:2.2rem;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--lav-200);padding:1.2rem 0;}
+.mob-close{position:absolute;top:1.5rem;right:2rem;font-size:2rem;background:none;border:none;cursor:pointer!important;}
+
+/* PAGE HERO */
+.page-hero{padding:160px 5rem 90px;background:var(--charcoal);position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;top:-100px;right:-80px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(139,95,195,0.18) 0%,transparent 70%);}
+.page-hero::after{content:'';position:absolute;bottom:-80px;left:25%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);}
+.ph-inner{max-width:680px;position:relative;z-index:2;}
+.sec-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.7rem;}
+.sec-label::before{content:'';width:28px;height:1px;}
+.sec-label-light{color:var(--gold-light);}
+.sec-label-light::before{background:var(--gold);}
+.sec-label-dark{color:var(--gold-dark);}
+.sec-label-dark::before{background:var(--gold);}
+.page-title{font-family:var(--font-serif);font-size:clamp(2.8rem,5vw,5rem);font-weight:400;line-height:1.06;color:var(--white);margin-bottom:1.2rem;}
+.page-title em{font-style:italic;color:var(--lav-300);}
+.page-sub{font-size:0.9rem;line-height:2;color:rgba(255,255,255,0.5);font-weight:300;max-width:520px;}
+
+/* HERO STATS */
+.hero-stats{display:flex;gap:3rem;margin-top:3rem;position:relative;z-index:2;}
+.hstat{border-left:1px solid rgba(201,168,76,0.3);padding-left:1.5rem;}
+.hstat-num{font-family:var(--font-serif);font-size:2rem;font-weight:400;color:var(--white);line-height:1;}
+.hstat-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:0.3rem;}
+
+/* SERVICE NAV TABS */
+.svc-tabs{background:var(--white);border-bottom:1px solid var(--lav-100);position:sticky;top:72px;z-index:100;display:flex;padding:0 5rem;gap:0;overflow-x:auto;}
+.svc-tab{padding:1.2rem 2rem;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;color:var(--stone);text-decoration:none;border-bottom:2px solid transparent;transition:all 0.25s;white-space:nowrap;display:flex;align-items:center;gap:0.6rem;flex-shrink:0;}
+.svc-tab svg{width:14px;height:14px;}
+.svc-tab:hover{color:var(--lav-600);}
+.svc-tab.active{color:var(--lav-600);border-bottom-color:var(--lav-500);}
+
+/* SERVICE SECTIONS — alternating layout */
+.svc-section{padding:7rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.svc-section.reverse{direction:rtl;}
+.svc-section.reverse > *{direction:ltr;}
+.svc-section.bg-lav{background:var(--lav-50);}
+.svc-section.bg-white{background:var(--white);}
+.svc-section.bg-dark{background:var(--charcoal);}
+
+/* SERVICE VISUAL PANEL */
+.svc-visual{position:relative;}
+.svc-visual-box{aspect-ratio:4/5;background:var(--lav-100);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.svc-visual-box.dark-box{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);}
+.svc-visual-icon{width:120px;height:120px;opacity:0.12;}
+.svc-visual-icon svg{width:100%;height:100%;}
+.svc-accent{position:absolute;top:-1.5rem;left:-1.5rem;width:120px;height:120px;border:1px solid var(--lav-300);z-index:-1;}
+.svc-accent.gold{border-color:var(--gold);opacity:0.4;}
+.svc-badge{position:absolute;bottom:2rem;right:-1.5rem;background:var(--lav-600);padding:1.2rem 1.5rem;min-width:140px;}
+.svc-badge.gold-badge{background:var(--gold);}
+.svc-badge-num{font-family:var(--font-serif);font-size:1.8rem;font-weight:300;color:var(--white);}
+.svc-badge-label{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-top:0.2rem;}
+
+/* SERVICE CONTENT */
+.svc-content{}
+.svc-num{font-family:var(--font-serif);font-size:5rem;font-weight:700;color:var(--lav-100);line-height:1;margin-bottom:-1rem;display:block;}
+.svc-section.bg-dark .svc-num{color:rgba(255,255,255,0.05);}
+.svc-icon-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
+.svc-icon-circle{width:52px;height:52px;background:var(--lav-100);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.svc-section.bg-dark .svc-icon-circle{background:rgba(255,255,255,0.07);}
+.svc-icon-circle svg{width:24px;height:24px;}
+.svc-category{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;font-weight:700;color:var(--gold-dark);}
+.svc-section.bg-dark .svc-category{color:var(--gold-light);}
+.svc-title{font-family:var(--font-serif);font-size:clamp(1.8rem,2.5vw,2.6rem);font-weight:400;color:var(--charcoal);line-height:1.15;margin-bottom:1rem;}
+.svc-title em{font-style:italic;color:var(--lav-500);}
+.svc-section.bg-dark .svc-title{color:var(--white);}
+.svc-section.bg-dark .svc-title em{color:var(--lav-300);}
+.svc-desc{font-size:0.87rem;line-height:2;color:var(--stone);font-weight:300;margin-bottom:2rem;}
+.svc-section.bg-dark .svc-desc{color:rgba(255,255,255,0.45);}
+
+/* FEATURE LIST */
+.svc-features{display:flex;flex-direction:column;gap:0.7rem;margin-bottom:2.5rem;}
+.svc-feat{display:flex;align-items:center;gap:0.8rem;font-size:0.8rem;color:var(--charcoal-mid);font-weight:400;}
+.svc-section.bg-dark .svc-feat{color:rgba(255,255,255,0.6);}
+.feat-dot{width:6px;height:6px;background:var(--lav-400);border-radius:50%;flex-shrink:0;}
+.svc-section.bg-dark .feat-dot{background:var(--gold);}
+
+/* PRICE RANGE */
+.svc-price-row{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;padding:1rem 1.5rem;background:var(--lav-50);border-left:3px solid var(--lav-500);}
+.svc-section.bg-dark .svc-price-row{background:rgba(255,255,255,0.05);border-left-color:var(--gold);}
+.svc-price-from{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--stone);}
+.svc-section.bg-dark .svc-price-from{color:rgba(255,255,255,0.35);}
+.svc-price-val{font-family:var(--font-serif);font-size:1.5rem;font-weight:400;color:var(--lav-600);}
+.svc-section.bg-dark .svc-price-val{color:var(--gold-light);}
+
+.btn-svc{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2rem;background:var(--lav-500);color:var(--white);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;}
+.btn-svc:hover{background:var(--lav-700);transform:translateY(-2px);}
+.btn-svc.gold{background:var(--gold);}
+.btn-svc.gold:hover{background:var(--gold-dark);}
+.btn-svc svg{width:14px;height:14px;}
+
+/* PROCESS SECTION */
+.process-section{padding:8rem 5rem;background:var(--lav-600);}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:4rem;}
+.proc-card{position:relative;padding:2.5rem 1.5rem;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);transition:all 0.3s;}
+.proc-card:hover{background:rgba(255,255,255,0.08);}
+.proc-card::before{content:attr(data-step);position:absolute;top:-1px;left:1.5rem;background:var(--gold);color:var(--white);font-size:0.6rem;letter-spacing:0.2em;font-weight:700;padding:0.3rem 0.8rem;text-transform:uppercase;}
+.proc-icon{width:48px;height:48px;background:rgba(255,255,255,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;margin-top:1rem;}
+.proc-icon svg{width:22px;height:22px;}
+.proc-title{font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--white);margin-bottom:0.7rem;}
+.proc-desc{font-size:0.78rem;line-height:1.9;color:rgba(255,255,255,0.45);font-weight:300;}
+
+/* SPECIALIZATIONS GRID */
+.specials-section{padding:8rem 5rem;background:var(--white);}
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem;}
+.spec-card{border:1px solid var(--lav-100);padding:2.5rem;transition:all 0.35s;position:relative;overflow:hidden;}
+.spec-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--lav-500);transform:scaleX(0);transition:transform 0.3s;}
+.spec-card:hover{box-shadow:0 20px 60px rgba(139,95,195,0.1);transform:translateY(-4px);}
+.spec-card:hover::after{transform:scaleX(1);}
+.spec-icon{width:56px;height:56px;background:var(--lav-50);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;}
+.spec-icon svg{width:26px;height:26px;}
+.spec-title{font-family:var(--font-serif);font-size:1.15rem;font-weight:600;color:var(--charcoal);margin-bottom:0.6rem;}
+.spec-desc{font-size:0.78rem;line-height:1.9;color:var(--stone);font-weight:300;}
+
+/* BRANDS STRIP */
+.brands-strip{padding:4rem 5rem;background:var(--lav-50);border-top:1px solid var(--lav-100);}
+.brands-label{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--stone);font-weight:700;text-align:center;margin-bottom:2rem;}
+.brands-row{display:flex;align-items:center;justify-content:center;gap:4rem;flex-wrap:wrap;}
+.brand-item{font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--lav-300);letter-spacing:0.05em;transition:color 0.2s;}
+.brand-item:hover{color:var(--lav-500);}
+
+/* FAQ */
+.faq-section{padding:8rem 5rem;background:var(--charcoal);}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:4rem;}
+.faq-item{border:1px solid rgba(255,255,255,0.06);padding:2rem;cursor:pointer!important;transition:background 0.25s;}
+.faq-item:hover{background:rgba(255,255,255,0.04);}
+.faq-q{font-family:var(--font-serif);font-size:0.95rem;font-weight:500;color:var(--white);margin-bottom:0.8rem;display:flex;justify-content:space-between;align-items:start;gap:1rem;}
+.faq-q-icon{width:20px;height:20px;flex-shrink:0;color:var(--gold);margin-top:2px;}
+.faq-a{font-size:0.78rem;line-height:1.9;color:rgba(255,255,255,0.4);font-weight:300;}
+
+/* TESTIMONIALS */
+.testi-section{padding:8rem 5rem;background:var(--lav-50);}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem;}
+.testi-card{background:var(--white);border:1px solid var(--lav-100);padding:2.5rem;transition:all 0.3s;}
+.testi-card:hover{box-shadow:0 20px 50px rgba(139,95,195,0.08);transform:translateY(-4px);}
+.testi-stars{display:flex;gap:3px;margin-bottom:1rem;}
+.testi-stars svg{width:14px;height:14px;fill:var(--gold);stroke:none;}
+.testi-q{font-family:var(--font-serif);font-size:0.88rem;line-height:1.85;color:var(--charcoal-mid);font-style:italic;margin-bottom:1.5rem;}
+.testi-divider{width:30px;height:1px;background:var(--lav-300);margin-bottom:1rem;}
+.testi-name{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--lav-600);font-weight:700;}
+.testi-role{font-size:0.68rem;color:var(--stone);margin-top:0.2rem;}
+
+/* CTA */
+.cta-band{background:var(--lav-600);padding:5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+.cta-band h2{font-family:var(--font-serif);font-size:2.2rem;color:var(--white);font-weight:400;}
+.cta-band h2 em{font-style:italic;color:var(--gold-light);}
+.btn-gold{padding:1rem 2.4rem;background:var(--gold);color:var(--white);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;display:inline-block;white-space:nowrap;}
+.btn-gold:hover{background:var(--gold-dark);transform:translateY(-2px);}
+.btn-lav{padding:1rem 2.4rem;background:var(--lav-500);color:var(--white);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;display:inline-flex;align-items:center;gap:0.5rem;white-space:nowrap;}
+.btn-lav:hover{background:var(--lav-700);transform:translateY(-2px);}
+.btn-wa{padding:1rem 2.4rem;background:#25D366;color:var(--white);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;display:inline-flex;align-items:center;gap:0.5rem;white-space:nowrap;}
+.btn-wa:hover{background:#1aab52;transform:translateY(-2px);}
+
+/* FOOTER */
+footer{background:var(--charcoal);}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding:5rem 5rem 4rem;}
+.foot-brand-name{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:1rem;}
+.foot-brand-name span{color:var(--lav-300);font-style:italic;}
+.foot-brand-desc{font-size:0.78rem;line-height:1.9;color:rgba(255,255,255,0.4);font-weight:300;max-width:240px;}
+.foot-col-title{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:1.5rem;}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
+.foot-links a{font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;font-weight:300;}
+.foot-links a:hover{color:var(--lav-300);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem 5rem;display:flex;justify-content:space-between;}
+.foot-copy,.foot-love{font-size:0.7rem;color:rgba(255,255,255,0.25);}
+.foot-love span{color:var(--lav-400);}
+
+/* FLOATS */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:300;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 30px rgba(37,211,102,0.4);animation:pulse-wa 2.5s infinite;}
+@keyframes pulse-wa{0%,100%{box-shadow:0 8px 30px rgba(37,211,102,0.4);}50%{box-shadow:0 8px 50px rgba(37,211,102,0.7);}}
+.btt{position:fixed;bottom:2rem;left:2rem;z-index:300;width:44px;height:44px;background:var(--lav-500);border:none;display:flex;align-items:center;justify-content:center;color:var(--white);opacity:0;transition:opacity 0.3s;cursor:pointer!important;}
+.btt.show{opacity:1;}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* Section headers */
+.section-head{max-width:580px;margin-bottom:4rem;}
+.sec-title{font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,3.2rem);font-weight:400;line-height:1.15;color:var(--charcoal);margin-bottom:1rem;}
+.sec-title em{font-style:italic;color:var(--lav-500);}
+.sec-title-white{color:var(--white);}
+.sec-title-white em{color:var(--lav-300);}
+.sec-sub{font-size:0.87rem;line-height:2;color:var(--stone);font-weight:300;margin-top:0.5rem;}
+.sec-sub-white{color:rgba(255,255,255,0.4);}
+
+@media(max-width:1100px){
+  nav{padding:1.2rem 2.5rem;}
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:flex;}
+  .svc-tabs{padding:0 2.5rem;top:60px;}
+  .svc-section,.process-section,.specials-section,.brands-strip,.faq-section,.testi-section,.cta-band{padding-left:2.5rem;padding-right:2.5rem;}
+  .svc-section{grid-template-columns:1fr;gap:3rem;}
+  .svc-section.reverse{direction:ltr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .spec-grid{grid-template-columns:1fr 1fr;}
+  .faq-grid{grid-template-columns:1fr;}
+  .testi-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;padding:3rem 2.5rem;}
+  .footer-bottom{flex-direction:column;gap:0.5rem;padding:1.5rem 2.5rem;}
+  .hero-stats{gap:1.5rem;}
+}
+@media(max-width:640px){
+  .page-hero{padding-left:1.5rem;padding-right:1.5rem;}
+  .svc-section,.process-section,.specials-section,.brands-strip,.faq-section,.testi-section{padding-left:1.5rem;padding-right:1.5rem;}
+  .cta-band{flex-direction:column;align-items:flex-start;padding:3rem 1.5rem;}
+  .process-grid{grid-template-columns:1fr;}
+  .spec-grid{grid-template-columns:1fr;}
+  .hero-stats{flex-wrap:wrap;gap:1.5rem;}
+  .footer-top{grid-template-columns:1fr;padding:3rem 1.5rem;}
+  .brands-row{gap:2rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curRing"></div>
+
+<a href="https://wa.me/919876543210" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Shreem<span>infinity</span><sup>™</sup></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="ratecard.html">Packages</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book Now</a>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="document.getElementById('mobMenu').classList.remove('open')">×</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="ratecard.html">Packages</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Book Now</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="ph-inner">
+    <div class="sec-label sec-label-light">What We Offer</div>
+    <h1 class="page-title">Artistry &<br><em>Expertise</em></h1>
+    <p class="page-sub">From intimate pre-bridal rituals to grand wedding-day transformations — every service is delivered with precision, passion, and decades of craft.</p>
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-num">500+</div>
+        <div class="hstat-label">Brides Served</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">8+</div>
+        <div class="hstat-label">Years of Craft</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">12</div>
+        <div class="hstat-label">Core Services</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">4.9★</div>
+        <div class="hstat-label">Avg. Rating</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE NAV TABS -->
+<div class="svc-tabs">
+  <a href="#bridal-makeup" class="svc-tab active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+    Bridal Makeup
+  </a>
+  <a href="#hair-styling" class="svc-tab">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 114.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1 1 2.48 1.91 3.98 1.91 2.45 0 4.5-2.01 4.5-4.48 0-1.66-1.33-3-2.97-3z"/></svg>
+    Hair Styling
+  </a>
+  <a href="#skin-care" class="svc-tab">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+    Skin & Facials
+  </a>
+  <a href="#saree-draping" class="svc-tab">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H7v10a2 2 0 002 2h6a2 2 0 002-2V10h3.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/></svg>
+    Saree Draping
+  </a>
+  <a href="#party-glam" class="svc-tab">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    Party Glam
+  </a>
+</div>
+
+<!-- SERVICE 1: BRIDAL MAKEUP -->
+<div class="svc-section bg-white" id="bridal-makeup">
+  <div class="svc-visual reveal">
+    <div class="svc-accent"></div>
+    <div class="svc-visual-box">
+      <div class="svc-visual-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+        </svg>
+      </div>
+    </div>
+    <div class="svc-badge">
+      <div class="svc-badge-num">500+</div>
+      <div class="svc-badge-label">Brides Beautifully Transformed</div>
+    </div>
+  </div>
+  <div class="svc-content reveal">
+    <span class="svc-num">01</span>
+    <div class="svc-icon-row">
+      <div class="svc-icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+        </svg>
+      </div>
+      <span class="svc-category">Signature Service</span>
+    </div>
+    <h2 class="svc-title">Bridal <em>Makeup</em></h2>
+    <p class="svc-desc">Your wedding day deserves nothing short of perfection. We blend advanced HD airbrush techniques with traditional South Indian bridal aesthetics to craft looks that photograph beautifully, last all day, and feel effortlessly you.</p>
+    <div class="svc-features">
+      <div class="svc-feat"><div class="feat-dot"></div>HD & Airbrush foundation techniques</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Full bridal trial session included</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Muhurtham, Engagement & Reception looks</div>
+      <div class="svc-feat"><div class="feat-dot"></div>On-site venue service with touch-up artist</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Premium MAC, Huda Beauty & SUGAR products</div>
+    </div>
+    <div class="svc-price-row">
+      <div><div class="svc-price-from">Starting from</div><div class="svc-price-val">₹8,000</div></div>
+      <div style="width:1px;height:40px;background:var(--lav-200);margin:0 1rem;"></div>
+      <div style="font-size:0.75rem;color:var(--stone);font-weight:300;line-height:1.6;">Full bridal package<br>from ₹18,999</div>
+    </div>
+    <a href="contact.html" class="btn-svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book a Bridal Consultation
+    </a>
+  </div>
+</div>
+
+<!-- SERVICE 2: HAIR STYLING -->
+<div class="svc-section bg-lav reverse" id="hair-styling">
+  <div class="svc-visual reveal">
+    <div class="svc-accent gold"></div>
+    <div class="svc-visual-box">
+      <div class="svc-visual-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 114.03 4.03l-8.06 8.08"/>
+          <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1 1 2.48 1.91 3.98 1.91 2.45 0 4.5-2.01 4.5-4.48 0-1.66-1.33-3-2.97-3z"/>
+        </svg>
+      </div>
+    </div>
+    <div class="svc-badge gold-badge">
+      <div class="svc-badge-num">35+</div>
+      <div class="svc-badge-label">Hairstyle Options</div>
+    </div>
+  </div>
+  <div class="svc-content reveal">
+    <span class="svc-num">02</span>
+    <div class="svc-icon-row">
+      <div class="svc-icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 114.03 4.03l-8.06 8.08"/>
+          <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1 1 2.48 1.91 3.98 1.91 2.45 0 4.5-2.01 4.5-4.48 0-1.66-1.33-3-2.97-3z"/>
+        </svg>
+      </div>
+      <span class="svc-category">Hair Artistry</span>
+    </div>
+    <h2 class="svc-title">Hair <em>Styling</em></h2>
+    <p class="svc-desc">From elaborate bridal updos adorned with fresh flowers to precision hair colouring using Schwarzkopf and L'Oréal Professionnel — our hair artistry elevates every look to its fullest potential.</p>
+    <div class="svc-features">
+      <div class="svc-feat"><div class="feat-dot"></div>Bridal updos with floral arrangements</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Global colour, balayage & highlights</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Keratin smoothening & rebonding</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Blow-dry, curls & party styling</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Luxury deep conditioning hair spa</div>
+    </div>
+    <div class="svc-price-row">
+      <div><div class="svc-price-from">Starting from</div><div class="svc-price-val">₹1,200</div></div>
+      <div style="width:1px;height:40px;background:var(--lav-200);margin:0 1rem;"></div>
+      <div style="font-size:0.75rem;color:var(--stone);font-weight:300;line-height:1.6;">Bridal updo<br>from ₹3,500</div>
+    </div>
+    <a href="contact.html" class="btn-svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book Hair Service
+    </a>
+  </div>
+</div>
+
+<!-- SERVICE 3: SKIN & FACIALS -->
+<div class="svc-section bg-dark" id="skin-care">
+  <div class="svc-visual reveal">
+    <div class="svc-visual-box dark-box">
+      <div class="svc-visual-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-400)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+        </svg>
+      </div>
+    </div>
+    <div class="svc-badge" style="background:var(--lav-500);">
+      <div class="svc-badge-num">O3+</div>
+      <div class="svc-badge-label">Advanced Glow Facial</div>
+    </div>
+  </div>
+  <div class="svc-content reveal">
+    <span class="svc-num">03</span>
+    <div class="svc-icon-row">
+      <div class="svc-icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-300)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+        </svg>
+      </div>
+      <span class="svc-category">Skin Wellness</span>
+    </div>
+    <h2 class="svc-title svc-title-white">Skin & <em>Pre-Bridal</em></h2>
+    <p class="svc-desc sec-sub-white">Begin your bridal journey weeks before the big day. Our curated skin preparation courses ensure you walk down the aisle with a radiant, healthy glow that no makeup alone can replicate.</p>
+    <div class="svc-features">
+      <div class="svc-feat"><div class="feat-dot"></div>5-session pre-bridal glow facial course</div>
+      <div class="svc-feat"><div class="feat-dot"></div>O3+ Advanced & Microdermabrasion treatments</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Skin brightening & de-tan therapy</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Full body waxing — Rica, Chocolate & Honey</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Eyebrow shaping, threading & tinting</div>
+    </div>
+    <div class="svc-price-row">
+      <div><div class="svc-price-from">Starting from</div><div class="svc-price-val">₹800</div></div>
+      <div style="width:1px;height:40px;background:rgba(255,255,255,0.1);margin:0 1rem;"></div>
+      <div style="font-size:0.75rem;color:rgba(255,255,255,0.35);font-weight:300;line-height:1.6;">Pre-bridal course<br>from ₹8,499</div>
+    </div>
+    <a href="contact.html" class="btn-svc gold">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Start Pre-Bridal Journey
+    </a>
+  </div>
+</div>
+
+<!-- SERVICE 4: SAREE DRAPING -->
+<div class="svc-section bg-white reverse" id="saree-draping">
+  <div class="svc-visual reveal">
+    <div class="svc-accent"></div>
+    <div class="svc-visual-box">
+      <div class="svc-visual-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H7v10a2 2 0 002 2h6a2 2 0 002-2V10h3.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/>
+        </svg>
+      </div>
+    </div>
+    <div class="svc-badge">
+      <div class="svc-badge-num">15+</div>
+      <div class="svc-badge-label">Draping Styles</div>
+    </div>
+  </div>
+  <div class="svc-content reveal">
+    <span class="svc-num">04</span>
+    <div class="svc-icon-row">
+      <div class="svc-icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H7v10a2 2 0 002 2h6a2 2 0 002-2V10h3.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/>
+        </svg>
+      </div>
+      <span class="svc-category">Traditional Artistry</span>
+    </div>
+    <h2 class="svc-title">Saree <em>Draping</em></h2>
+    <p class="svc-desc">The way a saree drapes tells your story. From classic Kanjivaram pleating for muhurtham to modern fusion styles for the reception, we drape each saree with architectural precision and cultural reverence.</p>
+    <div class="svc-features">
+      <div class="svc-feat"><div class="feat-dot"></div>Traditional Tamil & Telugu bridal styles</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Lehenga & half-saree draping</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Full bridal fashion styling & accessorising</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Pin-free & secure draping techniques</div>
+      <div class="svc-feat"><div class="feat-dot"></div>All-event saree draping in bridal packages</div>
+    </div>
+    <div class="svc-price-row">
+      <div><div class="svc-price-from">Starting from</div><div class="svc-price-val">₹800</div></div>
+      <div style="width:1px;height:40px;background:var(--lav-200);margin:0 1rem;"></div>
+      <div style="font-size:0.75rem;color:var(--stone);font-weight:300;line-height:1.6;">Bridal draping<br>from ₹1,500</div>
+    </div>
+    <a href="contact.html" class="btn-svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book Draping Service
+    </a>
+  </div>
+</div>
+
+<!-- SERVICE 5: PARTY GLAM -->
+<div class="svc-section bg-lav" id="party-glam">
+  <div class="svc-visual reveal">
+    <div class="svc-accent gold"></div>
+    <div class="svc-visual-box">
+      <div class="svc-visual-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </div>
+    </div>
+    <div class="svc-badge gold-badge">
+      <div class="svc-badge-num">1 Day</div>
+      <div class="svc-badge-label">Quick Turnaround</div>
+    </div>
+  </div>
+  <div class="svc-content reveal">
+    <span class="svc-num">05</span>
+    <div class="svc-icon-row">
+      <div class="svc-icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </div>
+      <span class="svc-category">Party & Events</span>
+    </div>
+    <h2 class="svc-title">Party <em>Glam</em></h2>
+    <p class="svc-desc">Every occasion deserves a polished, confident look. Whether it's a family function, corporate event, photoshoot, or festive celebration — our party glam service gives you a flawless, camera-ready finish in under two hours.</p>
+    <div class="svc-features">
+      <div class="svc-feat"><div class="feat-dot"></div>HD foundation party makeup</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Photoshoot & portfolio ready looks</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Sangeet, Mehendi & Engagement makeup</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Party blow-dry, curls & wave styling</div>
+      <div class="svc-feat"><div class="feat-dot"></div>Touch-up kit provided for all bookings</div>
+    </div>
+    <div class="svc-price-row">
+      <div><div class="svc-price-from">Starting from</div><div class="svc-price-val">₹2,500</div></div>
+      <div style="width:1px;height:40px;background:var(--lav-200);margin:0 1rem;"></div>
+      <div style="font-size:0.75rem;color:var(--stone);font-weight:300;line-height:1.6;">Glow Day Package<br>₹3,999 (all-inclusive)</div>
+    </div>
+    <a href="contact.html" class="btn-svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book Party Glam
+    </a>
+  </div>
+</div>
+
+<!-- HOW WE WORK -->
+<div class="process-section">
+  <div class="section-head reveal" style="max-width:100%;margin-bottom:0;">
+    <div class="sec-label" style="color:var(--gold-light);"><span>Our Process</span></div>
+    <h2 class="sec-title sec-title-white">How We <em>Work</em></h2>
+    <p class="sec-sub sec-sub-white">A seamless experience from your very first message to your final touch-up on the big day.</p>
+  </div>
+  <div class="process-grid">
+    <div class="proc-card reveal" data-step="Step 01">
+      <div class="proc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+        </svg>
+      </div>
+      <div class="proc-title">Initial Consultation</div>
+      <p class="proc-desc">Reach out via WhatsApp or our contact form. We discuss your event, preferences, and shortlist looks that match your vision and outfit.</p>
+    </div>
+    <div class="proc-card reveal" data-step="Step 02">
+      <div class="proc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <div class="proc-title">Book & Confirm</div>
+      <p class="proc-desc">Select your date, confirm the package or service, and secure your slot with a 25% advance payment. Your date is exclusively reserved.</p>
+    </div>
+    <div class="proc-card reveal" data-step="Step 03">
+      <div class="proc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+        </svg>
+      </div>
+      <div class="proc-title">Trial Session</div>
+      <p class="proc-desc">For bridal bookings, a full trial session is done 2-4 weeks before the event. We refine every detail until you're completely delighted.</p>
+    </div>
+    <div class="proc-card reveal" data-step="Step 04">
+      <div class="proc-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </div>
+      <div class="proc-title">Your Glam Day</div>
+      <p class="proc-desc">We arrive at your location on time, fully equipped. Our artist stays with you for touch-ups throughout the event, ensuring you stay flawless.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SPECIALISATIONS -->
+<div class="specials-section">
+  <div class="section-head reveal">
+    <div class="sec-label sec-label-dark">Our Expertise</div>
+    <h2 class="sec-title">What We <em>Specialise In</em></h2>
+    <p class="sec-sub">Beyond the basics — specific areas where Shreeminfinity truly excels.</p>
+  </div>
+  <div class="spec-grid">
+    <div class="spec-card reveal">
+      <div class="spec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div class="spec-title">Airbrush Perfection</div>
+      <p class="spec-desc">Our airbrush technique delivers an ultra-smooth, long-lasting finish that looks exceptional in natural light and flash photography — ideal for wedding albums.</p>
+    </div>
+    <div class="spec-card reveal">
+      <div class="spec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+        </svg>
+      </div>
+      <div class="spec-title">South Indian Bridal Aesthetics</div>
+      <p class="spec-desc">Deep expertise in traditional Tamil and Telugu bridal looks — from classic jasmine-adorned updos and gold-toned eye makeup to modern South Indian fusion looks.</p>
+    </div>
+    <div class="spec-card reveal">
+      <div class="spec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="spec-title">On-Site Venue Service</div>
+      <p class="spec-desc">We travel to marriage halls, hotels, and home venues across Madurai and surrounding districts — fully equipped, always on time, with no compromise on quality.</p>
+    </div>
+    <div class="spec-card reveal">
+      <div class="spec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="spec-title">Skin-First Approach</div>
+      <p class="spec-desc">We believe great makeup starts with great skin. Our pre-bridal courses prepare your skin weeks in advance so your makeup applies flawlessly and lasts longer.</p>
+    </div>
+    <div class="spec-card reveal">
+      <div class="spec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+        </svg>
+      </div>
+      <div class="spec-title">Bridesmaid & Family Packages</div>
+      <p class="spec-desc">Group packages for bridesmaids, the mother of the bride, and close family members — so every woman in your bridal party looks and feels her absolute best.</p>
+    </div>
+    <div class="spec-card reveal">
+      <div class="spec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+        </svg>
+      </div>
+      <div class="spec-title">Photoshoot Ready Looks</div>
+      <p class="spec-desc">Whether it's a portfolio shoot, maternity photoshoot, or pre-wedding session — our studio and on-location makeup is optimised for the lens, not just the mirror.</p>
+    </div>
+  </div>
+</div>
+
+<!-- BRANDS -->
+<div class="brands-strip">
+  <div class="brands-label">Trusted Professional Brands We Use</div>
+  <div class="brands-row">
+    <span class="brand-item">MAC Cosmetics</span>
+    <span class="brand-item">Huda Beauty</span>
+    <span class="brand-item">SUGAR</span>
+    <span class="brand-item">L'Oréal Pro</span>
+    <span class="brand-item">Schwarzkopf</span>
+    <span class="brand-item">O3+</span>
+    <span class="brand-item">Rica Wax</span>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <div class="section-head reveal" style="max-width:100%;">
+    <div class="sec-label" style="color:var(--gold-light);"><span>Common Questions</span></div>
+    <h2 class="sec-title sec-title-white">Frequently <em>Asked</em></h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        How far in advance should I book for bridal services?
+        <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+      </div>
+      <p class="faq-a">We recommend booking at least 3–6 months in advance, especially for peak wedding season (November to February). Popular dates fill up fast — a 25% advance secures your slot.</p>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        Do you offer services at home or only at the studio?
+        <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+      </div>
+      <p class="faq-a">Both! We have a fully equipped studio in Madurai and also offer on-site bridal services at your home, hotel, or marriage hall. Travel charges apply for venues outside city limits.</p>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        What is included in a bridal trial session?
+        <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+      </div>
+      <p class="faq-a">A full trial covers the complete bridal makeup look plus the hair updo. We do this 2–4 weeks before your wedding, note every product used, and finalise all details so the wedding day is completely seamless.</p>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        Can I customise a package to fit my budget?
+        <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+      </div>
+      <p class="faq-a">Absolutely. Our à la carte rate card lets you pick exactly what you need, and we're happy to build a custom package. Contact us with your requirements for a personalised quote.</p>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        How long does bridal makeup typically take?
+        <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+      </div>
+      <p class="faq-a">Full bridal HD/airbrush makeup with hair takes 2.5–3.5 hours depending on complexity. Party or event makeup takes 45–90 minutes. We always recommend scheduling buffer time on your wedding morning.</p>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        Do you service clients outside Madurai?
+        <svg class="faq-q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+      </div>
+      <p class="faq-a">Yes — we regularly travel to Dindigul, Sivaganga, Theni, Virudhunagar, and beyond. Travel and accommodation costs are quoted separately based on location. Contact us for outstation rates.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testi-section">
+  <div class="section-head reveal">
+    <div class="sec-label sec-label-dark">Real Brides</div>
+    <h2 class="sec-title">Words from Our <em>Clients</em></h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="testi-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="testi-q">"I was nervous about how my bridal look would turn out, but from the very first trial I knew I was in the best hands. The airbrush makeup lasted the entire day and night without a single touch-up needed."</p>
+      <div class="testi-divider"></div>
+      <div class="testi-name">Kavitha Subramaniam</div>
+      <div class="testi-role">Muhurtham Bride · December 2024</div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="testi-q">"The Pre-Bridal Ritual course was the best decision I made. My skin transformed over 6 weeks. By the wedding, it was so healthy that my foundation barely needed any work. Worth every rupee."</p>
+      <div class="testi-divider"></div>
+      <div class="testi-name">Preethi Anand</div>
+      <div class="testi-role">Pre-Bridal Package · October 2024</div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="testi-q">"The saree draping was impeccable. They managed a very heavy Kanjivaram and it stayed perfect from muhurtham to the end of the reception — no pins came loose, no pleats fell. Truly expert hands."</p>
+      <div class="testi-divider"></div>
+      <div class="testi-name">Meenakshi Rajan</div>
+      <div class="testi-role">Bridal Royale Package · January 2025</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div>
+    <h2>Your Dream Look<br><em>Starts Here.</em></h2>
+    <p>Reach out today and let's craft something beautiful together.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn-lav">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book Appointment
+    </a>
+    <a href="ratecard.html" class="btn-lav" style="background:transparent;border:1px solid rgba(255,255,255,0.2);">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      View Rate Card
+    </a>
+    <a href="https://wa.me/919876543210" class="btn-wa">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="foot-brand-name">Shreem<span>infinity</span></div>
+      <p class="foot-brand-desc">Luxury bridal makeup, hair styling and beauty services in Madurai, Tamil Nadu. Where every woman becomes royalty.</p>
+    </div>
+    <div>
+      <div class="foot-col-title">Services</div>
+      <ul class="foot-links">
+        <li><a href="services.html#bridal-makeup">Bridal Makeup</a></li>
+        <li><a href="services.html#hair-styling">Hair Styling</a></li>
+        <li><a href="services.html#pre-bridal-care">Pre-Bridal Care</a></li>
+        <li><a href="services.html#party-glam">Party Glam</a></li>
+        <li><a href="services.html#saree-draping">Saree Draping</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Studio</div>
+      <ul class="foot-links">
+        <li><a href="about.html">About Us</a></li>
+         <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+       <li><a href="ratecard.html">Packages</a></li>
+       <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Contact</div>
+      <ul class="foot-links">
+        <li><a href="#">+91 98765 43210</a></li>
+        <li><a href="#">hello@shreeminfinity.in</a></li>
+        <li><a href="#">Madurai, Tamil Nadu</a></li>
+        <li><a href="#">@shreeminfinity</a></li>
+        <li><a href="contact.html">Book Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="foot-copy">© 2025 Shreeminfinity. All Rights Reserved.</div>
+    <div class="foot-love">Crafted with <span>♥</span> for Beautiful Brides</div>
+  </div>
+</footer>
+
+<script>
+const cur=document.getElementById('cur'),curR=document.getElementById('curRing');
+document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';curR.style.left=e.clientX+'px';curR.style.top=e.clientY+'px';});
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+  document.getElementById('btt').classList.toggle('show',window.scrollY>400);
+  // update active tab
+  const sections=['bridal-makeup','hair-styling','skin-care','saree-draping','party-glam'];
+  const tabs=document.querySelectorAll('.svc-tab');
+  let current='';
+  sections.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-200)current=id;
+  });
+  tabs.forEach(tab=>{tab.classList.toggle('active',tab.getAttribute('href')==='#'+current);});
+});
+document.getElementById('ham').addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
+const ro=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);ro.unobserve(e.target);}});},{threshold:0.06});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+// Smooth scroll for tab links
+document.querySelectorAll('.svc-tab').forEach(tab=>{
+  tab.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.querySelector(tab.getAttribute('href'));
+    if(target){const y=target.getBoundingClientRect().top+window.scrollY-130;window.scrollTo({top:y,behavior:'smooth'});}
+  });
+});
+</script>
+</body>
+</html>

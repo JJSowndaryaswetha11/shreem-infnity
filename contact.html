@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment – Shreeminfinity | Madurai</title>
+
+<meta name="description" content="Book your bridal or beauty appointment with Shreeminfinity — Madurai's finest luxury beauty studio. HD makeup, hair styling, pre-bridal packages and on-site services.">
+<meta property="og:title" content="Book an Appointment – Shreeminfinity">
+<meta property="og:description" content="Book your bridal or beauty appointment with Shreeminfinity — Madurai's finest luxury beauty studio.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=630&fit=crop&q=85">
+<meta property="og:url" content="https://shreeminfinity.in/contact.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://shreeminfinity.in/contact.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%238B5FC3'/><text y='22' x='5' font-size='18' fill='%23C9A84C' font-family='serif'>S</text></svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --lav-50:#F9F7FD;
+  --lav-100:#F0EBF9;
+  --lav-200:#DDD0F4;
+  --lav-300:#C4AEE9;
+  --lav-400:#A886D8;
+  --lav-500:#8B5FC3;
+  --lav-600:#7040A8;
+  --lav-700:#552E88;
+  --lav-800:#3D1F6A;
+  --gold:#C9A84C;
+  --gold-light:#E8D5A0;
+  --gold-dark:#A07830;
+  --white:#FFFFFF;
+  --soft-white:#FDFCFF;
+  --charcoal:#2A2035;
+  --charcoal-mid:#4A3D60;
+  --stone:#8A7DA0;
+  --font-serif:'Playfair Display',Georgia,serif;
+  --font-sans:'Raleway',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-sans);background:var(--soft-white);color:var(--charcoal);overflow-x:hidden;}
+*{cursor:none;}
+.cursor{position:fixed;width:10px;height:10px;background:var(--lav-500);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s;}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid var(--lav-400);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.15s;}
+
+/* ── PRELOADER ── */
+/* .preloader{position:fixed;inset:0;background:var(--lav-100);z-index:9000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;transition:opacity 0.6s,visibility 0.6s;}
+.preloader.hidden{opacity:0;visibility:hidden;}
+.pre-logo{font-family:var(--font-serif);font-size:2.5rem;color:var(--lav-600);font-weight:600;}
+.pre-logo span{color:var(--gold);font-style:italic;}
+.pre-bar{width:160px;height:1px;background:var(--lav-200);position:relative;overflow:hidden;}
+.pre-bar::after{content:'';position:absolute;left:-100%;top:0;width:100%;height:100%;background:var(--gold);animation:preload 1.5s ease forwards;}
+@keyframes preload{to{left:0;}} */
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 5rem;background:rgba(253,252,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(196,174,233,0.2);transition:all 0.4s;}
+nav.scrolled{padding:1rem 5rem;box-shadow:0 4px 40px rgba(139,95,195,0.08);}
+.nav-logo{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;color:var(--charcoal);text-decoration:none;}
+.nav-logo span{color:var(--lav-500);font-style:italic;}
+.nav-logo sup{font-size:0.55rem;color:var(--gold);vertical-align:super;font-family:var(--font-sans);}
+.nav-links{display:flex;gap:2.8rem;list-style:none;}
+.nav-links a{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal-mid);text-decoration:none;font-weight:600;position:relative;transition:color 0.2s;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s;}
+.nav-links a:hover,.nav-links a.active{color:var(--lav-600);}
+.nav-links a.active::after,.nav-links a:hover::after{width:100%;}
+.nav-cta{padding:0.7rem 1.8rem;background:var(--lav-500);color:var(--white);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;}
+.nav-cta:hover{background:var(--lav-700);transform:translateY(-2px);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer!important;}
+.hamburger span{width:22px;height:1.5px;background:var(--charcoal);display:block;transition:all 0.3s;}
+.mob-menu{display:none;position:fixed;inset:0;z-index:400;background:var(--lav-50);padding:7rem 2.5rem 2.5rem;flex-direction:column;gap:0;}
+.mob-menu.open{display:flex;}
+.mob-menu a{font-family:var(--font-serif);font-size:2.2rem;font-weight:400;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--lav-200);padding:1.2rem 0;transition:color 0.2s;}
+.mob-menu a:hover{color:var(--lav-500);}
+.mob-close{position:absolute;top:1.5rem;right:2rem;font-size:2rem;color:var(--charcoal);cursor:pointer!important;background:none;border:none;font-family:var(--font-serif);}
+
+/* ── PAGE HERO ── */
+.page-hero{position:relative;min-height:480px;display:flex;align-items:center;padding-top:90px;overflow:hidden;}
+.page-hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&h=600&fit=crop&q=80');background-size:cover;background-position:center 20%;}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(42,32,53,0.88) 0%,rgba(112,64,168,0.75) 60%,rgba(42,32,53,0.6) 100%);}
+.page-hero-content{position:relative;z-index:2;padding:5rem 5rem;max-width:700px;}
+.page-eyebrow{display:inline-flex;align-items:center;gap:0.8rem;margin-bottom:1.8rem;}
+.page-eyebrow-line{width:40px;height:1px;background:var(--gold);}
+.page-eyebrow-text{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;}
+.page-hero-title{font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:400;line-height:1.1;color:var(--white);margin-bottom:1.2rem;}
+.page-hero-title em{font-style:italic;color:var(--gold-light);}
+.page-hero-sub{font-size:0.9rem;line-height:1.9;color:rgba(255,255,255,0.65);font-weight:300;max-width:480px;}
+/* breadcrumb */
+.breadcrumb{position:absolute;bottom:2rem;left:5rem;z-index:2;display:flex;align-items:center;gap:0.6rem;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:600;}
+.breadcrumb a{color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--gold-light);}
+.breadcrumb .sep{color:rgba(255,255,255,0.2);}
+.breadcrumb .current{color:var(--gold-light);}
+
+/* ── INFO STRIP ── */
+.info-strip{background:var(--lav-600);padding:0;}
+.info-strip-inner{display:grid;grid-template-columns:repeat(4,1fr);divide-x:1px solid rgba(255,255,255,0.1);}
+.istrip-item{padding:1.8rem 2.5rem;border-right:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:1rem;}
+.istrip-item:last-child{border-right:none;}
+.istrip-icon{font-size:1.4rem;flex-shrink:0;}
+.istrip-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:0.2rem;}
+.istrip-val{font-size:0.8rem;color:rgba(255,255,255,0.8);font-weight:300;}
+
+/* ── MAIN LAYOUT ── */
+.contact-main{display:grid;grid-template-columns:1fr 1.4fr;gap:0;background:var(--white);}
+
+/* ── LEFT PANEL ── */
+.contact-left{background:var(--lav-50);padding:6rem 4rem;}
+.sec-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.7rem;}
+.sec-label::before{content:'';width:28px;height:1px;background:var(--gold);}
+.sec-title{font-family:var(--font-serif);font-size:clamp(1.8rem,2.8vw,2.8rem);font-weight:400;line-height:1.15;color:var(--charcoal);margin-bottom:1.2rem;}
+.sec-title em{font-style:italic;color:var(--lav-500);}
+.sec-sub{font-size:0.87rem;line-height:2;color:var(--stone);font-weight:300;}
+
+/* contact cards */
+.contact-cards{display:flex;flex-direction:column;gap:1.2rem;margin-top:2.5rem;}
+.ccard{background:var(--white);border:1px solid var(--lav-200);padding:1.4rem 1.6rem;display:flex;align-items:flex-start;gap:1.2rem;transition:all 0.3s;text-decoration:none;}
+.ccard:hover{border-color:var(--lav-400);box-shadow:0 8px 30px rgba(139,95,195,0.1);transform:translateX(4px);}
+.ccard-icon{width:46px;height:46px;background:var(--lav-100);border:1px solid var(--lav-200);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;transition:background 0.3s;}
+.ccard:hover .ccard-icon{background:var(--lav-200);}
+.ccard-label{font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:0.3rem;}
+.ccard-val{font-size:0.85rem;color:var(--charcoal-mid);line-height:1.6;font-weight:400;}
+.ccard-hint{font-size:0.72rem;color:var(--stone);font-weight:300;margin-top:0.15rem;}
+
+/* studio photos strip */
+.studio-photos{margin-top:2.5rem;}
+.studio-photos-label{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:0.9rem;}
+.studio-photos-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+.sphoto{overflow:hidden;height:90px;}
+.sphoto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;filter:brightness(0.9);}
+.sphoto:hover img{transform:scale(1.08);filter:brightness(1);}
+
+/* hours table */
+.hours-table{margin-top:2.5rem;border:1px solid var(--lav-200);}
+.hours-head{background:var(--lav-600);padding:0.9rem 1.4rem;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.7);font-weight:700;}
+.hours-row{display:flex;justify-content:space-between;padding:0.75rem 1.4rem;border-bottom:1px solid var(--lav-100);font-size:0.78rem;}
+.hours-row:last-child{border-bottom:none;}
+.hours-day{color:var(--charcoal-mid);font-weight:500;}
+.hours-time{color:var(--lav-600);font-weight:600;}
+.hours-row.today{background:var(--lav-50);}
+.hours-row.today .hours-day{color:var(--lav-600);font-weight:700;}
+
+/* social row */
+.social-row{display:flex;gap:0.7rem;margin-top:2rem;}
+.sbtn{width:40px;height:40px;border:1px solid var(--lav-300);display:flex;align-items:center;justify-content:center;font-size:0.9rem;text-decoration:none;color:var(--lav-600);transition:all 0.25s;}
+.sbtn:hover{background:var(--lav-500);color:var(--white);border-color:var(--lav-500);transform:translateY(-3px);}
+
+/* ── RIGHT PANEL — FORM ── */
+.contact-right{background:var(--lav-700);padding:6rem 4.5rem;}
+.form-header{margin-bottom:3rem;}
+.form-header .sec-label{color:var(--gold-light);}
+.form-header .sec-label::before{background:var(--gold-light);}
+.form-header .sec-title{color:var(--white);}
+
+/* progress indicator */
+.form-progress{display:flex;align-items:center;gap:0;margin-bottom:3rem;}
+.fp-step{display:flex;align-items:center;gap:0.6rem;position:relative;}
+.fp-dot{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:rgba(255,255,255,0.4);font-weight:700;transition:all 0.3s;flex-shrink:0;}
+.fp-dot.active{background:var(--gold);border-color:var(--gold);color:var(--white);}
+.fp-dot.done{background:var(--lav-500);border-color:var(--lav-400);color:var(--white);}
+.fp-label{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);font-weight:600;white-space:nowrap;}
+.fp-label.active{color:var(--gold-light);}
+.fp-line{flex:1;height:1px;background:rgba(255,255,255,0.1);margin:0 0.8rem;}
+.fp-line.done{background:var(--lav-400);}
+
+/* form steps */
+.form-step{display:none;}
+.form-step.active{display:block;}
+
+.fgroup{margin-bottom:1.3rem;}
+.fgroup label{display:block;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.5rem;font-weight:600;}
+.fgroup label span.req{color:var(--gold-light);}
+.fgroup input,.fgroup select,.fgroup textarea{width:100%;padding:0.9rem 1rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:var(--white);font-family:var(--font-sans);font-size:0.85rem;font-weight:300;outline:none;transition:border-color 0.25s,background 0.25s;resize:none;-webkit-appearance:none;}
+.fgroup input::placeholder,.fgroup textarea::placeholder{color:rgba(255,255,255,0.3);}
+.fgroup input:focus,.fgroup select:focus,.fgroup textarea:focus{border-color:var(--gold);background:rgba(255,255,255,0.09);}
+.fgroup select option{background:var(--lav-800);color:var(--white);}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.frow3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;}
+
+/* service select grid */
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-top:0.5rem;}
+.svc-opt{padding:0.85rem 1rem;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);display:flex;align-items:center;gap:0.6rem;cursor:pointer!important;transition:all 0.2s;}
+.svc-opt:hover{border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.08);}
+.svc-opt.selected{border-color:var(--gold);background:rgba(201,168,76,0.12);}
+.svc-opt-icon{font-size:1rem;flex-shrink:0;}
+.svc-opt-name{font-size:0.75rem;color:rgba(255,255,255,0.7);font-weight:500;}
+.svc-opt.selected .svc-opt-name{color:var(--gold-light);}
+
+/* package pick */
+.pkg-pick{display:grid;grid-template-columns:repeat(3,1fr);gap:0.7rem;margin-top:0.5rem;}
+.pkg-opt{padding:1.1rem;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);cursor:pointer!important;transition:all 0.2s;text-align:center;}
+.pkg-opt:hover{border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.08);}
+.pkg-opt.selected{border-color:var(--gold);background:rgba(201,168,76,0.1);}
+.pkg-tier{font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.35);font-weight:700;margin-bottom:0.3rem;}
+.pkg-opt.selected .pkg-tier{color:var(--gold-light);}
+.pkg-name{font-family:var(--font-serif);font-size:0.9rem;color:rgba(255,255,255,0.75);font-weight:600;}
+.pkg-opt.selected .pkg-name{color:var(--white);}
+.pkg-price{font-size:0.72rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;}
+.pkg-opt.selected .pkg-price{color:var(--gold-light);}
+
+/* date picker row */
+.date-pick-wrap{position:relative;}
+.date-pick-wrap input[type=date]{padding-right:2.5rem;color-scheme:dark;}
+
+/* step nav */
+.step-nav{display:flex;justify-content:space-between;align-items:center;margin-top:2.2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);}
+.btn-prev{padding:0.85rem 1.8rem;background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.2);font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);cursor:pointer!important;transition:all 0.3s;}
+.btn-prev:hover{border-color:rgba(255,255,255,0.4);color:var(--white);}
+.btn-next{padding:0.85rem 2.2rem;background:var(--gold);color:var(--white);border:none;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;font-family:var(--font-sans);cursor:pointer!important;transition:all 0.3s;}
+.btn-next:hover{background:var(--gold-dark);transform:translateY(-2px);}
+.btn-submit{padding:1rem 2.8rem;background:var(--gold);color:var(--white);border:none;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;font-family:var(--font-sans);cursor:pointer!important;transition:all 0.3s;}
+.btn-submit:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.35);}
+.step-count{font-size:0.65rem;color:rgba(255,255,255,0.3);letter-spacing:0.1em;}
+
+/* ── SUCCESS STATE ── */
+.success-state{display:none;text-align:center;padding:4rem 2rem;}
+.success-state.show{display:block;}
+.success-icon{font-size:4rem;margin-bottom:1.5rem;animation:pop 0.4s ease;}
+@keyframes pop{0%{transform:scale(0.5);}70%{transform:scale(1.15);}100%{transform:scale(1);}}
+.success-title{font-family:var(--font-serif);font-size:2rem;color:var(--white);margin-bottom:0.8rem;}
+.success-sub{font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.9;font-weight:300;}
+.success-ref{display:inline-block;margin-top:1.5rem;padding:0.6rem 1.4rem;background:rgba(201,168,76,0.15);border:1px solid var(--gold);color:var(--gold-light);font-size:0.72rem;letter-spacing:0.15em;font-weight:600;}
+
+/* ── MAP SECTION ── */
+.map-section{background:var(--white);}
+.map-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:400px;}
+.map-placeholder{background:linear-gradient(160deg,var(--lav-100),var(--lav-200));position:relative;overflow:hidden;min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;}
+.map-bg-text{position:absolute;font-family:var(--font-serif);font-size:16rem;font-weight:700;color:rgba(139,95,195,0.06);line-height:1;font-style:italic;pointer-events:none;}
+.map-pin{font-size:3rem;position:relative;z-index:2;}
+.map-location{position:relative;z-index:2;text-align:center;}
+.map-location-name{font-family:var(--font-serif);font-size:1.4rem;color:var(--lav-600);font-weight:600;margin-bottom:0.3rem;}
+.map-location-addr{font-size:0.78rem;color:var(--stone);font-weight:300;}
+.map-cta{position:relative;z-index:2;margin-top:0.5rem;padding:0.75rem 2rem;background:var(--lav-500);color:var(--white);font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;font-family:var(--font-sans);text-decoration:none;display:inline-block;transition:all 0.3s;}
+.map-cta:hover{background:var(--lav-700);transform:translateY(-2px);}
+.map-info{padding:4rem;display:flex;flex-direction:column;justify-content:center;background:var(--charcoal);}
+.map-info-label{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:1.2rem;}
+.map-info-title{font-family:var(--font-serif);font-size:1.8rem;color:var(--white);margin-bottom:1.5rem;font-weight:400;}
+.map-info-title em{font-style:italic;color:var(--lav-300);}
+.nearby-list{list-style:none;display:flex;flex-direction:column;gap:0.7rem;margin-bottom:2rem;}
+.nearby-item{font-size:0.8rem;color:rgba(255,255,255,0.5);padding-left:1.2rem;position:relative;font-weight:300;}
+.nearby-item::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:0.65rem;}
+.parking-note{font-size:0.75rem;color:rgba(255,255,255,0.3);padding:0.8rem 1rem;border:1px solid rgba(255,255,255,0.08);line-height:1.7;font-weight:300;}
+
+/* ── FAQ ── */
+.faq-section{background:var(--lav-50);padding:6rem 5rem;}
+.faq-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;}
+.faq-list{display:flex;flex-direction:column;gap:0;}
+.faq-item{border-bottom:1px solid var(--lav-200);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0;cursor:pointer!important;gap:1rem;}
+.faq-q-text{font-family:var(--font-serif);font-size:1rem;color:var(--charcoal);font-weight:500;}
+.faq-arrow{font-size:1rem;color:var(--lav-400);transition:transform 0.3s;flex-shrink:0;}
+.faq-item.open .faq-arrow{transform:rotate(45deg);color:var(--lav-600);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
+.faq-item.open .faq-a{max-height:200px;}
+.faq-a-text{font-size:0.82rem;line-height:1.9;color:var(--stone);font-weight:300;padding-bottom:1.2rem;}
+
+/* ── FOOTER ── */
+footer{background:var(--charcoal);padding:0;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding:5rem 5rem 4rem;}
+.foot-brand-name{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:1rem;}
+.foot-brand-name span{color:var(--lav-300);font-style:italic;}
+.foot-brand-desc{font-size:0.78rem;line-height:1.9;color:rgba(255,255,255,0.4);font-weight:300;max-width:240px;}
+.foot-col-title{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:1.5rem;}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
+.foot-links a{font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;font-weight:300;}
+.foot-links a:hover{color:var(--lav-300);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem 5rem;display:flex;justify-content:space-between;align-items:center;}
+.foot-copy{font-size:0.7rem;color:rgba(255,255,255,0.25);}
+.foot-love{font-size:0.7rem;color:rgba(255,255,255,0.25);}
+.foot-love span{color:var(--lav-400);}
+
+/* ── FLOAT ── */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:300;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 30px rgba(37,211,102,0.4);animation:pulse-wa 2.5s infinite;}
+.wa-float svg{width:28px;height:28px;}
+@keyframes pulse-wa{0%,100%{box-shadow:0 8px 30px rgba(37,211,102,0.4);}50%{box-shadow:0 8px 50px rgba(37,211,102,0.7);}}
+.btt{position:fixed;bottom:2rem;left:2rem;z-index:300;width:44px;height:44px;background:var(--lav-500);border:none;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--white);opacity:0;transition:opacity 0.3s,transform 0.3s;cursor:pointer!important;}
+.btt.show{opacity:1;}
+.btt:hover{transform:translateY(-3px);background:var(--lav-700);}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal-left.in{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal-right.in{opacity:1;transform:translateX(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  nav{padding:1.2rem 2.5rem;}
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:flex;}
+  .page-hero-content{padding:4rem 2.5rem;}
+  .contact-main,.map-wrap,.faq-inner{grid-template-columns:1fr;}
+  .contact-left,.contact-right{padding:4rem 2.5rem;}
+  .map-info{padding:3rem 2.5rem;}
+  .map-placeholder{min-height:280px;}
+  .info-strip-inner{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem;}
+  .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center;padding:1.5rem 2.5rem;}
+  .faq-section{padding:4rem 2.5rem;}
+  .pkg-pick{grid-template-columns:1fr 1fr 1fr;}
+  .breadcrumb{left:2.5rem;}
+}
+@media(max-width:640px){
+  .frow,.frow3{grid-template-columns:1fr;}
+  .service-grid,.pkg-pick{grid-template-columns:1fr;}
+  .info-strip-inner{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .studio-photos-row{grid-template-columns:1fr 1fr 1fr;}
+  .form-progress{flex-wrap:wrap;gap:0.5rem;}
+  .fp-line{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="pre-logo">Shreem<span>infinity</span></div>
+  <div class="pre-bar"></div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curRing"></div>
+
+<!-- FLOAT BUTTONS -->
+<a href="https://wa.me/919876543210" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Shreem<span>infinity</span><sup>™</sup></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#gallery">Gallery</a></li>
+    <li><a href="index.html#packages">Packages</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="#booking-form" class="nav-cta">Book Now</a>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMob()">×</button>
+  <a href="index.html" onclick="closeMob()">Home</a>
+  <a href="index.html#services" onclick="closeMob()">Services</a>
+  <a href="index.html#gallery" onclick="closeMob()">Gallery</a>
+  <a href="index.html#packages" onclick="closeMob()">Packages</a>
+  <a href="#booking-form" onclick="closeMob()">Book Now</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-eyebrow reveal">
+      <span class="page-eyebrow-line"></span>
+      <span class="page-eyebrow-text">Your Beauty Journey Begins Here</span>
+    </div>
+    <h1 class="page-hero-title reveal">
+      Book Your<br><em>Appointment</em>
+    </h1>
+    <p class="page-hero-sub reveal">Tell us about your event, your vision, your dream — and we'll create a look that makes your heart sing. Every bride deserves her perfect moment.</p>
+  </div>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="sep">✦</span>
+    <span class="current">Contact & Booking</span>
+  </div>
+</section>
+
+<!-- ── INFO STRIP ── -->
+<div class="info-strip">
+  <div class="info-strip-inner">
+    <div class="istrip-item">
+      <span class="istrip-icon">📍</span>
+      <div>
+        <div class="istrip-label">Location</div>
+        <div class="istrip-val">Madurai, Tamil Nadu</div>
+      </div>
+    </div>
+    <div class="istrip-item">
+      <span class="istrip-icon">📞</span>
+      <div>
+        <div class="istrip-label">Phone / WhatsApp</div>
+        <div class="istrip-val">+91 98765 43210</div>
+      </div>
+    </div>
+    <div class="istrip-item">
+      <span class="istrip-icon">🕐</span>
+      <div>
+        <div class="istrip-label">Studio Hours</div>
+        <div class="istrip-val">Mon – Sun · 8 AM – 8 PM</div>
+      </div>
+    </div>
+    <div class="istrip-item">
+      <span class="istrip-icon">✦</span>
+      <div>
+        <div class="istrip-label">Response Time</div>
+        <div class="istrip-val">Within 24 hours</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div class="contact-main">
+
+  <!-- LEFT PANEL -->
+  <div class="contact-left">
+    <div class="reveal-left">
+      <div class="sec-label">Reach Us</div>
+      <h2 class="sec-title">We'd Love to<br><em>Hear From You</em></h2>
+      <p class="sec-sub">Whether it's a grand bridal affair or a quick party glam — we're here for every occasion. Contact us through any of the channels below.</p>
+    </div>
+
+    <div class="contact-cards reveal">
+      <a href="tel:+919876543210" class="ccard">
+        <div class="ccard-icon">📞</div>
+        <div>
+          <div class="ccard-label">Call Us</div>
+          <div class="ccard-val">+91 98765 43210</div>
+          <div class="ccard-hint">Mon – Sun, 8:00 AM to 8:00 PM</div>
+        </div>
+      </a>
+      <a href="https://wa.me/919876543210" target="_blank" class="ccard">
+        <div class="ccard-icon">💬</div>
+        <div>
+          <div class="ccard-label">WhatsApp</div>
+          <div class="ccard-val">+91 98765 43210</div>
+          <div class="ccard-hint">Fastest way to reach us — chat anytime</div>
+        </div>
+      </a>
+      <a href="mailto:hello@shreeminfinity.in" class="ccard">
+        <div class="ccard-icon">📧</div>
+        <div>
+          <div class="ccard-label">Email</div>
+          <div class="ccard-val">hello@shreeminfinity.in</div>
+          <div class="ccard-hint">We respond within 24 hours</div>
+        </div>
+      </a>
+      <a href="#" class="ccard">
+        <div class="ccard-icon">📷</div>
+        <div>
+          <div class="ccard-label">Instagram DM</div>
+          <div class="ccard-val">@shreeminfinity</div>
+          <div class="ccard-hint">Slide into our DMs — we're always there!</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="studio-photos reveal">
+      <div class="studio-photos-label">Studio Glimpses</div>
+      <div class="studio-photos-row">
+        <div class="sphoto"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=200&h=120&fit=crop&q=80" alt="Studio" loading="lazy"></div>
+        <div class="sphoto"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=200&h=120&fit=crop&q=80" alt="Makeup" loading="lazy"></div>
+        <div class="sphoto"><img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=200&h=120&fit=crop&q=80" alt="Hair" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="hours-table reveal">
+      <div class="hours-head">Studio Hours</div>
+      <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">8:00 AM – 8:00 PM</span></div>
+      <div class="hours-row today"><span class="hours-day">Saturday ✦ Today</span><span class="hours-time">8:00 AM – 9:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">9:00 AM – 7:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Bridal Day (On-Site)</span><span class="hours-time">By Appointment</span></div>
+    </div>
+
+    <div class="social-row reveal">
+      <a href="#" class="sbtn" title="Instagram">📷</a>
+      <a href="#" class="sbtn" title="Facebook">📘</a>
+      <a href="#" class="sbtn" title="YouTube">▶️</a>
+      <a href="https://wa.me/919876543210" class="sbtn" title="WhatsApp">💬</a>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL — MULTI-STEP FORM -->
+  <div class="contact-right" id="booking-form">
+    <div class="form-header">
+      <div class="sec-label">Appointment Request</div>
+      <h2 class="sec-title" style="color:var(--white);">Book Your <em>Perfect Look</em></h2>
+    </div>
+
+    <!-- Progress -->
+    <div class="form-progress" id="formProgress">
+      <div class="fp-step">
+        <div class="fp-dot active" id="dot1">1</div>
+        <span class="fp-label active" id="lbl1">Your Details</span>
+      </div>
+      <div class="fp-line" id="line12"></div>
+      <div class="fp-step">
+        <div class="fp-dot" id="dot2">2</div>
+        <span class="fp-label" id="lbl2">Service & Package</span>
+      </div>
+      <div class="fp-line" id="line23"></div>
+      <div class="fp-step">
+        <div class="fp-dot" id="dot3">3</div>
+        <span class="fp-label" id="lbl3">Event Details</span>
+      </div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="form-step active" id="step1">
+      <div class="frow">
+        <div class="fgroup">
+          <label>First Name <span class="req">*</span></label>
+          <input type="text" id="fname" placeholder="Priya">
+        </div>
+        <div class="fgroup">
+          <label>Last Name</label>
+          <input type="text" id="lname" placeholder="Venkatesh">
+        </div>
+      </div>
+      <div class="fgroup">
+        <label>Phone Number <span class="req">*</span></label>
+        <input type="tel" id="phone" placeholder="+91 99999 00000">
+      </div>
+      <div class="fgroup">
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com">
+      </div>
+      <div class="fgroup">
+        <label>How did you hear about us?</label>
+        <select id="source">
+          <option value="">Select an option</option>
+          <option>Instagram</option>
+          <option>Facebook</option>
+          <option>Word of mouth / Friend</option>
+          <option>Google Search</option>
+          <option>Previous client</option>
+          <option>YouTube</option>
+          <option>Wedding portal</option>
+        </select>
+      </div>
+      <div class="step-nav">
+        <span class="step-count">Step 1 of 3</span>
+        <button class="btn-next" onclick="nextStep(2)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="form-step" id="step2">
+      <div class="fgroup">
+        <label>Service Required <span class="req">*</span> <span style="color:rgba(255,255,255,0.3);font-weight:300;">(select all that apply)</span></label>
+        <div class="service-grid">
+          <div class="svc-opt" onclick="toggleSvc(this)"><span class="svc-opt-icon">💍</span><span class="svc-opt-name">Bridal Makeup</span></div>
+          <div class="svc-opt" onclick="toggleSvc(this)"><span class="svc-opt-icon">✂️</span><span class="svc-opt-name">Hair Styling</span></div>
+          <div class="svc-opt" onclick="toggleSvc(this)"><span class="svc-opt-icon">🌸</span><span class="svc-opt-name">Pre-Bridal Ritual</span></div>
+          <div class="svc-opt" onclick="toggleSvc(this)"><span class="svc-opt-icon">🎉</span><span class="svc-opt-name">Party / Event Glam</span></div>
+          <div class="svc-opt" onclick="toggleSvc(this)"><span class="svc-opt-icon">🧖</span><span class="svc-opt-name">Skin Care</span></div>
+          <div class="svc-opt" onclick="toggleSvc(this)"><span class="svc-opt-icon">👗</span><span class="svc-opt-name">Saree Draping</span></div>
+          <div class="svc-opt" onclick="toggleSvc(this)"><span class="svc-opt-icon">💅</span><span class="svc-opt-name">Nail Art</span></div>
+          <div class="svc-opt" onclick="toggleSvc(this)"><span class="svc-opt-icon">📸</span><span class="svc-opt-name">Photoshoot Styling</span></div>
+        </div>
+      </div>
+
+      <div class="fgroup" style="margin-top:1.5rem;">
+        <label>Package Interest</label>
+        <div class="pkg-pick">
+          <div class="pkg-opt" onclick="selectPkg(this)">
+            <div class="pkg-tier">Essential</div>
+            <div class="pkg-name">Glow Day</div>
+            <div class="pkg-price">₹3,999</div>
+          </div>
+          <div class="pkg-opt" onclick="selectPkg(this)">
+            <div class="pkg-tier">Signature</div>
+            <div class="pkg-name">Bridal Royale</div>
+            <div class="pkg-price">₹18,999</div>
+          </div>
+          <div class="pkg-opt" onclick="selectPkg(this)">
+            <div class="pkg-tier">Preparation</div>
+            <div class="pkg-name">Pre-Bridal</div>
+            <div class="pkg-price">₹8,499</div>
+          </div>
+        </div>
+        <div style="margin-top:0.6rem;">
+          <div class="svc-opt" style="justify-content:flex-start;" onclick="selectPkgCustom(this)"><span class="svc-opt-icon">💬</span><span class="svc-opt-name">Custom / Would like to discuss</span></div>
+        </div>
+      </div>
+
+      <div class="step-nav">
+        <button class="btn-prev" onclick="nextStep(1)">← Back</button>
+        <span class="step-count">Step 2 of 3</span>
+        <button class="btn-next" onclick="nextStep(3)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="form-step" id="step3">
+      <div class="frow">
+        <div class="fgroup">
+          <label>Event Type <span class="req">*</span></label>
+          <select id="eventType">
+            <option value="">Select event</option>
+            <option>Wedding / Muhurtham</option>
+            <option>Engagement</option>
+            <option>Reception</option>
+            <option>Sangeet Night</option>
+            <option>Mehendi Ceremony</option>
+            <option>Festival / Puja</option>
+            <option>Corporate / Formal</option>
+            <option>Photoshoot</option>
+            <option>Birthday Party</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fgroup">
+          <label>Cultural Tradition</label>
+          <select id="tradition">
+            <option value="">Select tradition</option>
+            <option>Tamil (Hindu)</option>
+            <option>Tamil Brahmin</option>
+            <option>Telugu</option>
+            <option>Malayalam / Kerala</option>
+            <option>Christian</option>
+            <option>Muslim / Islamic</option>
+            <option>North Indian</option>
+            <option>Gujarati / Marathi</option>
+            <option>Other / Mixed</option>
+          </select>
+        </div>
+      </div>
+      <div class="frow">
+        <div class="fgroup">
+          <label>Preferred Date <span class="req">*</span></label>
+          <div class="date-pick-wrap"><input type="date" id="prefDate"></div>
+        </div>
+        <div class="fgroup">
+          <label>Preferred Time</label>
+          <select id="prefTime">
+            <option value="">Select a time</option>
+            <option>Early Morning (4–6 AM)</option>
+            <option>Morning (6–9 AM)</option>
+            <option>Mid Morning (9–11 AM)</option>
+            <option>Afternoon (11 AM–2 PM)</option>
+            <option>Evening (2–6 PM)</option>
+            <option>Night (6–8 PM)</option>
+          </select>
+        </div>
+      </div>
+      <div class="fgroup">
+        <label>Venue / Location</label>
+        <input type="text" id="venue" placeholder="Hotel name, home address, or mandapam name">
+      </div>
+      <div class="fgroup">
+        <label>Message & Special Requests</label>
+        <textarea id="message" rows="4" placeholder="Share your inspiration, skin concerns, reference photos you love, cultural requirements, or anything else we should know to prepare your perfect look..."></textarea>
+      </div>
+      <div class="fgroup" style="display:flex;align-items:flex-start;gap:0.8rem;margin-top:0.5rem;">
+        <input type="checkbox" id="agree" style="width:auto;flex-shrink:0;margin-top:3px;accent-color:var(--gold);">
+        <label for="agree" style="font-size:0.73rem;color:rgba(255,255,255,0.4);text-transform:none;letter-spacing:0;margin:0;cursor:pointer!important;">I agree to be contacted by Shreeminfinity regarding my appointment request. My details will not be shared with third parties.</label>
+      </div>
+      <div class="step-nav">
+        <button class="btn-prev" onclick="nextStep(2)">← Back</button>
+        <span class="step-count">Step 3 of 3</span>
+        <button class="btn-submit" onclick="submitForm()">✦ Confirm Request</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="success-state" id="successState">
+      <div class="success-icon">✦</div>
+      <div class="success-title">Request Received!</div>
+      <p class="success-sub">Thank you for choosing Shreeminfinity. Our team will review your request and contact you within 24 hours to confirm your appointment details.<br><br>Until then — get excited! Your beauty journey is about to begin. ✨</p>
+      <div class="success-ref" id="successRef">Ref: SHR-2025-0000</div>
+      <br><br>
+      <a href="index.html" style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-decoration:underline;font-weight:600;">← Back to Homepage</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAP SECTION ── -->
+<div class="map-wrap">
+  <div class="map-placeholder reveal">
+    <div class="map-bg-text">M</div>
+    <div class="map-pin">📍</div>
+    <div class="map-location">
+      <div class="map-location-name">Shreeminfinity Studio</div>
+      <div class="map-location-addr">Madurai, Tamil Nadu, India</div>
+    </div>
+    <a href="https://maps.google.com" target="_blank" class="map-cta">Open in Google Maps →</a>
+  </div>
+  <div class="map-info reveal-right">
+    <div class="map-info-label">Finding Us</div>
+    <h3 class="map-info-title">Visit Our <em>Studio</em></h3>
+    <ul class="nearby-list">
+      <li class="nearby-item">Located in the heart of Madurai city</li>
+      <li class="nearby-item">5 minutes from Meenakshi Amman Temple</li>
+      <li class="nearby-item">Near major hotels & marriage halls</li>
+      <li class="nearby-item">Easily accessible by auto & cab</li>
+      <li class="nearby-item">On-site service available across Madurai district</li>
+    </ul>
+    <div class="parking-note">🚗 &nbsp; Free parking available nearby. On-site bridal services available at your hotel, home, or mandapam — anywhere in Madurai and surrounding districts including Dindigul, Virudhunagar, Theni and Sivaganga.</div>
+  </div>
+</div>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="reveal-left">
+      <div class="sec-label">Quick Answers</div>
+      <h2 class="sec-title">Frequently<br>Asked <em>Questions</em></h2>
+      <p class="sec-sub" style="margin-top:1rem;">Can't find your answer here? Call or WhatsApp us — we're always happy to help.</p>
+      <a href="https://wa.me/919876543210" target="_blank" style="display:inline-block;margin-top:2rem;padding:0.85rem 2rem;background:var(--lav-500);color:var(--white);font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;">Ask on WhatsApp →</a>
+    </div>
+    <div class="faq-list reveal-right">
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How early should I book for my wedding?</span>
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a"><p class="faq-a-text">We recommend booking at least 3–6 months in advance for bridal packages, especially during peak wedding season (October – March). This ensures availability and allows time for pre-bridal sessions and a trial run.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do you provide on-site bridal services?</span>
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a"><p class="faq-a-text">Absolutely! We come to your venue — be it a hotel, home, or mandapam — anywhere in Madurai and surrounding districts. Our artists arrive fully equipped with professional lighting and all tools needed.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What is a trial session and is it necessary?</span>
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a"><p class="faq-a-text">A trial is a full run-through of your bridal look done weeks before your wedding. It lets you see your look, request changes, and go into your big day with complete confidence. We strongly recommend it for all brides.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Which makeup brands do you use?</span>
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a"><p class="faq-a-text">We exclusively use premium international brands including MAC, Huda Beauty, Charlotte Tilbury, Kryolan, and NARS. All products are dermatologically safe and suitable for all skin types and tones.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do you handle all cultural wedding traditions?</span>
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a"><p class="faq-a-text">Yes! We specialise in Tamil, Telugu, Kerala, Christian, Muslim, North Indian, Gujarati, and Maharashtrian bridal looks. Our artists are deeply familiar with the specific aesthetic requirements of each tradition.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Can I customise my package?</span>
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a"><p class="faq-a-text">Every package is fully customisable. We understand each wedding is unique — you can add or remove services, combine packages, or build something entirely bespoke. Contact us to discuss a personalised quote.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="foot-brand-name">Shreem<span>infinity</span></div>
+      <p class="foot-brand-desc">Luxury bridal makeup, hair styling and beauty services in Madurai, Tamil Nadu. Where every woman becomes royalty.</p>
+    </div>
+    <div>
+      <div class="foot-col-title">Services</div>
+      <ul class="foot-links">
+        <li><a href="index.html#services">Bridal Makeup</a></li>
+        <li><a href="index.html#services">Hair Styling</a></li>
+        <li><a href="index.html#services">Pre-Bridal Care</a></li>
+        <li><a href="index.html#services">Party Glam</a></li>
+        <li><a href="index.html#services">Saree Draping</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Studio</div>
+      <ul class="foot-links">
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#gallery">Portfolio</a></li>
+        <li><a href="index.html#process">Our Process</a></li>
+        <li><a href="index.html#testimonials">Reviews</a></li>
+        <li><a href="index.html#packages">Packages</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Contact</div>
+      <ul class="foot-links">
+        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><a href="mailto:hello@shreeminfinity.in">hello@shreeminfinity.in</a></li>
+        <li><a href="#">Madurai, Tamil Nadu</a></li>
+        <li><a href="#">@shreeminfinity</a></li>
+        <li><a href="#booking-form">Book Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="foot-copy">© 2025 Shreeminfinity. All Rights Reserved.</div>
+    <div class="foot-love">Crafted with <span>♥</span> for Beautiful Brides</div>
+  </div>
+</footer>
+
+<script>
+// Preloader
+window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('preloader').classList.add('hidden');},1400);});
+
+// Cursor
+const cur=document.getElementById('cur'),curR=document.getElementById('curRing');
+document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';curR.style.left=e.clientX+'px';curR.style.top=e.clientY+'px';});
+
+// Nav / BTT
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+  document.getElementById('btt').classList.toggle('show',window.scrollY>400);
+});
+document.getElementById('ham').addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
+function closeMob(){document.getElementById('mobMenu').classList.remove('open');}
+
+// Reveal
+const ro=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);ro.unobserve(e.target);}});},{threshold:0.07,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+
+// ── MULTI-STEP FORM ──
+let currentStep = 1;
+function nextStep(to){
+  if(to > currentStep){
+    // basic validation
+    if(currentStep===1){
+      const phone=document.getElementById('phone').value.trim();
+      const fname=document.getElementById('fname').value.trim();
+      if(!fname){alert('Please enter your name to continue.');return;}
+      if(!phone){alert('Please enter your phone number to continue.');return;}
+    }
+    if(currentStep===3 && to>3){return submitForm();}
+  }
+  document.getElementById('step'+currentStep).classList.remove('active');
+  currentStep=to;
+  document.getElementById('step'+currentStep).classList.add('active');
+  updateProgress();
+  document.getElementById('booking-form').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function updateProgress(){
+  for(let i=1;i<=3;i++){
+    const dot=document.getElementById('dot'+i);
+    const lbl=document.getElementById('lbl'+i);
+    dot.classList.remove('active','done');
+    lbl.classList.remove('active');
+    if(i<currentStep){dot.classList.add('done');dot.textContent='✓';}
+    else if(i===currentStep){dot.classList.add('active');dot.textContent=i;lbl.classList.add('active');}
+    else{dot.textContent=i;}
+  }
+  const l12=document.getElementById('line12');
+  const l23=document.getElementById('line23');
+  if(l12)l12.classList.toggle('done',currentStep>1);
+  if(l23)l23.classList.toggle('done',currentStep>2);
+}
+
+// Service toggles
+function toggleSvc(el){el.classList.toggle('selected');}
+let selectedPkg=null;
+function selectPkg(el){
+  document.querySelectorAll('.pkg-opt').forEach(e=>e.classList.remove('selected'));
+  document.querySelectorAll('.pkg-pick ~ div .svc-opt').forEach(e=>e.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedPkg=el.querySelector('.pkg-name').textContent;
+}
+function selectPkgCustom(el){
+  document.querySelectorAll('.pkg-opt').forEach(e=>e.classList.remove('selected'));
+  el.classList.toggle('selected');
+}
+
+// FAQ
+function toggleFaq(el){
+  const item=el.closest('.faq-item');
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!wasOpen)item.classList.add('open');
+}
+
+// Submit
+function submitForm(){
+  const agree=document.getElementById('agree');
+  if(!agree.checked){alert('Please agree to the terms to submit your request.');return;}
+  const ref='SHR-2025-'+Math.floor(1000+Math.random()*9000);
+  document.getElementById('step3').classList.remove('active');
+  document.getElementById('formProgress').style.display='none';
+  const ss=document.getElementById('successState');
+  ss.classList.add('show');
+  document.getElementById('successRef').textContent='Ref: '+ref;
+  document.getElementById('booking-form').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// Set today's hours row dynamically
+const today=new Date().getDay(); // 0=sun,6=sat
+document.querySelectorAll('.hours-row').forEach(r=>r.classList.remove('today'));
+const rows=document.querySelectorAll('.hours-row');
+if(today===6&&rows[1])rows[1].classList.add('today');
+else if(today===0&&rows[2])rows[2].classList.add('today');
+else if(rows[0])rows[0].classList.add('today');
+</script>
+</body>
+</html>
