@@ -17,24 +17,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --lav-50:#F9F7FD;
-  --lav-100:#F0EBF9;
-  --lav-200:#DDD0F4;
-  --lav-300:#C4AEE9;
-  --lav-400:#A886D8;
-  --lav-500:#8B5FC3;
-  --lav-600:#7040A8;
-  --lav-700:#552E88;
-  --lav-800:#3D1F6A;
-  --gold:#C9A84C;
-  --gold-light:#E8D5A0;
-  --gold-dark:#A07830;
-  --white:#FFFFFF;
-  --soft-white:#FDFCFF;
-  --charcoal:#2A2035;
-  --charcoal-mid:#4A3D60;
-  --stone:#8A7DA0;
+:root {
+  --lav-50:  #F4F6F2;
+  --lav-100: #E4EAE0;
+  --lav-200: #C4D0BC;
+  --lav-300: #96AA8A;
+  --lav-400: #6B8A5E;
+  --lav-500: #4A6E3A;
+  --lav-600: #3A5A2C;
+  --lav-700: #2C4520;
+
+  --gold:       #C9A84C;
+  --gold-light: #E8D5A0;
+  --gold-dark:  #A07830;
+
+  --white:       #FFFFFF;
+  --soft-white:  #F7F9F5;
+  --charcoal:    #1A2415;
+  --charcoal-mid:#324728;
+  --stone:       #5C6E54;
+
   --font-serif:'Playfair Display',Georgia,serif;
   --font-sans:'Raleway',sans-serif;
 }
@@ -77,7 +79,7 @@ nav.scrolled{padding:1rem 5rem;box-shadow:0 4px 40px rgba(139,95,195,0.08);}
 /* ── PAGE HERO ── */
 .page-hero{position:relative;min-height:480px;display:flex;align-items:center;padding-top:90px;overflow:hidden;}
 .page-hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&h=600&fit=crop&q=80');background-size:cover;background-position:center 20%;}
-.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(42,32,53,0.88) 0%,rgba(112,64,168,0.75) 60%,rgba(42,32,53,0.6) 100%);}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,36,21,0.88) 0%,rgba(58,90,44,0.75) 60%,rgba(26,36,21,0.6) 100%);}
 .page-hero-content{position:relative;z-index:2;padding:5rem 5rem;max-width:700px;}
 .page-eyebrow{display:inline-flex;align-items:center;gap:0.8rem;margin-bottom:1.8rem;}
 .page-eyebrow-line{width:40px;height:1px;background:var(--gold);}
@@ -336,13 +338,13 @@ footer{background:var(--charcoal);padding:0;}
   <a href="index.html" class="nav-logo">Shreem<span>infinity</span><sup>™</sup></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#gallery">Gallery</a></li>
-    <li><a href="index.html#packages">Packages</a></li>
-    <li><a href="index.html#services">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="packages.html">Packages</a></li>
+    <li><a href="services.html">Services</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
-  <a href="#booking-form" class="nav-cta">Book Now</a>
+  <a href="contact.html" class="nav-cta">Book Now</a>
   <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
 </nav>
 
@@ -350,10 +352,11 @@ footer{background:var(--charcoal);padding:0;}
 <div class="mob-menu" id="mobMenu">
   <button class="mob-close" onclick="closeMob()">×</button>
   <a href="index.html" onclick="closeMob()">Home</a>
-  <a href="index.html#services" onclick="closeMob()">Services</a>
-  <a href="index.html#gallery" onclick="closeMob()">Gallery</a>
-  <a href="index.html#packages" onclick="closeMob()">Packages</a>
-  <a href="#booking-form" onclick="closeMob()">Book Now</a>
+  <a href="about.html" onclick="closeMob()">About</a>
+  <a href="services.html" onclick="closeMob()">Services</a>
+  <a href="gallery.html" onclick="closeMob()">Gallery</a>
+  <a href="packages.html" onclick="closeMob()">Packages</a>
+  <a href="contact.html" onclick="closeMob()">Book Now</a>
 </div>
 
 <!-- ── PAGE HERO ── -->

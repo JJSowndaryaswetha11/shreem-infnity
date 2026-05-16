@@ -1,387 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us – Shreeminfinity Luxury Bridal & Beauty Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --lav-50:#F9F7FD;--lav-100:#F0EBF9;--lav-200:#DDD0F4;--lav-300:#C4AEE9;
-  --lav-400:#A886D8;--lav-500:#8B5FC3;--lav-600:#7040A8;--lav-700:#552E88;
-  --gold:#C9A84C;--gold-light:#E8D5A0;--gold-dark:#A07830;
-  --white:#FFFFFF;--soft-white:#FDFCFF;--charcoal:#2A2035;
-  --charcoal-mid:#4A3D60;--stone:#8A7DA0;
-  --font-serif:'Playfair Display',Georgia,serif;
-  --font-sans:'Raleway',sans-serif;
-}
-html{scroll-behavior:smooth;}
-body{font-family:var(--font-sans);background:var(--soft-white);color:var(--charcoal);overflow-x:hidden;}
-*{cursor:none;}
-.cursor{position:fixed;width:10px;height:10px;background:var(--lav-500);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
-.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid var(--lav-400);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width 0.2s,height 0.2s;}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 5rem;background:rgba(253,252,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(196,174,233,0.2);transition:all 0.4s;}
-nav.scrolled{padding:1rem 5rem;box-shadow:0 4px 40px rgba(139,95,195,0.08);}
-.nav-logo{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;color:var(--charcoal);text-decoration:none;}
-.nav-logo span{color:var(--lav-500);font-style:italic;}
-.nav-logo sup{font-size:0.55rem;color:var(--gold);vertical-align:super;font-family:var(--font-sans);}
-.nav-links{display:flex;gap:2.8rem;list-style:none;}
-.nav-links a{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal-mid);text-decoration:none;font-weight:600;position:relative;transition:color 0.2s;}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s;}
-.nav-links a:hover,.nav-links a.active{color:var(--lav-600);}
-.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
-.nav-cta{padding:0.7rem 1.8rem;background:var(--lav-500);color:var(--white);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;}
-.nav-cta:hover{background:var(--lav-700);}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer!important;}
-.hamburger span{width:22px;height:1.5px;background:var(--charcoal);display:block;}
-.mob-menu{display:none;position:fixed;inset:0;z-index:400;background:var(--lav-50);padding:7rem 2.5rem 2.5rem;flex-direction:column;}
-.mob-menu.open{display:flex;}
-.mob-menu a{font-family:var(--font-serif);font-size:2.2rem;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--lav-200);padding:1.2rem 0;}
-.mob-close{position:absolute;top:1.5rem;right:2rem;font-size:2rem;background:none;border:none;cursor:pointer!important;}
-
-/* HERO SPLIT */
-.about-hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding-top:90px;}
-.ah-img{position:relative;overflow:hidden;}
-.ah-img img{width:100%;height:100%;object-fit:cover;display:block;}
-.ah-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(85,46,136,0.5) 0%,rgba(42,32,53,0.3) 100%);}
-.ah-img-quote{position:absolute;bottom:3rem;left:3rem;right:3rem;z-index:2;}
-.ah-img-quote blockquote{font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:var(--white);line-height:1.5;margin-bottom:1rem;}
-.ah-img-quote cite{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);font-weight:600;font-style:normal;}
-.ah-content{display:flex;flex-direction:column;justify-content:center;padding:6rem 5rem;background:var(--white);}
-.sec-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.7rem;}
-.sec-label::before{content:'';width:28px;height:1px;background:var(--gold);}
-.sec-title{font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,3.4rem);font-weight:400;line-height:1.1;color:var(--charcoal);margin-bottom:1.5rem;}
-.sec-title em{font-style:italic;color:var(--lav-500);}
-.sec-title strong{font-weight:700;}
-.body-text{font-size:0.88rem;line-height:2;color:var(--stone);font-weight:300;margin-bottom:1.2rem;}
-.stat-row{display:flex;gap:2.5rem;padding:2rem 0;border-top:1px solid var(--lav-100);border-bottom:1px solid var(--lav-100);margin:2rem 0;}
-.stat-item .num{font-family:var(--font-serif);font-size:2.8rem;font-weight:600;color:var(--lav-600);line-height:1;}
-.stat-item .num sup{font-size:1rem;color:var(--gold);}
-.stat-item .lbl{font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--stone);margin-top:0.3rem;font-weight:600;}
-
-/* TEAM */
-.team-section{padding:8rem 5rem;background:var(--lav-50);}
-.section-head{max-width:560px;margin-bottom:4rem;}
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
-.team-card{background:var(--white);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;}
-.team-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(139,95,195,0.12);}
-.team-card-img{position:relative;overflow:hidden;aspect-ratio:3/4;}
-.team-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
-.team-card:hover .team-card-img img{transform:scale(1.05);}
-.team-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(42,32,53,0.6) 0%,transparent 50%);opacity:0;transition:opacity 0.3s;}
-.team-card:hover .team-card-img-overlay{opacity:1;}
-.team-card-body{padding:1.8rem;}
-.tc-name{font-family:var(--font-serif);font-size:1.2rem;font-weight:600;color:var(--charcoal);margin-bottom:0.3rem;}
-.tc-role{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--lav-500);font-weight:700;margin-bottom:0.8rem;}
-.tc-desc{font-size:0.78rem;line-height:1.75;color:var(--stone);font-weight:300;}
-
-/* VALUES */
-.values-section{padding:8rem 5rem;background:var(--white);}
-.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:4rem;}
-.val-card{padding:2.5rem 2rem;border:1px solid var(--lav-200);position:relative;overflow:hidden;transition:all 0.3s;}
-.val-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--lav-500);transition:height 0.4s;}
-.val-card:hover::before{height:100%;}
-.val-card:hover{background:var(--lav-50);}
-.val-icon{font-size:2rem;margin-bottom:1.2rem;}
-.val-name{font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--charcoal);margin-bottom:0.6rem;}
-.val-desc{font-size:0.78rem;line-height:1.75;color:var(--stone);font-weight:300;}
-
-/* STUDIO IMAGES */
-.studio-section{padding:8rem 5rem;background:var(--lav-50);}
-.studio-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:280px 280px;gap:12px;margin-top:4rem;}
-.sg-a{grid-column:1;grid-row:1/3;overflow:hidden;}
-.sg-b{grid-column:2;grid-row:1;overflow:hidden;}
-.sg-c{grid-column:3;grid-row:1;overflow:hidden;}
-.sg-d{grid-column:2/4;grid-row:2;overflow:hidden;}
-.studio-grid div img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;}
-.studio-grid div:hover img{transform:scale(1.04);}
-
-/* BRANDS */
-.brands-section{padding:5rem;background:var(--charcoal);text-align:center;}
-.brands-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:2.5rem;opacity:0.7;}
-.brands-row{display:flex;gap:3rem;justify-content:center;align-items:center;flex-wrap:wrap;}
-.brand-pill{padding:0.6rem 1.6rem;border:1px solid rgba(255,255,255,0.12);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:600;transition:all 0.2s;}
-.brand-pill:hover{border-color:var(--gold);color:var(--gold-light);}
-
-/* CTA */
-.cta-band{background:var(--lav-600);padding:5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
-.cta-band h2{font-family:var(--font-serif);font-size:2.2rem;color:var(--white);font-weight:400;}
-.cta-band h2 em{font-style:italic;color:var(--gold-light);}
-.btn-gold{padding:1rem 2.4rem;background:var(--gold);color:var(--white);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;display:inline-block;white-space:nowrap;}
-.btn-gold:hover{background:var(--gold-dark);transform:translateY(-2px);}
-
-/* FOOTER */
-footer{background:var(--charcoal);}
-.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding:5rem 5rem 4rem;}
-.foot-brand-name{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:1rem;}
-.foot-brand-name span{color:var(--lav-300);font-style:italic;}
-.foot-brand-desc{font-size:0.78rem;line-height:1.9;color:rgba(255,255,255,0.4);font-weight:300;max-width:240px;}
-.foot-col-title{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:1.5rem;}
-.foot-links{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
-.foot-links a{font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;font-weight:300;}
-.foot-links a:hover{color:var(--lav-300);}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem 5rem;display:flex;justify-content:space-between;}
-.foot-copy,.foot-love{font-size:0.7rem;color:rgba(255,255,255,0.25);}
-.foot-love span{color:var(--lav-400);}
-
-.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:300;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 30px rgba(37,211,102,0.4);animation:pulse-wa 2.5s infinite;}
-.wa-float svg{width:28px;height:28px;}
-@keyframes pulse-wa{0%,100%{box-shadow:0 8px 30px rgba(37,211,102,0.4);}50%{box-shadow:0 8px 50px rgba(37,211,102,0.7);}}
-.btt{position:fixed;bottom:2rem;left:2rem;z-index:300;width:44px;height:44px;background:var(--lav-500);border:none;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--white);opacity:0;transition:opacity 0.3s;cursor:pointer!important;}
-.btt.show{opacity:1;}
-
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
-.reveal.in{opacity:1;transform:translateY(0);}
-.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.8s ease,transform 0.8s ease;}
-.reveal-left.in{opacity:1;transform:translateX(0);}
-.reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.8s ease,transform 0.8s ease;}
-.reveal-right.in{opacity:1;transform:translateX(0);}
-
-@media(max-width:1100px){
-  nav{padding:1.2rem 2.5rem;}
-  .nav-links,.nav-cta{display:none;}
-  .hamburger{display:flex;}
-  .about-hero{grid-template-columns:1fr;min-height:auto;}
-  .ah-img{min-height:420px;}
-  .ah-content{padding:4rem 2.5rem;}
-  .team-grid{grid-template-columns:1fr 1fr;}
-  .values-grid{grid-template-columns:1fr 1fr;}
-  .studio-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
-  .sg-a,.sg-b,.sg-c,.sg-d{grid-column:auto;grid-row:auto;}
-  .studio-grid div{height:220px;}
-  .team-section,.values-section,.studio-section,.cta-band{padding:5rem 2.5rem;}
-  .footer-top{grid-template-columns:1fr 1fr;padding:3rem 2.5rem;}
-  .footer-bottom{padding:1.5rem 2.5rem;flex-direction:column;gap:0.5rem;}
-}
-@media(max-width:640px){
-  .team-grid,.values-grid{grid-template-columns:1fr;}
-  .studio-grid{grid-template-columns:1fr;}
-  .stat-row{flex-wrap:wrap;gap:1.5rem;}
-  .footer-top{grid-template-columns:1fr;padding:3rem 1.5rem;}
-  .brands-section,.cta-band{padding:3rem 1.5rem;}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – Shreeminfinity Luxury Bridal & Beauty Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<div class="cursor" id="cur"></div>
-<div class="cursor-ring" id="curRing"></div>
-<a href="https://wa.me/919876543210" target="_blank" class="wa-float" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cur"></div>
+  <div class="cursor-ring" id="curRing"></div>
 
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">Shreem<span>infinity</span><sup>™</sup></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="ratecard.html">Packages</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <a href="contact.html" class="nav-cta">Book Now</a>
-  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
-</nav>
-<div class="mob-menu" id="mobMenu">
-  <button class="mob-close" onclick="document.getElementById('mobMenu').classList.remove('open')">×</button>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="ratecard.html">Packages</a>
-  <a href="contact.html">Book Now</a>
-</div>
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/919876543210" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
 
-<!-- HERO SPLIT -->
-<div class="about-hero">
-  <div class="ah-img reveal-left">
-    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=900&q=85&auto=format&fit=crop" alt="Shreeminfinity Lead Artist">
-    <div class="ah-img-overlay"></div>
-    <div class="ah-img-quote">
-      <blockquote>"Every woman carries a unique beauty within her. My art is simply the key that unlocks it."</blockquote>
-      <cite>— Founder, Shreeminfinity Beauty Studio</cite>
-    </div>
-  </div>
-  <div class="ah-content reveal-right">
-    <div class="sec-label">Our Story</div>
-    <h1 class="sec-title">Born from<br><em>Passion</em> & <strong>Purpose</strong></h1>
-    <p class="body-text">Shreeminfinity was born in the heart of Madurai over 8 years ago from a simple but profound belief — that every woman deserves to feel extraordinary on the most important days of her life.</p>
-    <p class="body-text">What began as a boutique bridal studio has grown into Madurai's most trusted luxury beauty destination, having adorned over 500 brides across Tamil Nadu. Our approach is deeply personal — we listen, we understand, and we create.</p>
-    <p class="body-text">We blend the richness of traditional Indian bridal aesthetics with cutting-edge international techniques to craft looks that are timeless, culturally rooted, and uniquely personal to each woman.</p>
-    <div class="stat-row">
-      <div class="stat-item"><div class="num">500<sup>+</sup></div><div class="lbl">Brides Adorned</div></div>
-      <div class="stat-item"><div class="num">8<sup>+</sup></div><div class="lbl">Years of Artistry</div></div>
-      <div class="stat-item"><div class="num">12</div><div class="lbl">Expert Stylists</div></div>
-    </div>
-    <a href="contact.html" style="display:inline-block;padding:1rem 2.4rem;background:var(--lav-500);color:var(--white);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;font-family:var(--font-sans);text-decoration:none;transition:all 0.3s;">Book a Consultation →</a>
-  </div>
-</div>
+  <!-- BACK TO TOP -->
+   <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<!-- TEAM -->
-<section class="team-section">
-  <div class="section-head reveal">
-    <div class="sec-label">The Artists</div>
-    <h2 class="sec-title">Meet Our <em>Expert</em><br><strong>Team</strong></h2>
-    <p style="font-size:0.88rem;line-height:2;color:var(--stone);font-weight:300;margin-top:0.8rem;">Our certified artists bring a combined experience of 40+ years across bridal, fashion, and editorial makeup.</p>
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Shreem<span>infinity</span><sup>™</sup></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="ratecard.html">Packages</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Book Now</a>
+    <button class="hamburger" id="ham" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mob-menu" id="mobMenu" aria-hidden="true">
+    <button class="mob-close" id="mobClose" aria-label="Close menu">×</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="ratecard.html">Packages</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="mob-cta">Book Now</a>
   </div>
-  <div class="team-grid">
-    <div class="team-card reveal">
-      <div class="team-card-img">
-        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=85&auto=format&fit=crop&crop=face" alt="Lead Bridal Artist">
-        <div class="team-card-img-overlay"></div>
-      </div>
-      <div class="team-card-body">
-        <div class="tc-name">Preethi Rajkumar</div>
-        <div class="tc-role">Lead Bridal Artist & Founder</div>
-        <div class="tc-desc">Certified in HD & Airbrush with 10+ years specialising in South Indian and pan-Indian bridal traditions. Trained in Mumbai and Dubai.</div>
+
+  <!-- ── HERO SPLIT ── -->
+   <div class="about-hero-bg">
+  <div class="about-hero">
+    <div class="ah-img reveal-left">
+      <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=900&q=85&auto=format&fit=crop" alt="Shreeminfinity Lead Artist">
+      <div class="ah-img-overlay"></div>
+      <div class="ah-img-quote">
+        <blockquote>"Every woman carries a unique beauty within her. My art is simply the key that unlocks it."</blockquote>
+        <cite>— Founder, Shreeminfinity Beauty Studio</cite>
       </div>
     </div>
-    <div class="team-card reveal">
-      <div class="team-card-img">
-        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=85&auto=format&fit=crop&crop=face" alt="Senior Makeup Artist">
-        <div class="team-card-img-overlay"></div>
+    <div class="ah-content reveal-right">
+      <div class="sec-label">Our Story</div>
+      <h1 class="sec-title">Born from<br><em>Passion</em> & <strong>Purpose</strong></h1>
+      <p class="body-text">Shreeminfinity was born in the heart of Madurai over 8 years ago from a simple but profound belief — that every woman deserves to feel extraordinary on the most important days of her life.</p>
+      <p class="body-text">What began as a boutique bridal studio has grown into Madurai's most trusted luxury beauty destination, having adorned over 500 brides across Tamil Nadu. Our approach is deeply personal — we listen, we understand, and we create.</p>
+      <p class="body-text">We blend the richness of traditional Indian bridal aesthetics with cutting-edge international techniques to craft looks that are timeless, culturally rooted, and uniquely personal to each woman.</p>
+      <div class="stat-row">
+        <div class="stat-item">
+          <div class="num">500<sup>+</sup></div>
+          <div class="lbl">Brides Adorned</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">8<sup>+</sup></div>
+          <div class="lbl">Years of Artistry</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">12</div>
+          <div class="lbl">Expert Stylists</div>
+        </div>
       </div>
-      <div class="team-card-body">
-        <div class="tc-name">Kavitha Suresh</div>
-        <div class="tc-role">Senior Makeup Artist</div>
-        <div class="tc-desc">Specialises in Christian and North Indian bridal looks with expertise in high-definition photography makeup and skin-prep techniques.</div>
+      <a href="contact.html" class="btn-lav">Book a Consultation →</a>
+    </div>
+  </div>
+  </div>
+
+  <!-- ── TEAM ── -->
+  <section class="team-section">
+    <div class="about-section-head reveal">
+      <div class="sec-label">The Artists</div>
+      <h2 class="sec-title">Meet Our <em>Expert</em><br><strong>Team</strong></h2>
+      <p class="sec-sub">Our certified artists bring a combined experience of 40+ years across bridal, fashion, and editorial makeup.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-card-img">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=85&auto=format&fit=crop&crop=face" alt="Lead Bridal Artist">
+          <div class="team-card-img-overlay"></div>
+        </div>
+        <div class="team-card-body">
+          <div class="tc-name">Preethi Rajkumar</div>
+          <div class="tc-role">Lead Bridal Artist & Founder</div>
+          <div class="tc-desc">Certified in HD & Airbrush with 10+ years specialising in South Indian and pan-Indian bridal traditions. Trained in Mumbai and Dubai.</div>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-card-img">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=85&auto=format&fit=crop&crop=face" alt="Senior Makeup Artist">
+          <div class="team-card-img-overlay"></div>
+        </div>
+        <div class="team-card-body">
+          <div class="tc-name">Kavitha Suresh</div>
+          <div class="tc-role">Senior Makeup Artist</div>
+          <div class="tc-desc">Specialises in Christian and North Indian bridal looks with expertise in high-definition photography makeup and skin-prep techniques.</div>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-card-img">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=85&auto=format&fit=crop&crop=face" alt="Hair Specialist">
+          <div class="team-card-img-overlay"></div>
+        </div>
+        <div class="team-card-body">
+          <div class="tc-name">Divya Nair</div>
+          <div class="tc-role">Master Hair Stylist</div>
+          <div class="tc-desc">Expert in elaborate bridal updos, hair extensions, balayage, and global hair colour techniques. Certified Schwarzkopf professional.</div>
+        </div>
       </div>
     </div>
-    <div class="team-card reveal">
-      <div class="team-card-img">
-        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=85&auto=format&fit=crop&crop=face" alt="Hair Specialist">
-        <div class="team-card-img-overlay"></div>
+  </section>
+
+  <!-- ── VALUES ── -->
+  <section class="values-section">
+    <div class="about-section-head reveal">
+      <div class="sec-label">Our Philosophy</div>
+      <h2 class="sec-title">What We <em>Stand For</em></h2>
+    </div>
+    <div class="values-grid">
+      <div class="val-card reveal">
+        <div class="val-icon"><i class="fa-solid fa-paintbrush"></i></div>
+        <div class="val-name">Artistry First</div>
+        <div class="val-desc">Every look is treated as a work of art — composed, refined, and deeply intentional. We never rush beauty.</div>
       </div>
-      <div class="team-card-body">
-        <div class="tc-name">Divya Nair</div>
-        <div class="tc-role">Master Hair Stylist</div>
-        <div class="tc-desc">Expert in elaborate bridal updos, hair extensions, balayage, and global hair colour techniques. Certified Schwarzkopf professional.</div>
+      <div class="val-card reveal">
+        <div class="val-icon"><i class="fa-solid fa-earth-asia"></i></div>
+        <div class="val-name">Cultural Pride</div>
+        <div class="val-desc">We honour the richness of Indian traditions while embracing global trends, creating looks that feel authentic and timeless.</div>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon"><i class="fa-solid fa-spa"></i></div>
+        <div class="val-name">Skin Wellness</div>
+        <div class="val-desc">We use only premium, skin-safe products. Your skin health is as important to us as your visual transformation.</div>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon"><i class="fa-solid fa-handshake"></i></div>
+        <div class="val-name">Personal Connection</div>
+        <div class="val-desc">We build genuine relationships with our clients. Your joy, comfort, and confidence are our true measure of success.</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- VALUES -->
-<section class="values-section">
-  <div class="section-head reveal">
-    <div class="sec-label">Our Philosophy</div>
-    <h2 class="sec-title">What We <em>Stand For</em></h2>
-  </div>
-  <div class="values-grid">
-    <div class="val-card reveal">
-      <div class="val-icon">🎨</div>
-      <div class="val-name">Artistry First</div>
-      <div class="val-desc">Every look is treated as a work of art — composed, refined, and deeply intentional. We never rush beauty.</div>
+  <!-- ── STUDIO IMAGES ── -->
+  <section class="studio-section">
+    <div class="about-section-head reveal">
+      <div class="sec-label">Our Studio</div>
+      <h2 class="sec-title">A Space Built for <em>Beauty</em></h2>
+      <p class="sec-sub">Our studio in Madurai is designed to make you feel pampered from the moment you walk in — serene, luxurious, and entirely yours.</p>
     </div>
-    <div class="val-card reveal">
-      <div class="val-icon">💛</div>
-      <div class="val-name">Cultural Pride</div>
-      <div class="val-desc">We honour the richness of Indian traditions while embracing global trends, creating looks that feel authentic and timeless.</div>
+    <div class="studio-grid">
+      <div class="sg-a reveal"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700&q=85&auto=format&fit=crop" alt="Beauty Studio Interior"></div>
+      <div class="sg-b reveal"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&q=85&auto=format&fit=crop" alt="Skincare Products"></div>
+      <div class="sg-c reveal"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&q=85&auto=format&fit=crop" alt="Makeup Collection"></div>
+      <div class="sg-d reveal"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=85&auto=format&fit=crop" alt="Studio Session"></div>
     </div>
-    <div class="val-card reveal">
-      <div class="val-icon">🌿</div>
-      <div class="val-name">Skin Wellness</div>
-      <div class="val-desc">We use only premium, skin-safe products. Your skin health is as important to us as your visual transformation.</div>
-    </div>
-    <div class="val-card reveal">
-      <div class="val-icon">🤝</div>
-      <div class="val-name">Personal Connection</div>
-      <div class="val-desc">We build genuine relationships with our clients. Your joy, comfort, and confidence are our true measure of success.</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- STUDIO IMAGES -->
-<section class="studio-section">
-  <div class="section-head reveal">
-    <div class="sec-label">Our Studio</div>
-    <h2 class="sec-title">A Space Built for <em>Beauty</em></h2>
-    <p style="font-size:0.88rem;line-height:2;color:var(--stone);font-weight:300;margin-top:0.8rem;max-width:500px;">Our studio in Madurai is designed to make you feel pampered from the moment you walk in — serene, luxurious, and entirely yours.</p>
-  </div>
-  <div class="studio-grid">
-    <div class="sg-a reveal"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700&q=85&auto=format&fit=crop" alt="Beauty Studio Interior"></div>
-    <div class="sg-b reveal"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&q=85&auto=format&fit=crop" alt="Skincare Products"></div>
-    <div class="sg-c reveal"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&q=85&auto=format&fit=crop" alt="Makeup Collection"></div>
-    <div class="sg-d reveal"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=85&auto=format&fit=crop" alt="Studio Session"></div>
-  </div>
-</section>
-
-<!-- BRANDS -->
-<div class="brands-section">
-  <div class="brands-label">Premium Brands We Trust</div>
-  <div class="brands-row">
-    <div class="brand-pill">MAC Cosmetics</div>
-    <div class="brand-pill">Huda Beauty</div>
-    <div class="brand-pill">Charlotte Tilbury</div>
-    <div class="brand-pill">Kryolan</div>
-    <div class="brand-pill">L'Oréal Pro</div>
-    <div class="brand-pill">Schwarzkopf</div>
-    <div class="brand-pill">O3+ Skincare</div>
-    <div class="brand-pill">NYX Professional</div>
-  </div>
-</div>
-
-<!-- CTA -->
-<div class="cta-band">
-  <h2>Begin Your Beauty<br><em>Journey With Us</em></h2>
-  <a href="contact.html" class="btn-gold">✦ Book Appointment</a>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div>
-      <div class="foot-brand-name">Shreem<span>infinity</span></div>
-      <p class="foot-brand-desc">Luxury bridal makeup, hair styling and beauty services in Madurai, Tamil Nadu. Where every woman becomes royalty.</p>
-    </div>
-    <div>
-      <div class="foot-col-title">Services</div>
-      <ul class="foot-links">
-        <li><a href="services.html#bridal-makeup">Bridal Makeup</a></li>
-        <li><a href="services.html#hair-styling">Hair Styling</a></li>
-        <li><a href="services.html#pre-bridal-care">Pre-Bridal Care</a></li>
-        <li><a href="services.html#party-glam">Party Glam</a></li>
-        <li><a href="services.html#saree-draping">Saree Draping</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-title">Studio</div>
-      <ul class="foot-links">
-        <li><a href="about.html">About Us</a></li>
-         <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-       <li><a href="ratecard.html">Packages</a></li>
-       <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="foot-col-title">Contact</div>
-      <ul class="foot-links">
-        <li><a href="#">+91 98765 43210</a></li>
-        <li><a href="#">hello@shreeminfinity.in</a></li>
-        <li><a href="#">Madurai, Tamil Nadu</a></li>
-        <li><a href="#">@shreeminfinity</a></li>
-        <li><a href="contact.html">Book Appointment</a></li>
-      </ul>
+  <!-- ── BRANDS ── -->
+  <div class="brands-section">
+    <div class="brands-label">Premium Brands We Trust</div>
+    <div class="brands-row">
+      <div class="brand-pill">MAC Cosmetics</div>
+      <div class="brand-pill">Huda Beauty</div>
+      <div class="brand-pill">Charlotte Tilbury</div>
+      <div class="brand-pill">Kryolan</div>
+      <div class="brand-pill">L'Oréal Pro</div>
+      <div class="brand-pill">Schwarzkopf</div>
+      <div class="brand-pill">O3+ Skincare</div>
+      <div class="brand-pill">NYX Professional</div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <div class="foot-copy">© 2025 Shreeminfinity. All Rights Reserved.</div>
-    <div class="foot-love">Crafted with <span>♥</span> for Beautiful Brides</div>
-  </div>
-</footer>
 
-<script>
-const cur=document.getElementById('cur'),curR=document.getElementById('curRing');
-document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';curR.style.left=e.clientX+'px';curR.style.top=e.clientY+'px';});
-window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);document.getElementById('btt').classList.toggle('show',window.scrollY>400);});
-document.getElementById('ham').addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
-const ro=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);ro.unobserve(e.target);}});},{threshold:0.06});
-document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
-</script>
+  <!-- ── CTA BAND ── -->
+  <div class="cta-band">
+    <div class="cta-band-inner">
+    <h2>Begin Your Beauty<br><em>Journey With Us</em></h2>
+    <a href="contact.html" class="btn-gold">✦ Book Appointment</a>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-top">
+      <div class="foot-brand">
+        <div class="foot-brand-name">Shreem<span>infinity</span></div>
+        <p class="foot-brand-desc">Luxury bridal makeup, hair styling and beauty services in Madurai, Tamil Nadu. Where every woman becomes royalty.</p>
+      </div>
+      <div>
+        <div class="foot-col-title">Services</div>
+        <ul class="foot-links">
+          <li><a href="services.html#bridal-makeup">Bridal Makeup</a></li>
+          <li><a href="services.html#hair-styling">Hair Styling</a></li>
+          <li><a href="services.html#pre-bridal-care">Pre-Bridal Care</a></li>
+          <li><a href="services.html#party-glam">Party Glam</a></li>
+          <li><a href="services.html#saree-draping">Saree Draping</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-col-title">Studio</div>
+        <ul class="foot-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="ratecard.html">Packages</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-col-title">Contact</div>
+        <ul class="foot-links">
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="mailto:hello@shreeminfinity.in">hello@shreeminfinity.in</a></li>
+          <li><a href="#">Madurai, Tamil Nadu</a></li>
+          <li><a href="#">@shreeminfinity</a></li>
+          <li><a href="contact.html">Book Appointment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="foot-copy">© 2025 Shreeminfinity. All Rights Reserved.</div>
+      <div class="foot-love">Crafted with <span>♥</span> for Beautiful Brides</div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
