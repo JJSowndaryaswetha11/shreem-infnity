@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="service.css">
 </head>
 <body>
+  
 
 <div class="cursor" id="cur"></div>
 <div class="cursor-ring" id="curRing"></div>
@@ -31,7 +32,7 @@
   <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
 </nav>
 <div class="mob-menu" id="mobMenu">
-  <button class="mob-close" onclick="document.getElementById('mobMenu').classList.remove('open')">×</button>
+  <button class="mob-close" id="mobClose">×</button>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="gallery.html">Gallery</a>
@@ -95,13 +96,10 @@
 <div class="svc-section bg-white" id="bridal-makeup">
   <div class="svc-visual reveal">
     <div class="svc-accent"></div>
-    <div class="svc-visual-box">
-      <div class="svc-visual-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-        </svg>
-      </div>
-    </div>
+   <div class="svc-visual-box">
+  <img src="./images/services-1.png" alt="Bridal Makeup"
+    style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
     <div class="svc-badge">
       <div class="svc-badge-num">500+</div>
       <div class="svc-badge-label">Brides Beautifully Transformed</div>
@@ -142,14 +140,10 @@
 <div class="svc-section bg-lav reverse" id="hair-styling">
   <div class="svc-visual reveal">
     <div class="svc-accent gold"></div>
-    <div class="svc-visual-box">
-      <div class="svc-visual-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 114.03 4.03l-8.06 8.08"/>
-          <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1 1 2.48 1.91 3.98 1.91 2.45 0 4.5-2.01 4.5-4.48 0-1.66-1.33-3-2.97-3z"/>
-        </svg>
-      </div>
-    </div>
+       <div class="svc-visual-box">
+  <img src="./images/services-2.png" alt="Bridal Makeup"
+    style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
     <div class="svc-badge gold-badge">
       <div class="svc-badge-num">35+</div>
       <div class="svc-badge-label">Hairstyle Options</div>
@@ -190,13 +184,10 @@
 <!-- SERVICE 3: SKIN & FACIALS -->
 <div class="svc-section bg-dark" id="skin-care">
   <div class="svc-visual reveal">
-    <div class="svc-visual-box dark-box">
-      <div class="svc-visual-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-400)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
-        </svg>
-      </div>
-    </div>
+       <div class="svc-visual-box">
+  <img src="./images/services-3.png" alt="Bridal Makeup"
+    style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
     <div class="svc-badge" style="background:var(--lav-500);">
       <div class="svc-badge-num">O3+</div>
       <div class="svc-badge-label">Advanced Glow Facial</div>
@@ -237,13 +228,10 @@
 <div class="svc-section bg-white reverse" id="saree-draping">
   <div class="svc-visual reveal">
     <div class="svc-accent"></div>
-    <div class="svc-visual-box">
-      <div class="svc-visual-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H7v10a2 2 0 002 2h6a2 2 0 002-2V10h3.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/>
-        </svg>
-      </div>
-    </div>
+       <div class="svc-visual-box">
+  <img src="./images/services-4.png" alt="Bridal Makeup"
+    style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
     <div class="svc-badge">
       <div class="svc-badge-num">15+</div>
       <div class="svc-badge-label">Draping Styles</div>
@@ -284,13 +272,10 @@
 <div class="svc-section bg-lav" id="party-glam">
   <div class="svc-visual reveal">
     <div class="svc-accent gold"></div>
-    <div class="svc-visual-box">
-      <div class="svc-visual-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--lav-500)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-        </svg>
-      </div>
-    </div>
+   <div class="svc-visual-box">
+  <img src="./images/services-5.png" alt="Bridal Makeup"
+    style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
     <div class="svc-badge gold-badge">
       <div class="svc-badge-num">1 Day</div>
       <div class="svc-badge-label">Quick Turnaround</div>
@@ -637,7 +622,7 @@ window.addEventListener('scroll',()=>{
   });
   tabs.forEach(tab=>{tab.classList.toggle('active',tab.getAttribute('href')==='#'+current);});
 });
-document.getElementById('ham').addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
+
 const ro=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);ro.unobserve(e.target);}});},{threshold:0.06});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 // Smooth scroll for tab links
@@ -647,6 +632,17 @@ document.querySelectorAll('.svc-tab').forEach(tab=>{
     const target=document.querySelector(tab.getAttribute('href'));
     if(target){const y=target.getBoundingClientRect().top+window.scrollY-130;window.scrollTo({top:y,behavior:'smooth'});}
   });
+});
+// Hamburger toggle (matches index.html)
+const ham = document.getElementById('ham');
+const mobMenu = document.getElementById('mobMenu');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  mobMenu.classList.toggle('open');
+});
+document.getElementById('mobClose').addEventListener('click', () => {
+  ham.classList.remove('open');
+  mobMenu.classList.remove('open');
 });
 </script>
 </body>

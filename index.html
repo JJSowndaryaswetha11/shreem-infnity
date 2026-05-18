@@ -9,6 +9,51 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+
+  <style>
+    /* SVG Icon base styles */
+    .icon-svg {
+      display: inline-block;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+    .svc-icon-box .icon-svg {
+      width: 36px;
+      height: 36px;
+    }
+    .af-icon .icon-svg {
+      width: 28px;
+      height: 28px;
+    }
+    .step-circle .icon-svg {
+      width: 30px;
+      height: 30px;
+    }
+    .cdetail-icon .icon-svg {
+      width: 22px;
+      height: 22px;
+    }
+    .social-btn .icon-svg {
+      width: 20px;
+      height: 20px;
+    }
+    .wa-float .icon-svg {
+      width: 28px;
+      height: 28px;
+    }
+    .btt .icon-svg {
+      width: 18px;
+      height: 18px;
+    }
+    .ticker .icon-svg {
+      width: 10px;
+      height: 10px;
+    }
+    .float-badge .icon-svg {
+      width: 14px;
+      height: 14px;
+    }
+  </style>
 </head>
 
 <body>
@@ -25,14 +70,14 @@
 
   <!-- WHATSAPP -->
   <a href="https://wa.me/919876543210" target="_blank" class="wa-float" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    <!-- WhatsApp icon -->
+    <svg class="icon-svg" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
 
   <!-- BACK TO TOP -->
-  <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+     <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
   <!-- NAV -->
   <nav id="navbar">
@@ -56,10 +101,10 @@
   <!-- MOBILE MENU -->
   <div class="mob-menu" id="mobMenu">
     <button class="mob-close" id="mobClose">×</button>
-    <a href="#services" class="mob-link">Services</a>
-    <a href="#about" class="mob-link">About Us</a>
-    <a href="#gallery" class="mob-link">Gallery</a>
-    <a href="#packages" class="mob-link">Packages</a>
+    <a href="about.html" class="mob-link">About Us</a>
+    <a href="gallery.html" class="mob-link">Gallery</a>
+     <a href="ratecard.html" class="mob-link">Packages</a>
+    <a href="services.html" class="mob-link">Services</a>
     <a href="contact.html" class="mob-link">Book Now</a>
   </div>
 
@@ -98,38 +143,144 @@
     </div>
 
     <div class="hero-right">
-      <div class="hero-photo"></div>
-      <div class="hero-photo-overlay"></div>
-      <div class="float-badge badge-2">
-        <div class="badge-label">Rating</div>
-        <div class="badge-val">⭐ 4.9 / 5.0</div>
-      </div>
+  <img src="./images/banner.png" alt="Luxury Bridal Makeup Studio" class="hero-photo-img">
+  <div class="hero-photo-overlay"></div>
+  <div class="float-badge badge-2">
+    <div class="badge-label">Rating</div>
+    <div class="badge-val">
+      <svg class="icon-svg" viewBox="0 0 24 24" fill="#f5c842" stroke="#f5c842" stroke-width="1" style="margin-right:2px;">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+      4.9 / 5.0
     </div>
+  </div>
+</div>
   </section>
 
   <!-- TICKER -->
   <div class="ticker">
     <div class="ticker-inner">
-      <span>Bridal Makeup</span><span class="gem">✦</span>
-      <span>Airbrush & HD</span><span class="gem">✦</span>
-      <span>Hair Styling</span><span class="gem">✦</span>
-      <span>Bridal Updo</span><span class="gem">✦</span>
-      <span>Pre-Bridal Packages</span><span class="gem">✦</span>
-      <span>Party Glam</span><span class="gem">✦</span>
-      <span>Saree Draping</span><span class="gem">✦</span>
-      <span>Nail Art</span><span class="gem">✦</span>
-      <span>Skin Treatments</span><span class="gem">✦</span>
-      <span>Fashion Styling</span><span class="gem">✦</span>
-      <span>Bridal Makeup</span><span class="gem">✦</span>
-      <span>Airbrush & HD</span><span class="gem">✦</span>
-      <span>Hair Styling</span><span class="gem">✦</span>
-      <span>Bridal Updo</span><span class="gem">✦</span>
-      <span>Pre-Bridal Packages</span><span class="gem">✦</span>
-      <span>Party Glam</span><span class="gem">✦</span>
-      <span>Saree Draping</span><span class="gem">✦</span>
-      <span>Nail Art</span><span class="gem">✦</span>
-      <span>Skin Treatments</span><span class="gem">✦</span>
-      <span>Fashion Styling</span><span class="gem">✦</span>
+      <span>Bridal Makeup</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Airbrush & HD</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Hair Styling</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Bridal Updo</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Pre-Bridal Packages</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Party Glam</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Saree Draping</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Nail Art</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Skin Treatments</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Fashion Styling</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <!-- Duplicate for infinite scroll -->
+      <span>Bridal Makeup</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Airbrush & HD</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Hair Styling</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Bridal Updo</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Pre-Bridal Packages</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Party Glam</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Saree Draping</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Nail Art</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Skin Treatments</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
+      <span>Fashion Styling</span>
+      <span class="gem">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor" style="width:8px;height:8px;">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </span>
     </div>
   </div>
 
@@ -144,82 +295,141 @@
         features, and occasion — because true beauty is never one-size-fits-all.</p>
     </div>
     <div class="svc-grid">
+
+      <!-- 01 Bridal Makeup -->
       <div class="svc-card reveal">
         <div class="svc-card-inner">
           <span class="svc-no">01</span>
-          <div class="svc-icon-box">💍</div>
+          <div class="svc-icon-box">
+            <!-- Ring / diamond icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h12l4 6-10 13L2 9z"/>
+              <path d="M11 3L8 9l4 13 4-13-3-6"/>
+              <path d="M2 9h20"/>
+            </svg>
+          </div>
           <h3 class="svc-name">Bridal Makeup</h3>
           <p class="svc-text">Flawless HD & Airbrush bridal looks for Tamil, Telugu, Christian, Muslim and all
             traditions. Long-lasting, camera-perfect, and uniquely yours.</p>
           <a href="contact.html" class="svc-link">Book Now →</a>
         </div>
       </div>
+
+      <!-- 02 Hair Styling -->
       <div class="svc-card reveal">
         <div class="svc-card-inner">
           <span class="svc-no">02</span>
-          <div class="svc-icon-box">✂️</div>
+          <div class="svc-icon-box">
+            <!-- Scissors icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="6" cy="6" r="3"/>
+              <circle cx="6" cy="18" r="3"/>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+            </svg>
+          </div>
           <h3 class="svc-name">Hair Styling</h3>
           <p class="svc-text">Elaborate bridal updos, traditional pleating, modern cuts, balayage, keratin, rebonding
             and creative hair colour treatments.</p>
           <a href="contact.html" class="svc-link">Book Now →</a>
         </div>
       </div>
+
+      <!-- 03 Pre-Bridal Rituals -->
       <div class="svc-card reveal">
         <div class="svc-card-inner">
           <span class="svc-no">03</span>
-          <div class="svc-icon-box">🌸</div>
+          <div class="svc-icon-box">
+            <!-- Flower / sparkle icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4z"/>
+              <path d="M12 14a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4z"/>
+              <path d="M2 12a4 4 0 0 1 4-4 4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4z"/>
+              <path d="M14 12a4 4 0 0 1 4-4 4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4z"/>
+            </svg>
+          </div>
           <h3 class="svc-name">Pre-Bridal Rituals</h3>
           <p class="svc-text">Complete skin prep — glow facials, bleach, waxing, threading, O3+ treatments and full body
             polishing for your wedding season.</p>
           <a href="contact.html" class="svc-link">Book Now →</a>
         </div>
       </div>
+
+      <!-- 04 Party & Event Glam -->
       <div class="svc-card reveal">
         <div class="svc-card-inner">
           <span class="svc-no">04</span>
-          <div class="svc-icon-box">🎉</div>
+          <div class="svc-icon-box">
+            <!-- Sparkles / celebration icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l1.5 4.5H18l-3.75 2.75L15.75 15 12 12.25 8.25 15l1.5-4.75L6 7.5h4.5z"/>
+              <path d="M5 3l.75 2.25H8L6.12 6.63 6.87 9 5 7.75 3.13 9l.75-2.37L2 5.25h2.25z"/>
+              <path d="M19 12l.75 2.25H22l-1.88 1.38.75 2.37L19 16.75l-1.87 1.25.75-2.37L16 14.25h2.25z"/>
+            </svg>
+          </div>
           <h3 class="svc-name">Party & Event Glam</h3>
           <p class="svc-text">Stunning looks for receptions, sangeet nights, mehendi ceremonies, engagements, and all
             festive & corporate occasions.</p>
           <a href="contact.html" class="svc-link">Book Now →</a>
         </div>
       </div>
+
+      <!-- 05 Skin & Beauty Care -->
       <div class="svc-card reveal">
         <div class="svc-card-inner">
           <span class="svc-no">05</span>
-          <div class="svc-icon-box">🧖</div>
+          <div class="svc-icon-box">
+            <!-- Leaf / skin care icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-6 8-12a8 8 0 0 0-16 0c0 6 8 12 8 12z"/>
+              <path d="M12 10v6"/>
+              <path d="M9 13h6"/>
+            </svg>
+          </div>
           <h3 class="svc-name">Skin & Beauty Care</h3>
           <p class="svc-text">Advanced facials, microdermabrasion, skin brightening, clean-up, eyebrow sculpting, and
             premium waxing services.</p>
           <a href="contact.html" class="svc-link">Book Now →</a>
         </div>
       </div>
+
+      <!-- 06 Saree & Fashion Draping -->
       <div class="svc-card reveal">
         <div class="svc-card-inner">
           <span class="svc-no">06</span>
-          <div class="svc-icon-box">👗</div>
+          <div class="svc-icon-box">
+            <!-- Hanger / fashion icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4a2 2 0 0 1 2 2c0 1.5-2 3-2 3s-2-1.5-2-3a2 2 0 0 1 2-2z"/>
+              <path d="M3 20h18L12 9"/>
+            </svg>
+          </div>
           <h3 class="svc-name">Saree & Fashion Draping</h3>
           <p class="svc-text">Expert draping in 20+ styles — Nivi, Coorg, Bengali, Gujarati, Maharashtrian. Complete
             bridal fashion styling consultation included.</p>
           <a href="contact.html" class="svc-link">Book Now →</a>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- ── ABOUT ── -->
   <div id="about" class="about-wrap">
     <div class="about-img-side reveal-left">
-      <div class="about-img-side-photo"></div>
+      <div class="about-img-side-photo">
+        <img src="./images/about.jpg" alt="">
+      </div>
       <div class="about-img-side-overlay"></div>
       <div class="about-big-text">S</div>
-      <div class="about-card">
+      <!-- <div class="about-card">
         <div class="about-card-quote">"</div>
         <p class="about-card-text">Every woman who sits in my chair leaves feeling like the most radiant version of
           herself. That is my purpose, my passion, and my promise.</p>
         <div class="about-card-sig">Shreeminfinity</div>
         <div class="about-card-role">Lead Bridal Artist & Founder</div>
-      </div>
+      </div> -->
     </div>
     <div class="about-content-side reveal-right">
       <div class="sec-label">Our Story</div>
@@ -231,30 +441,56 @@
         are timeless, culturally rooted, and uniquely personal. Every brushstroke is placed with intention, care, and
         artistry.</p>
       <div class="about-features">
+
         <div class="af-item">
-          <div class="af-icon">🏆</div>
-          <div class="af-title">Certified Artists</div>
-          <div class="af-desc">All stylists are professionally trained & certified in HD, Airbrush & international
-            techniques.</div>
-        </div>
-        <div class="af-item">
-          <div class="af-icon">🚗</div>
-          <div class="af-title">On-Site Service</div>
-          <div class="af-desc">We come to your venue — hotel, home, or mandapam — anywhere in Madurai & nearby
-            districts.</div>
-        </div>
-        <div class="af-item">
-          <div class="af-icon">🌍</div>
-          <div class="af-title">All Traditions</div>
-          <div class="af-desc">Tamil, Telugu, Kerala, Christian, Muslim, North Indian — we specialise in all cultural
-            bridal looks.</div>
-        </div>
-        <div class="af-item">
-          <div class="af-icon">✨</div>
-          <div class="af-title">Premium Products</div>
-          <div class="af-desc">Mac, Huda Beauty, Charlotte Tilbury, Kryolan — only the finest brands touch your skin.
+          <div class="af-icon">
+            <!-- Award / certificate icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
           </div>
+          <div class="af-title">Certified Artists</div>
+          <div class="af-desc">All stylists are professionally trained & certified in HD, Airbrush & international techniques.</div>
         </div>
+
+        <div class="af-item">
+          <div class="af-icon">
+            <!-- Car / on-site service icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-2"/>
+              <circle cx="9" cy="17" r="2"/>
+              <circle cx="17" cy="17" r="2"/>
+            </svg>
+          </div>
+          <div class="af-title">On-Site Service</div>
+          <div class="af-desc">We come to your venue — hotel, home, or mandapam — anywhere in Madurai & nearby districts.</div>
+        </div>
+
+        <div class="af-item">
+          <div class="af-icon">
+            <!-- Globe / traditions icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div class="af-title">All Traditions</div>
+          <div class="af-desc">Tamil, Telugu, Kerala, Christian, Muslim, North Indian — we specialise in all cultural bridal looks.</div>
+        </div>
+
+        <div class="af-item">
+          <div class="af-icon">
+            <!-- Sparkle / premium icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+            </svg>
+          </div>
+          <div class="af-title">Premium Products</div>
+          <div class="af-desc">Mac, Huda Beauty, Charlotte Tilbury, Kryolan — only the finest brands touch your skin.</div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -266,44 +502,35 @@
         <div class="sec-label">Our Portfolio</div>
         <h2 class="sec-title">Beauty <em>Gallery</em></h2>
       </div>
-      <a href="contact.html" class="btn-lav">Book a Session →</a>
+      <a href="gallery.html" class="btn-lav">view portfolio →</a>
     </div>
     <div class="gallery-mosaic">
       <div class="gm-cell gm-a">
-        <img
-          src="https://image.pollinations.ai/prompt/Close-up-traditional-Indian-bridal-makeup-rich-colors-flawless-glowing-skin-intricate-gold-jewelry-photorealistic?width=700&height=500&nologo=true"
-          alt="Traditional Bridal Makeup" loading="lazy">
+        <img src="./images/gallery1.jpg" alt="Traditional Bridal Makeup" loading="lazy">
         <div class="gm-overlay"><span class="gm-tag">Traditional Bridal</span></div>
       </div>
       <div class="gm-cell gm-b">
-        <img
-          src="https://image.pollinations.ai/prompt/Beautiful-Indian-bridal-hair-updo-with-jasmine-flowers-and-gold-hair-ornaments-back-view-detailed?width=400&height=300&nologo=true"
-          alt="Bridal Updo Hair" loading="lazy">
+        <img src="./images/gallery2.jpg" alt="Bridal Updo Hair" loading="lazy">
         <div class="gm-overlay"><span class="gm-tag">Bridal Updo</span></div>
       </div>
       <div class="gm-cell gm-c">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=600&fit=crop&q=85"
-          alt="Full Bridal Look" loading="lazy">
+        <img src="./images/gallery3.jpg" alt="Full Bridal Look" loading="lazy">
         <div class="gm-overlay"><span class="gm-tag">Full Bridal</span></div>
       </div>
       <div class="gm-cell gm-d">
-        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop&q=85"
-          alt="Nail Art Design" loading="lazy">
+        <img src="./images/gallery4.png" alt="Nail Art Design" loading="lazy">
         <div class="gm-overlay"><span class="gm-tag">Nail Design</span></div>
       </div>
       <div class="gm-cell gm-e">
-        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&h=280&fit=crop&q=85"
-          alt="Party Makeup Look" loading="lazy">
+        <img src="./images/gallery5.jpg" alt="Party Makeup Look" loading="lazy">
         <div class="gm-overlay"><span class="gm-tag">Party Makeup</span></div>
       </div>
       <div class="gm-cell gm-f">
-        <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=500&h=280&fit=crop&q=85"
-          alt="Mehendi Art" loading="lazy">
+        <img src="./images/gallery6.jpg" alt="Mehendi Art" loading="lazy">
         <div class="gm-overlay"><span class="gm-tag">Mehendi</span></div>
       </div>
       <div class="gm-cell gm-g">
-        <img src="https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=500&h=280&fit=crop&q=85"
-          alt="Floral Bridal Style" loading="lazy">
+        <img src="./images/gallery7.jpg" alt="Floral Bridal Style" loading="lazy">
         <div class="gm-overlay"><span class="gm-tag">Floral Style</span></div>
       </div>
     </div>
@@ -316,29 +543,63 @@
       <h2 class="sec-title" style="text-align:center;">Your <em>Beauty Journey</em><br>in 4 Simple Steps</h2>
     </div>
     <div class="process-steps">
+
       <div class="step reveal">
-        <div class="step-circle">💬<span class="step-num">1</span></div>
+        <div class="step-circle">
+          <!-- MessageCircle / consultation icon -->
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          <span class="step-num">1</span>
+        </div>
         <h3 class="step-name">Consultation</h3>
-        <p class="step-desc">We understand your vision, skin type, event type, and cultural preferences through a
-          detailed discussion.</p>
+        <p class="step-desc">We understand your vision, skin type, event type, and cultural preferences through a detailed discussion.</p>
       </div>
+
       <div class="step reveal">
-        <div class="step-circle">🎨<span class="step-num">2</span></div>
+        <div class="step-circle">
+          <!-- Brush / palette icon -->
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+            <path d="M2 2l7.586 7.586"/>
+            <circle cx="11" cy="11" r="2"/>
+          </svg>
+          <span class="step-num">2</span>
+        </div>
         <h3 class="step-name">Trial Session</h3>
         <p class="step-desc">A full makeup and hair trial to finalise your perfect look weeks before your big day.</p>
       </div>
+
       <div class="step reveal">
-        <div class="step-circle">✨<span class="step-num">3</span></div>
+        <div class="step-circle">
+          <!-- Wand / sparkle icon -->
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="3" x2="19" y2="17"/>
+            <path d="M14.5 6.5 17 4l3 3-2.5 2.5"/>
+            <path d="M6.5 14.5 4 17l3 3 2.5-2.5"/>
+            <path d="M8 3H3v5"/>
+            <path d="M21 16v5h-5"/>
+          </svg>
+          <span class="step-num">3</span>
+        </div>
         <h3 class="step-name">Day-of Artistry</h3>
-        <p class="step-desc">Our artists arrive at your venue and create your flawless, camera-ready bridal or event
-          look.</p>
+        <p class="step-desc">Our artists arrive at your venue and create your flawless, camera-ready bridal or event look.</p>
       </div>
+
       <div class="step reveal">
-        <div class="step-circle">📸<span class="step-num">4</span></div>
+        <div class="step-circle">
+          <!-- Camera icon -->
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+          <span class="step-num">4</span>
+        </div>
         <h3 class="step-name">Touch-ups & Beyond</h3>
-        <p class="step-desc">We stay for touch-ups, saree draping and complete bridal-day support so you shine all day
-          long.</p>
+        <p class="step-desc">We stay for touch-ups, saree draping and complete bridal-day support so you shine all day long.</p>
       </div>
+
     </div>
   </section>
 
@@ -351,27 +612,42 @@
     <div class="testi-grid">
       <div class="tcard reveal">
         <div class="tcard-mark">"</div>
-        <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-quote">Shreeminfinity made me look absolutely breathtaking on my wedding day. The look lasted
-          all 12 hours and I received compliments from every single guest. Best artist in Madurai, hands down!</p>
+        <div class="tcard-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="tcard-quote">Shreeminfinity made me look absolutely breathtaking on my wedding day. The look lasted all 12 hours and I received compliments from every single guest. Best artist in Madurai, hands down!</p>
         <div class="tcard-divider"></div>
         <div class="tcard-name">Priya Venkatesh</div>
         <div class="tcard-role">Bride · Tamil Brahmin Wedding 2024</div>
       </div>
       <div class="tcard reveal">
         <div class="tcard-mark">"</div>
-        <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-quote">From the pre-bridal sessions to the final look — everything was perfection. The team is
-          so warm, professional, and deeply skilled. My updo stayed perfect all through the reception!</p>
+        <div class="tcard-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="tcard-quote">From the pre-bridal sessions to the final look — everything was perfection. The team is so warm, professional, and deeply skilled. My updo stayed perfect all through the reception!</p>
         <div class="tcard-divider"></div>
         <div class="tcard-name">Ananya Krishnaswamy</div>
         <div class="tcard-role">Bride · Reception & Muhurtham 2024</div>
       </div>
       <div class="tcard reveal">
         <div class="tcard-mark">"</div>
-        <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-quote">I've been a loyal client for 3 years — for my engagement, sangeet, and reception. They
-          always understand exactly what suits me. Shreeminfinity is my forever beauty home!</p>
+        <div class="tcard-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="tcard-quote">I've been a loyal client for 3 years — for my engagement, sangeet, and reception. They always understand exactly what suits me. Shreeminfinity is my forever beauty home!</p>
         <div class="tcard-divider"></div>
         <div class="tcard-name">Meera Subramanian</div>
         <div class="tcard-role">Repeat Client · Events & Occasions</div>
@@ -386,10 +662,10 @@
         <div class="sec-label">Pricing Plans</div>
         <h2 class="sec-title">Transparent <em>Packages</em><br><strong>for Every Occasion</strong></h2>
       </div>
-      <p class="sec-sub reveal-right">All packages are customisable. Contact us for a personalised quote for your
-        specific event and requirements. No hidden charges — ever.</p>
+      <p class="sec-sub reveal-right">All packages are customisable. Contact us for a personalised quote for your specific event and requirements. No hidden charges — ever.</p>
     </div>
     <div class="pkg-grid">
+
       <div class="pcard reveal">
         <div class="pcard-tier">Essential</div>
         <div class="pcard-name">Glow Day</div>
@@ -406,8 +682,12 @@
         </ul>
         <a href="contact.html" class="pbtn pbtn-lav">Book This Package</a>
       </div>
+
       <div class="pcard star reveal">
-        <div class="star-badge">✦ Most Popular</div>
+        <div class="star-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px;display:inline;margin-right:3px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Most Popular
+        </div>
         <div class="pcard-tier">Signature</div>
         <div class="pcard-name">Bridal Royale</div>
         <div class="pcard-sub">Complete bridal experience</div>
@@ -425,6 +705,7 @@
         </ul>
         <a href="contact.html" class="pbtn pbtn-gold">Book This Package</a>
       </div>
+
       <div class="pcard reveal">
         <div class="pcard-tier">Preparation</div>
         <div class="pcard-name">Pre-Bridal Ritual</div>
@@ -441,6 +722,7 @@
         </ul>
         <a href="contact.html" class="pbtn pbtn-lav">Book This Package</a>
       </div>
+
     </div>
   </section>
 
@@ -449,43 +731,94 @@
     <div class="contact-info reveal-left">
       <div class="sec-label">Get in Touch</div>
       <h2 class="sec-title">Book Your <em>Appointment</em></h2>
-      <p class="sec-sub" style="margin-bottom:0;">We'd love to be part of your special day. Reach out and we'll craft a
-        beauty journey that's perfectly yours.</p>
+      <p class="sec-sub" style="margin-bottom:0;">We'd love to be part of your special day. Reach out and we'll craft a beauty journey that's perfectly yours.</p>
       <div class="contact-details">
+
         <div class="cdetail">
-          <div class="cdetail-icon">📍</div>
+          <div class="cdetail-icon">
+            <!-- MapPin icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
           <div>
             <div class="cdetail-label">Studio Location</div>
             <div class="cdetail-val">Shreeminfinity Beauty Studio<br>Madurai, Tamil Nadu, India</div>
           </div>
         </div>
+
         <div class="cdetail">
-          <div class="cdetail-icon">📞</div>
+          <div class="cdetail-icon">
+            <!-- Phone icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
           <div>
             <div class="cdetail-label">Call / WhatsApp</div>
             <div class="cdetail-val">+91 98765 43210<br>Mon – Sun &nbsp; 8:00 AM – 8:00 PM</div>
           </div>
         </div>
+
         <div class="cdetail">
-          <div class="cdetail-icon">📧</div>
+          <div class="cdetail-icon">
+            <!-- Mail icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
           <div>
             <div class="cdetail-label">Email Us</div>
             <div class="cdetail-val">hello@shreeminfinity.in</div>
           </div>
         </div>
+
         <div class="cdetail">
-          <div class="cdetail-icon">📱</div>
+          <div class="cdetail-icon">
+            <!-- Smartphone / social icon -->
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+          </div>
           <div>
             <div class="cdetail-label">Follow Our Work</div>
             <div class="cdetail-val">@shreeminfinity on Instagram & Facebook</div>
           </div>
         </div>
+
       </div>
+
       <div class="social-strip">
-        <a href="#" class="social-btn" title="Instagram">📷</a>
-        <a href="#" class="social-btn" title="Facebook">📘</a>
-        <a href="#" class="social-btn" title="YouTube">▶️</a>
-        <a href="#" class="social-btn" title="WhatsApp">💬</a>
+        <!-- Instagram -->
+        <a href="#" class="social-btn" title="Instagram">
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="#" class="social-btn" title="Facebook">
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <!-- YouTube -->
+        <a href="#" class="social-btn" title="YouTube">
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+          </svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="#" class="social-btn" title="WhatsApp">
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
       </div>
     </div>
 
@@ -526,13 +859,13 @@
       </div>
       <div class="fgroup">
         <label>Message / Special Requirements</label>
-        <textarea rows="3"
-          placeholder="Tell us about your event, cultural tradition, style references, or any special requests..."></textarea>
+        <textarea rows="3" placeholder="Tell us about your event, cultural tradition, style references, or any special requests..."></textarea>
       </div>
-      <button class="fsub" id="formSubmit">✦ Request Appointment</button>
-      <p style="margin-top:1rem;font-size:0.68rem;color:rgba(255,255,255,0.3);letter-spacing:0.05em;">For a full
-        dedicated booking experience, visit our <a href="contact.html"
-          style="color:var(--gold-light);text-decoration:underline;">Contact Page →</a></p>
+      <button class="fsub" id="formSubmit">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;display:inline;margin-right:6px;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Request Appointment
+      </button>
+      <p style="margin-top:1rem;font-size:0.68rem;color:rgba(255,255,255,0.3);letter-spacing:0.05em;">For a full dedicated booking experience, visit our <a href="contact.html" style="color:var(--gold-light);text-decoration:underline;">Contact Page →</a></p>
     </div>
   </div>
 
@@ -541,8 +874,7 @@
     <div class="footer-top">
       <div>
         <div class="foot-brand-name">Shreem<span>infinity</span></div>
-        <p class="foot-brand-desc">Luxury bridal makeup, hair styling and beauty services in Madurai, Tamil Nadu. Where
-          every woman becomes royalty.</p>
+        <p class="foot-brand-desc">Luxury bridal makeup, hair styling and beauty services in Madurai, Tamil Nadu. Where every woman becomes royalty.</p>
       </div>
       <div>
         <div class="foot-col-title">Services</div>
@@ -577,7 +909,12 @@
     </div>
     <div class="footer-bottom">
       <div class="foot-copy">© 2025 Shreeminfinity. All Rights Reserved.</div>
-      <div class="foot-love">Crafted with <span>♥</span> for Beautiful Brides</div>
+      <div class="foot-love">Crafted with
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;display:inline;vertical-align:middle;color:#e05a7a;">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        for Beautiful Brides
+      </div>
     </div>
   </footer>
 

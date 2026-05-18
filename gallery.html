@@ -32,14 +32,14 @@
   <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
 </nav>
 <div class="mob-menu" id="mobMenu">
-  <button class="mob-close" onclick="document.getElementById('mobMenu').classList.remove('open')">×</button>
-  <a href="index.html" onclick="document.getElementById('mobMenu').classList.remove('open')">Home</a>
-  <a href="about.html" onclick="document.getElementById('mobMenu').classList.remove('open')">About</a>
-  <a href="gallery.html" onclick="document.getElementById('mobMenu').classList.remove('open')">Gallery</a>
-  <a href="ratecard.html" onclick="document.getElementById('mobMenu').classList.remove('open')">Packages</a>
-  <a href="contact.html" onclick="document.getElementById('mobMenu').classList.remove('open')">Book Now</a>
+  <button class="mob-close" id="mobClose">×</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="ratecard.html">Packages</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Book Now</a>
 </div>
-
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -66,92 +66,92 @@
   <div class="masonry" id="masonryGrid">
 
     <div class="masonry-item reveal" data-cat="bridal">
-      <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=600&q=85&auto=format&fit=crop" alt="South Indian Bridal Makeup" loading="lazy">
+      <img src="./images/gallery1.jpg" alt="South Indian Bridal Makeup" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Bridal</div><div class="mo-title">South Indian Bridal Look</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="hair">
-      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=85&auto=format&fit=crop" alt="Bridal Updo Hair" loading="lazy">
+      <img src="./images/gallery2.jpg" alt="Bridal Updo Hair" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Hair</div><div class="mo-title">Elaborate Bridal Updo</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="party">
-      <img src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?w=600&q=85&auto=format&fit=crop" alt="Wedding Reception" loading="lazy">
+      <img src="./images/gallery8.png" alt="Wedding Reception" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Party</div><div class="mo-title">Reception Glam</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="bridal">
-      <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&q=85&auto=format&fit=crop" alt="Bridal Makeover" loading="lazy">
+      <img src="./images/gallery10.png" alt="Bridal Makeover" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Bridal</div><div class="mo-title">HD Airbrush Bridal</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="saree">
-      <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&q=85&auto=format&fit=crop" alt="Saree Draping" loading="lazy">
+      <img src="./images/gallery11.png" alt="Saree Draping" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Saree</div><div class="mo-title">Kanjivaram Nivi Drape</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="party">
-      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=85&auto=format&fit=crop" alt="Event Makeup" loading="lazy">
+      <img src="./images/gallery12.png" alt="Event Makeup" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Party</div><div class="mo-title">Engagement Look</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="hair">
-      <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=85&auto=format&fit=crop" alt="Hair Color" loading="lazy">
+      <img src="./images/gallery9.png" alt="Hair Color" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Hair</div><div class="mo-title">Balayage Colour</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="bridal">
-      <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=600&q=85&auto=format&fit=crop" alt="Tamil Bride" loading="lazy">
+      <img src="./images/gallery13.png" alt="Tamil Bride" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Bridal</div><div class="mo-title">Traditional Tamil Bride</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="prebridal">
-      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=85&auto=format&fit=crop" alt="Facial Treatment" loading="lazy">
+      <img src="./images/gallery14.png" alt="Facial Treatment" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Pre-Bridal</div><div class="mo-title">Glow Facial Session</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="party">
-      <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=600&q=85&auto=format&fit=crop" alt="Festival Makeup" loading="lazy">
+      <img src="./images/gallery15.png" alt="Festival Makeup" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Party</div><div class="mo-title">Festival Glam</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="bridal">
-      <img src="https://images.unsplash.com/photo-1550772934-5e69b20d38c4?w=600&q=85&auto=format&fit=crop" alt="Bridal Jewellery Look" loading="lazy">
+      <img src="./images/gallery16.png" alt="Bridal Jewellery Look" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Bridal</div><div class="mo-title">Jewellery Bridal Edit</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="hair">
-      <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=85&auto=format&fit=crop" alt="Hair Spa" loading="lazy">
+      <img src="./images/gallery17.png" alt="Hair Spa" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Hair</div><div class="mo-title">Luxury Hair Spa</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="saree">
-      <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=600&q=85&auto=format&fit=crop" alt="Saree Look" loading="lazy">
+      <img src="./images/gallery18.png" alt="Saree Look" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Saree</div><div class="mo-title">Bengali Style Drape</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="prebridal">
-      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=85&auto=format&fit=crop" alt="Skincare" loading="lazy">
+      <img src="./images/gallery19.png" alt="Skincare" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Pre-Bridal</div><div class="mo-title">Skin Brightening</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="bridal">
-      <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=85&auto=format&fit=crop" alt="Christian Bride" loading="lazy">
+      <img src="./images/gallery20.png" alt="Christian Bride" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Bridal</div><div class="mo-title">Christian Bridal Look</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="party">
-      <img src="https://images.unsplash.com/photo-1583939411023-14783179e581?w=600&q=85&auto=format&fit=crop" alt="Sangeet Night" loading="lazy">
+      <img src="./images/gallery21.png" alt="Sangeet Night" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Party</div><div class="mo-title">Sangeet Night Look</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="hair">
-      <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=85&auto=format&fit=crop" alt="Braid Style" loading="lazy">
+      <img src="./images/gallery22.png" alt="Braid Style" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Hair</div><div class="mo-title">Floral Braid</div></div>
     </div>
 
     <div class="masonry-item reveal" data-cat="bridal">
-      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=85&auto=format&fit=crop" alt="Wedding Couple" loading="lazy">
+      <img src="./images/gallery23.png" alt="Wedding Couple" loading="lazy">
       <div class="masonry-overlay"><div class="mo-tag">Bridal</div><div class="mo-title">Wedding Day Story</div></div>
     </div>
 
@@ -227,7 +227,16 @@ window.addEventListener('scroll',()=>{
   document.getElementById('btt').classList.toggle('show',window.scrollY>400);
 });
 // Hamburger
-document.getElementById('ham').addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
+const ham = document.getElementById('ham');
+const mobMenu = document.getElementById('mobMenu');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  mobMenu.classList.toggle('open');
+});
+document.getElementById('mobClose').addEventListener('click', () => {
+  ham.classList.remove('open');
+  mobMenu.classList.remove('open');
+});
 // Reveal
 const ro=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);ro.unobserve(e.target);}});},{threshold:0.06});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));

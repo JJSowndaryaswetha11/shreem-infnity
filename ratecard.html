@@ -431,7 +431,16 @@
 const cur=document.getElementById('cur'),curR=document.getElementById('curRing');
 document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';curR.style.left=e.clientX+'px';curR.style.top=e.clientY+'px';});
 window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);document.getElementById('btt').classList.toggle('show',window.scrollY>400);});
-document.getElementById('ham').addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
+const ham = document.getElementById('ham');
+const mobMenu = document.getElementById('mobMenu');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  mobMenu.classList.toggle('open');
+});
+document.getElementById('mobClose').addEventListener('click', () => {
+  ham.classList.remove('open');
+  mobMenu.classList.remove('open');
+});
 const ro=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);ro.unobserve(e.target);}});},{threshold:0.06});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 </script>

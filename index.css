@@ -90,7 +90,7 @@ nav.scrolled{padding:1rem 5rem;box-shadow:0 4px 40px rgba(139,95,195,0.08);}
 /* ── MOBILE MENU ── */
 .mob-menu{display:none;position:fixed;inset:0;z-index:400;background:var(--lav-50);padding:7rem 2.5rem 2.5rem;flex-direction:column;gap:0;}
 .mob-menu.open{display:flex;}
-.mob-menu a{font-family:var(--font-serif);font-size:2.2rem;font-weight:400;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--lav-200);padding:1.2rem 0;transition:color 0.2s;}
+.mob-menu a{font-family:var(--font-serif);font-size:1.4rem;font-weight:400;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--lav-200);padding:1.2rem 0;transition:color 0.2s;}
 .mob-menu a:hover{color:var(--lav-500);}
 .mob-close{position:absolute;top:1.5rem;right:2rem;font-size:2rem;color:var(--charcoal);cursor:pointer!important;background:none;border:none;font-family:var(--font-serif);}
 
@@ -464,7 +464,7 @@ nav{max-width:100%;}  /* nav is position:fixed, keep full-width */
 /* ── 480px — phones ── */
 @media(max-width:480px){
   .hero-left{padding:3rem 1.2rem 2rem;}
-  .mob-menu a{font-size:1.7rem;}
+  .mob-menu a{font-size:1.4rem;}
   .hero-actions{flex-direction:column;align-items:center;}
   .btn-lav,.btn-ghost{width:100%;text-align:center;}
 }
@@ -2455,4 +2455,30 @@ nav {
 /* Compare table — allow horizontal scroll on small screens */
 .compare-wrap {
   overflow-x: auto;
+}
+
+/* hero */
+/* Remove or comment out this old rule */
+/* .hero-photo { background-image: url(...) } */
+
+/* Add these new rules */
+.hero-photo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.hero-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(74,110,58,0.25) 0%, rgba(26,36,21,0.15) 100%);
+  z-index: 1;
+}
+
+.float-badge {
+  z-index: 2;
 }
