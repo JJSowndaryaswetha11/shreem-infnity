@@ -2492,7 +2492,7 @@ nav {
 }
 /* ── NAV FULL-WIDTH FIX (always full bleed) ── */
 /* ── NAV FIX ── */
-/* nav {
+nav {
   padding: 0 !important;
 }
 nav.scrolled {
@@ -2514,7 +2514,7 @@ nav.scrolled {
 nav.scrolled .nav-inner {
   padding-top: 1rem;
   padding-bottom: 1rem;
-} */
+}
 /* ── RESPONSIVE PARAGRAPH READABILITY (all zoom levels) ── */
 .hero-desc,
 .sec-sub,
