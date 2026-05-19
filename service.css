@@ -298,7 +298,31 @@ nav.scrolled{padding:1rem 2.5rem;}
   position: relative;
   overflow: hidden;
 }
+/* ── NAV FULL-WIDTH FIX (always full bleed) ── */
+/* ── NAV FIX ── */
+nav {
+  padding: 0 !important;
+}
+nav.scrolled {
+  padding: 0 !important;
+  box-shadow: 0 4px 40px rgba(139,95,195,0.08);
+}
 
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.4rem clamp(1.25rem, 5vw, 5rem);
+  box-sizing: border-box;
+}
+
+nav.scrolled .nav-inner {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 /* Content container — centred and capped */
 .page-hero {
   max-width: 1400px;
@@ -351,7 +375,41 @@ nav.scrolled{padding:1rem 2.5rem;}
 .cta-band p,
 .sec-sub,
 .sec-sub-white {
-  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  font-size: clamp(0.925rem, 1.175vw, 1.075rem);
   line-height: 1.85;
   letter-spacing: 0.01em;
+}
+/* ── CENTER EVERYTHING FIX ── */
+
+/* Hero bg must be full-width, only inner content is capped */
+
+
+/* Service tabs — center content */
+.svc-tabs {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+/* All main sections — cap content width */
+.svc-section,
+.process-section,
+.specials-section,
+.brands-strip,
+.faq-section,
+.testi-section,
+.cta-band {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+.footer-top,
+.footer-bottom {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }

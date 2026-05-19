@@ -352,6 +352,31 @@ footer{background:var(--charcoal);padding:0;}
   nav{padding:1.2rem 3rem;}
   nav.scrolled{padding:1rem 3rem;}
 }
+/* ── NAV FULL-WIDTH FIX (always full bleed) ── */
+/* ── NAV FIX ── */
+nav {
+  padding: 0 !important;
+}
+nav.scrolled {
+  padding: 0 !important;
+  box-shadow: 0 4px 40px rgba(139,95,195,0.08);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.4rem clamp(1.25rem, 5vw, 5rem);
+  box-sizing: border-box;
+}
+
+nav.scrolled .nav-inner {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 /* ── PARAGRAPH FONT SIZE INCREASE ── */
 .page-hero-sub,
 .sec-sub,
@@ -367,7 +392,87 @@ footer{background:var(--charcoal);padding:0;}
 .success-sub,
 .foot-brand-desc,
 .foot-links a {
- font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+ font-size: clamp(0.925rem, 1.175vw, 1.075rem);
   line-height: 1.85;
   letter-spacing: 0.01em;
+}
+/* ── CONTACT PAGE CENTERING FIX ── */
+
+/* Nav — already fixed with nav-inner */
+
+/* Page hero — full width bg, content centered */
+.page-hero {
+  max-width: none !important;
+  width: 100%;
+}
+
+.page-hero-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: clamp(1.25rem, 5vw, 5rem);
+  padding-right: clamp(1.25rem, 5vw, 5rem);
+}
+
+/* Info strip — already has .info-strip-inner with max-width */
+.info-strip {
+  max-width: none !important;
+}
+
+/* Main contact grid */
+.contact-main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Map wrap */
+.map-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* FAQ section */
+.faq-section {
+  max-width: none !important;
+}
+.faq-section-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer-top,
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: clamp(1.25rem, 5vw, 5rem);
+  padding-right: clamp(1.25rem, 5vw, 5rem);
+}
+/* ── CONTACT HERO IMAGE FIX ── */
+.page-hero {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* The img tag used as bg must fill the full hero */
+img.page-hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center 30% !important;
+  opacity: 0.35 !important;
+  display: block !important;
+}
+
+/* Content inside stays centered */
+.page-hero-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: clamp(1.25rem, 5vw, 5rem);
+  padding-right: clamp(1.25rem, 5vw, 5rem);
+  width: 100%;
+  box-sizing: border-box;
 }
