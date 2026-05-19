@@ -2490,7 +2490,7 @@ nav {
 .float-badge {
   z-index: 2;
 }
-/* ── PARAGRAPH FONT SIZE INCREASE ── */
+/* ── RESPONSIVE PARAGRAPH READABILITY (all zoom levels) ── */
 .hero-desc,
 .sec-sub,
 .svc-text,
@@ -2508,5 +2508,7 @@ nav {
 .pcard-item,
 .sr-service,
 .note-text {
-  font-size: 1.05rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  line-height: 1.85;
+  letter-spacing: 0.01em;
 }

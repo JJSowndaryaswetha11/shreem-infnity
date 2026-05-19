@@ -339,7 +339,6 @@ nav.scrolled{padding:1rem 2.5rem;}
   margin-right: auto;
   border-radius: 0; /* optional: add if you want rounded corners */
 }
-/* ── PARAGRAPH FONT SIZE INCREASE ── */
 .page-sub,
 .svc-desc,
 .svc-feat,
@@ -352,5 +351,7 @@ nav.scrolled{padding:1rem 2.5rem;}
 .cta-band p,
 .sec-sub,
 .sec-sub-white {
-  font-size: 1.05rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  line-height: 1.85;
+  letter-spacing: 0.01em;
 }
