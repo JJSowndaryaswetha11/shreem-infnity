@@ -318,7 +318,16 @@ function waitForImages(items, callback) {
 
 // Initial layout
 let activeItems = [...allItems];
-waitForImages(allItems, () => layoutMasonry(allItems));
+waitForImages(allItems, () => {
+  layoutMasonry(allItems);
+  // Stagger fade-in after layout is calculated
+  allItems.forEach((item, i) => {
+    setTimeout(() => {
+      item.style.opacity = '1';
+      item.style.transform = 'scale(1)';
+    }, i * 40);
+  });
+});
 window.addEventListener('resize', () => layoutMasonry(activeItems));
 
 // ── FILTER ──

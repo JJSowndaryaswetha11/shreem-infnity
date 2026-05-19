@@ -2567,3 +2567,7 @@ nav.scrolled .nav-inner {
 @media (max-width: 640px) {
   .masonry-item { width: 100%; }
 }
+/* Hide items until JS measures and places them */
+.masonry-item {
+  opacity: 0;
+}
