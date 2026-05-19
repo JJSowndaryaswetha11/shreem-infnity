@@ -174,8 +174,8 @@ nav.scrolled{padding:1rem 5rem;box-shadow:0 4px 40px rgba(139,95,195,0.08);}
 /* ── ABOUT ── */
 #about{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0;background:var(--lav-50);}
 .about-img-side{position:relative;min-height:650px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.about-img-side-photo{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop&q=85');background-size:cover;background-position:center;}
-.about-img-side-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(196,174,233,0.25),rgba(85,46,136,0.3));}
+.about-img-side-photo{position:absolute;inset:0;background-size:cover;background-position:center;}
+
 .about-big-text{position:absolute;font-family:var(--font-serif);font-size:18rem;font-weight:700;color:rgba(255,255,255,0.08);line-height:1;font-style:italic;top:-2rem;left:-1rem;pointer-events:none;z-index:2;}
 .about-card{background:var(--white);padding:2.8rem;max-width:300px;position:relative;z-index:3;box-shadow:0 30px 80px rgba(42,32,53,0.18);}
 .about-card-quote{font-family:var(--font-serif);font-size:3.5rem;line-height:0.6;color:var(--lav-300);margin-bottom:1rem;}
@@ -319,8 +319,8 @@ footer{background:var(--charcoal);padding:0;}
 .btt:hover{transform:translateY(-3px);background:var(--lav-700);}
 
 /* ── FADE ANIMATIONS ── */
-.reveal{opacity:1;transform:none;}
-.reveal.in{opacity:1;transform:none;}
+/* .reveal{opacity:1;transform:none;}
+.reveal.in{opacity:1;transform:none;} */
 
 /* ══════════════════════════════════════════════
    GLOBAL MAX-WIDTH CENTRING
@@ -2489,4 +2489,24 @@ nav {
 
 .float-badge {
   z-index: 2;
+}
+/* ── PARAGRAPH FONT SIZE INCREASE ── */
+.hero-desc,
+.sec-sub,
+.svc-text,
+.tcard-quote,
+.body-text,
+.foot-brand-desc,
+.foot-links a,
+.cdetail-val,
+.af-desc,
+.step-desc,
+.tc-desc,
+.val-desc,
+.page-sub,
+.pkg-tagline,
+.pcard-item,
+.sr-service,
+.note-text {
+  font-size: 1.05rem;
 }

@@ -352,3 +352,20 @@ footer{background:var(--charcoal);padding:0;}
   nav{padding:1.2rem 3rem;}
   nav.scrolled{padding:1rem 3rem;}
 }
+/* ── PARAGRAPH FONT SIZE INCREASE ── */
+.page-hero-sub,
+.sec-sub,
+.ccard-val,
+.ccard-hint,
+.istrip-val,
+.hours-day,
+.hours-time,
+.nearby-item,
+.parking-note,
+.faq-a-text,
+.faq-q-text,
+.success-sub,
+.foot-brand-desc,
+.foot-links a {
+  font-size: 1.05rem;
+}
