@@ -310,9 +310,20 @@ function waitForImages(items, callback) {
   let loaded = 0;
   const imgs = items.map(i => i.querySelector('img')).filter(Boolean);
   if (!imgs.length) return callback();
+  
   imgs.forEach(img => {
-    if (img.complete) { loaded++; if (loaded === imgs.length) callback(); }
-    else { img.onload = img.onerror = () => { loaded++; if (loaded === imgs.length) callback(); }; }
+    if (img.complete && img.naturalHeight !== 0) {
+      loaded++;
+      // Re-layout after each image so grid builds progressively
+      layoutMasonry(items);
+      if (loaded === imgs.length) callback();
+    } else {
+      img.onload = img.onerror = () => {
+        loaded++;
+        layoutMasonry(items); // re-layout on each load
+        if (loaded === imgs.length) callback();
+      };
+    }
   });
 }
 
