@@ -2574,8 +2574,10 @@ nav.scrolled .nav-inner {
 /* Hide items until JS measures and places them */
 .masonry-item {
   opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
-.masonry-item {
+.masonry-item.visible {
   opacity: 1;
-  transform: none;
+  transform: scale(1);
 }

@@ -249,213 +249,181 @@
       </div>
     </div>
   </footer>
-
 <script>
-  // Cursor
-const cur = document.getElementById('cur'), curR = document.getElementById('curRing');
-document.addEventListener('mousemove', e => {
-  cur.style.left = e.clientX + 'px'; cur.style.top = e.clientY + 'px';
-  curR.style.left = e.clientX + 'px'; curR.style.top = e.clientY + 'px';
-});
-
-// Nav scroll
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-  document.getElementById('btt').classList.toggle('show', window.scrollY > 400);
-});
-
-// Hamburger
-const ham = document.getElementById('ham');
-const mobMenu = document.getElementById('mobMenu');
-ham.addEventListener('click', () => { ham.classList.toggle('open'); mobMenu.classList.toggle('open'); });
-document.getElementById('mobClose').addEventListener('click', () => { ham.classList.remove('open'); mobMenu.classList.remove('open'); });
-
-// ── MASONRY LAYOUT ENGINE ──
-const grid = document.getElementById('masonryGrid');
-const allItems = Array.from(document.querySelectorAll('.masonry-item'));
-
-function getColumns() {
-  const w = grid.offsetWidth;
-  if (w < 640) return 1;
-  if (w < 1100) return 2;
-  return 3;
-}
-
-function layoutMasonry(visibleItems) {
-  const cols = getColumns();
-  const gap = 12;
-  const colWidth = (grid.offsetWidth - gap * (cols - 1)) / cols;
-  const colHeights = Array(cols).fill(0);
-
-  visibleItems.forEach(item => {
-    const shortestCol = colHeights.indexOf(Math.min(...colHeights));
-    const x = shortestCol * (colWidth + gap);
-    const y = colHeights[shortestCol];
-
-    item.style.width = colWidth + 'px';
-    item.style.left = x + 'px';
-    item.style.top = y + 'px';
-    item.style.opacity = '1';
-    item.style.transform = 'scale(1)';
-    item.style.pointerEvents = 'auto';
-
-    colHeights[shortestCol] += item.offsetHeight + gap;
+  // ── CURSOR ──
+  const cur = document.getElementById('cur'), curR = document.getElementById('curRing');
+  document.addEventListener('mousemove', e => {
+    cur.style.left = e.clientX + 'px'; cur.style.top = e.clientY + 'px';
+    curR.style.left = e.clientX + 'px'; curR.style.top = e.clientY + 'px';
   });
-
-  grid.style.height = Math.max(...colHeights) + 'px';
-}
-
-function waitForImages(items, callback) {
-  let loaded = 0;
-  const imgs = items.map(i => i.querySelector('img')).filter(Boolean);
-  if (!imgs.length) return callback();
-  
-  imgs.forEach(img => {
+ 
+  // ── NAV SCROLL ──
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    document.getElementById('btt').classList.toggle('show', window.scrollY > 400);
+  });
+ 
+  // ── HAMBURGER ──
+  const ham = document.getElementById('ham');
+  const mobMenu = document.getElementById('mobMenu');
+  ham.addEventListener('click', () => { ham.classList.toggle('open'); mobMenu.classList.toggle('open'); });
+  document.getElementById('mobClose').addEventListener('click', () => { ham.classList.remove('open'); mobMenu.classList.remove('open'); });
+ 
+  // ── MASONRY LAYOUT ENGINE ──
+  const grid = document.getElementById('masonryGrid');
+  const allItems = Array.from(document.querySelectorAll('.masonry-item'));
+ 
+  function getColumns() {
+    const w = grid.offsetWidth;
+    if (w < 640) return 1;
+    if (w < 1100) return 2;
+    return 3;
+  }
+ 
+  function layoutMasonry(visibleItems) {
+    const cols = getColumns();
+    const gap = 12;
+    const colWidth = (grid.offsetWidth - gap * (cols - 1)) / cols;
+    const colHeights = Array(cols).fill(0);
+ 
+    visibleItems.forEach(item => {
+      const shortestCol = colHeights.indexOf(Math.min(...colHeights));
+      const x = shortestCol * (colWidth + gap);
+      const y = colHeights[shortestCol];
+ 
+      item.style.width = colWidth + 'px';
+      item.style.left = x + 'px';
+      item.style.top = y + 'px';
+      item.style.pointerEvents = 'auto';
+ 
+      colHeights[shortestCol] += item.offsetHeight + gap;
+    });
+ 
+    grid.style.height = Math.max(...colHeights) + 'px';
+  }
+ 
+  // ── INITIAL LOAD ──
+  // Do a first layout pass immediately so items are positioned
+  // before images finish loading (prevents layout jump).
+  layoutMasonry(allItems);
+ 
+  let activeItems = [...allItems];
+ 
+  // Reveal each item the moment its image loads.
+  // Uses classList.add('visible') — one source of truth, no inline style conflicts.
+  allItems.forEach((item, i) => {
+    const img = item.querySelector('img');
+ 
+    function revealItem() {
+      // Re-layout so the grid height updates as each image arrives
+      layoutMasonry(allItems);
+      // Staggered fade-in via CSS class (transition defined in index.css)
+      setTimeout(() => item.classList.add('visible'), i * 40);
+    }
+ 
     if (img.complete && img.naturalHeight !== 0) {
-      loaded++;
-      // Re-layout after each image so grid builds progressively
-      layoutMasonry(items);
-      if (loaded === imgs.length) callback();
+      // Already cached — reveal immediately
+      revealItem();
     } else {
-      img.onload = img.onerror = () => {
-        loaded++;
-        layoutMasonry(items); // re-layout on each load
-        if (loaded === imgs.length) callback();
-      };
+      img.addEventListener('load', revealItem);
+      img.addEventListener('error', revealItem); // broken image still gets placed
     }
   });
-}
-
-// Initial layout
-// let activeItems = [...allItems];
-// waitForImages(allItems, () => {
-//   layoutMasonry(allItems);
-//   allItems.forEach((item, i) => {
-//     setTimeout(() => {
-//       item.style.opacity = '1';
-//       item.style.transform = 'scale(1)';
-//     }, i * 40);
-//   });
-// });
-// window.addEventListener('resize', () => layoutMasonry(activeItems));
-// Initial layout
-let activeItems = [...allItems];
-
-// Layout immediately
-layoutMasonry(allItems);
-
-// Fade in each image the moment IT loads
-allItems.forEach((item, i) => {
-  const img = item.querySelector('img');
-
-  function revealItem() {
-    layoutMasonry(allItems);
-    setTimeout(() => {
-      item.style.opacity = '1';
-      item.style.transform = 'scale(1)';
-      item.style.pointerEvents = 'auto';
-    }, i * 30);
-  }
-
-  if (img.complete && img.naturalHeight !== 0) {
-    revealItem();
-  } else {
-    img.addEventListener('load', revealItem);
-    img.addEventListener('error', revealItem);
-  }
-});
-
-window.addEventListener('resize', () => layoutMasonry(activeItems));
-
-// ── FILTER ──
-const tabs = document.querySelectorAll('.ftab');
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    const f = tab.dataset.filter;
-
-    // Fade everything out
-    allItems.forEach(item => {
-      item.style.opacity = '0';
-      item.style.transform = 'scale(0.95)';
-      item.style.pointerEvents = 'none';
-    });
-
-    setTimeout(() => {
-      activeItems = allItems.filter(item => f === 'all' || item.dataset.cat === f);
-
-      // Hide non-matching (off screen)
+ 
+  window.addEventListener('resize', () => layoutMasonry(activeItems));
+ 
+  // ── FILTER TABS ──
+  const tabs = document.querySelectorAll('.ftab');
+ 
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const f = tab.dataset.filter;
+ 
+      // Step 1 — fade everything out instantly via class removal
       allItems.forEach(item => {
-        if (!activeItems.includes(item)) {
-          item.style.left = '-9999px';
-        }
+        item.classList.remove('visible');
+        item.style.pointerEvents = 'none';
       });
-
-      // Layout visible ones, then fade in with stagger
-      layoutMasonry(activeItems);
-      activeItems.forEach((item, i) => {
-        item.style.opacity = '0';
-        item.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-          item.style.opacity = '1';
-          item.style.transform = 'scale(1)';
-        }, i * 50);
-      });
-    }, 350);
+ 
+      // Step 2 — after the fade-out transition finishes, re-layout and fade in
+      setTimeout(() => {
+        activeItems = allItems.filter(item => f === 'all' || item.dataset.cat === f);
+ 
+        // Park non-matching items off-screen
+        allItems.forEach(item => {
+          if (!activeItems.includes(item)) {
+            item.style.left = '-9999px';
+          }
+        });
+ 
+        // Layout the visible items then stagger them in
+        layoutMasonry(activeItems);
+ 
+        activeItems.forEach((item, i) => {
+          setTimeout(() => item.classList.add('visible'), i * 50);
+        });
+      }, 350); // matches the CSS transition duration
+    });
   });
-});
-
-// ── LIGHTBOX ──
-const imgs = allItems.map(i => i.querySelector('img'));
-let curIdx = 0;
-
-function openLb(idx) {
-  curIdx = idx;
-  document.getElementById('lbImg').src = imgs[idx].src;
-  document.getElementById('lbCaption').textContent = imgs[idx].alt;
-  document.getElementById('lightbox').classList.add('open');
-}
-function closeLb() { document.getElementById('lightbox').classList.remove('open'); }
-
-allItems.forEach((item, i) => item.addEventListener('click', () => openLb(i)));
-document.getElementById('lbClose').addEventListener('click', closeLb);
-document.getElementById('lightbox').addEventListener('click', e => { if (e.target === document.getElementById('lightbox')) closeLb(); });
-
-document.getElementById('lbPrev').addEventListener('click', e => {
-  e.stopPropagation();
-  const visible = activeItems;
-  const vi = visible.indexOf(allItems[curIdx]);
-  const ni = (vi - 1 + visible.length) % visible.length;
-  curIdx = allItems.indexOf(visible[ni]);
-  document.getElementById('lbImg').src = imgs[curIdx].src;
-  document.getElementById('lbCaption').textContent = imgs[curIdx].alt;
-});
-
-document.getElementById('lbNext').addEventListener('click', e => {
-  e.stopPropagation();
-  const visible = activeItems;
-  const vi = visible.indexOf(allItems[curIdx]);
-  const ni = (vi + 1) % visible.length;
-  curIdx = allItems.indexOf(visible[ni]);
-  document.getElementById('lbImg').src = imgs[curIdx].src;
-  document.getElementById('lbCaption').textContent = imgs[curIdx].alt;
-});
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeLb();
-  if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
-  if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
-});
-
-// Reveal on scroll
-const ro = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('in'), i * 80); ro.unobserve(e.target); }
+ 
+  // ── LIGHTBOX ──
+  const lbImgs = allItems.map(i => i.querySelector('img'));
+  let curIdx = 0;
+ 
+  function openLb(idx) {
+    curIdx = idx;
+    document.getElementById('lbImg').src = lbImgs[idx].src;
+    document.getElementById('lbCaption').textContent = lbImgs[idx].alt;
+    document.getElementById('lightbox').classList.add('open');
+  }
+ 
+  function closeLb() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+ 
+  allItems.forEach((item, i) => item.addEventListener('click', () => openLb(i)));
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target === document.getElementById('lightbox')) closeLb();
   });
-}, { threshold: 0.06 });
-document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+ 
+  document.getElementById('lbPrev').addEventListener('click', e => {
+    e.stopPropagation();
+    const vi = activeItems.indexOf(allItems[curIdx]);
+    const ni = (vi - 1 + activeItems.length) % activeItems.length;
+    curIdx = allItems.indexOf(activeItems[ni]);
+    document.getElementById('lbImg').src = lbImgs[curIdx].src;
+    document.getElementById('lbCaption').textContent = lbImgs[curIdx].alt;
+  });
+ 
+  document.getElementById('lbNext').addEventListener('click', e => {
+    e.stopPropagation();
+    const vi = activeItems.indexOf(allItems[curIdx]);
+    const ni = (vi + 1) % activeItems.length;
+    curIdx = allItems.indexOf(activeItems[ni]);
+    document.getElementById('lbImg').src = lbImgs[curIdx].src;
+    document.getElementById('lbCaption').textContent = lbImgs[curIdx].alt;
+  });
+ 
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+    if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
+  });
+ 
+  // ── SCROLL REVEAL (for .reveal elements, if any) ──
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 80);
+        ro.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 </script>
+ 
 </body>
 </html>
