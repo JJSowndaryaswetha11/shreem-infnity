@@ -2542,12 +2542,16 @@ nav.scrolled .nav-inner {
   width: 100%;
 }
 
-.masonry-item {
+/* .masonry-item {
   position: absolute;
   width: calc(33.333% - 8px);
   transition: opacity 0.4s ease, transform 0.4s ease;
   overflow: hidden;
   cursor: pointer;
+} */
+ .masonry-item {
+  position: absolute;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .masonry-item img {
@@ -2570,4 +2574,8 @@ nav.scrolled .nav-inner {
 /* Hide items until JS measures and places them */
 .masonry-item {
   opacity: 0;
+}
+.masonry-item {
+  opacity: 1;
+  transform: none;
 }
