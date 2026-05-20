@@ -328,17 +328,44 @@ function waitForImages(items, callback) {
 }
 
 // Initial layout
+// let activeItems = [...allItems];
+// waitForImages(allItems, () => {
+//   layoutMasonry(allItems);
+//   allItems.forEach((item, i) => {
+//     setTimeout(() => {
+//       item.style.opacity = '1';
+//       item.style.transform = 'scale(1)';
+//     }, i * 40);
+//   });
+// });
+// window.addEventListener('resize', () => layoutMasonry(activeItems));
+// Initial layout
 let activeItems = [...allItems];
-waitForImages(allItems, () => {
-  layoutMasonry(allItems);
-  // Stagger fade-in after layout is calculated
-  allItems.forEach((item, i) => {
+
+// Layout immediately
+layoutMasonry(allItems);
+
+// Fade in each image the moment IT loads
+allItems.forEach((item, i) => {
+  const img = item.querySelector('img');
+
+  function revealItem() {
+    layoutMasonry(allItems);
     setTimeout(() => {
       item.style.opacity = '1';
       item.style.transform = 'scale(1)';
-    }, i * 40);
-  });
+      item.style.pointerEvents = 'auto';
+    }, i * 30);
+  }
+
+  if (img.complete && img.naturalHeight !== 0) {
+    revealItem();
+  } else {
+    img.addEventListener('load', revealItem);
+    img.addEventListener('error', revealItem);
+  }
 });
+
 window.addEventListener('resize', () => layoutMasonry(activeItems));
 
 // ── FILTER ──
