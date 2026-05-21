@@ -502,9 +502,10 @@
         <textarea id="message" rows="4" placeholder="Share your inspiration, skin concerns, cultural requirements, or anything else we should know..."></textarea>
       </div>
       <div class="fgroup" style="display:flex;align-items:flex-start;gap:0.8rem;">
-        <input type="checkbox" id="agree" style="width:auto;flex-shrink:0;margin-top:3px;accent-color:var(--gold);">
-        <label for="agree" style="font-size:0.72rem;color:rgba(255,255,255,0.4);text-transform:none;letter-spacing:0;margin:0;cursor:pointer!important;font-weight:300;line-height:1.6;">I agree to be contacted by Shreeminfinity regarding my appointment request. My details will not be shared with third parties.</label>
-      </div>
+  <input type="checkbox" id="agree" style="position:absolute;opacity:0;width:0;height:0;pointer-events:none;">
+  <div class="custom-check" id="checkBox" onclick="this.classList.toggle('checked');document.getElementById('agree').checked=!document.getElementById('agree').checked;"></div>
+  <label for="agree" onclick="document.getElementById('checkBox').classList.toggle('checked');document.getElementById('agree').checked=!document.getElementById('agree').checked;" style="font-size:0.72rem;color:rgba(255,255,255,0.4);text-transform:none;letter-spacing:0;margin:0;cursor:pointer!important;font-weight:300;line-height:1.6;">I agree to be contacted by Shreeminfinity regarding my appointment request. My details will not be shared with third parties.</label>
+</div>
       <div class="step-nav">
         <button class="btn-prev" onclick="nextStep(2)">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
@@ -766,15 +767,51 @@ function toggleFaq(el) {
 function submitForm() {
   const agree = document.getElementById('agree');
   if (!agree.checked) { alert('Please agree to the terms to submit your request.'); return; }
-  const ref = 'SHR-2025-' + Math.floor(1000 + Math.random() * 9000);
+
+  const fname     = document.getElementById('fname').value.trim();
+  const lname     = document.getElementById('lname').value.trim();
+  const phone     = document.getElementById('phone').value.trim();
+  const email     = document.getElementById('email').value.trim();
+  const source    = document.getElementById('source').value;
+  const eventType = document.getElementById('eventType').value;
+  const tradition = document.getElementById('tradition').value;
+  const venue     = document.getElementById('venue').value.trim();
+  const message   = document.getElementById('message').value.trim();
+  const prefDate  = document.getElementById('prefDate').value;
+  const prefTime  = document.getElementById('prefTime').value;
+
+  const services = [...document.querySelectorAll('.svc-opt.selected')]
+    .map(el => el.querySelector('.svc-opt-name').textContent).join(', ') || 'Not selected';
+  const pkgEl = document.querySelector('.pkg-opt.selected');
+  const pkg   = pkgEl ? pkgEl.querySelector('.pkg-name').textContent : 'Custom / TBD';
+  const ref   = 'SHR-2025-' + Math.floor(1000 + Math.random() * 9000);
+
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwRZKp1Jyl2mWIT3rIOo8P8N48TqWeYDkqXR2ldo6qYzbU5QeOOwO3kBbllIIa7vWEQ_A/exec';
+
+  const payload = {
+    fname, lname, phone, email, source,
+    eventType, tradition, venue, message,
+    prefDate, prefTime, services, pkg, ref
+  };
+
+  // Send to Google Apps Script
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors', // required for Apps Script
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(() => console.log('Booking sent to calendar'))
+  .catch(err => console.error('Script error:', err));
+
+  // Show success immediately (no-cors won't return a response)
+  const ss = document.getElementById('successState');
   document.getElementById('step3').classList.remove('active');
   document.getElementById('formProgress').style.display = 'none';
-  const ss = document.getElementById('successState');
   ss.classList.add('show');
   document.getElementById('successRef').textContent = 'Ref: ' + ref;
   document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-
 // Dynamic today highlight
 const today = new Date().getDay();
 const rows = document.querySelectorAll('.hours-row');
